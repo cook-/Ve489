@@ -1,0 +1,2358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" lang="en">
+<head>
+<title>Simulation ALOHA in C++ - Dev Articles</title>
+
+<meta name="description" content="Simulation ALOHA in C++- C/C++ Help. Visit Dev Articles to discuss Simulation ALOHA in C++" />
+<meta name="keywords" content="C/C++, Help, Simulation, ALOHA, in, C++" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+<base href="http://forums.devarticles.com/" />
+
+
+<!-- CSS Stylesheet -->
+<style type="text/css">
+<!--
+/* vBulletin 3 CSS For Style 'New Dev Articles' (styleid: 7) */
+body
+{
+	background-color: #FFFFFF;
+	color: #000000;
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	margin: 0px;
+}
+a:link
+{
+	color: #000020;
+}
+a:visited
+{
+	color: #000020;
+}
+a:hover, a:active
+{
+	color: #FF4400;
+}
+.page
+{
+	background-color: #FFFFFF;
+	color: #000000;
+}
+td, th, p, li
+{
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.tborder
+{
+	background-color: #FFFFFF;
+	color: #000000;
+	border: 1px solid #CCCCCC;
+}
+.tcat
+{
+	background-color: #CBCB9F;
+	color: #000000;
+	font: bold 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	padding:4px;
+}
+.tcat a:link
+{
+	color: #000000;
+	text-decoration: none;
+}
+.tcat a:visited
+{
+	color: #000000;
+	text-decoration: none;
+}
+.tcat a:hover, .tcat a:active
+{
+	color: #000000;
+	text-decoration: underline;
+}
+.thead
+{
+	background-color: #E0E0C7;
+	color: #000000;
+	font: bold 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.thead a:link
+{
+	color: #000000;
+}
+.thead a:visited
+{
+	color: #000000;
+}
+.thead a:hover, .thead a:active
+{
+	color: #000000;
+}
+.tfoot
+{
+	background-color: #E0E0C7;
+	color: #000000;
+}
+.tfoot a:link
+{
+	color: #000000;
+}
+.tfoot a:visited
+{
+	color: #000000;
+}
+.tfoot a:hover, .tfoot a:active
+{
+	color: #000000;
+}
+.alt1, .alt1Active
+{
+	background-color: #E5E5E5;
+	color: #000000;
+}
+.alt2, .alt2Active
+{
+	background-color: #F4F4F4;
+	color: #000000;
+}
+.wysiwyg
+{
+	background-color: #F5F5FF;
+	color: #000000;
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+textarea, .bginput
+{
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.button
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+select
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+option, optgroup
+{
+	font-size: 11px;
+	font-family: verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.smallfont
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.time
+{
+	color: #000033;
+}
+.navbar
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.highlight
+{
+	color: #FF0000;
+	font-weight: bold;
+}
+.fjsel
+{
+	background-color: #3E5C92;
+	color: #E0E0F6;
+}
+.fjdpth0
+{
+	background-color: #F7F7F7;
+	color: #000000;
+}
+.panel
+{
+	background: #E4E7F5 url(http://images.devshed.com/fda/gradients/gradient_panel.gif) repeat-x top left;
+	color: #000000;
+	padding: 10px;
+	border: 2px outset;
+}
+.panelsurround
+{
+	background: #D5D8E5 url(http://images.devshed.com/fda/gradients/gradient_panelsurround.gif) repeat-x top left;
+	color: #000000;
+}
+legend
+{
+	color: #22229C;
+	font: 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.vbmenu_control
+{
+	background-color: #738FBF;
+	color: #FFFFFF;
+	font: bold 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	padding: 3px 6px 3px 6px;
+	white-space: nowrap;
+}
+.vbmenu_control a:link
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.vbmenu_control a:visited
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.vbmenu_control a:hover, .vbmenu_control a:active
+{
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+.vbmenu_popup
+{
+	background-color: #FFFFFF;
+	color: #000000;
+	border: 1px solid #0B198C;
+}
+.vbmenu_option
+{
+	background-color: #BBC7CE;
+	color: #000000;
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	white-space: nowrap;
+	cursor: pointer;
+}
+.vbmenu_option a:link
+{
+	color: #22229C;
+	text-decoration: none;
+}
+.vbmenu_option a:visited
+{
+	color: #22229C;
+	text-decoration: none;
+}
+.vbmenu_option a:hover, .vbmenu_option a:active
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.vbmenu_hilite
+{
+	background-color: #8A949E;
+	color: #FFFFFF;
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	white-space: nowrap;
+	cursor: pointer;
+}
+.vbmenu_hilite a:link
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.vbmenu_hilite a:visited
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.vbmenu_hilite a:hover, .vbmenu_hilite a:active
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+/* ***** small padding on 'thead' elements ***** */
+td.thead, div.thead { padding: 4px; }
+
+/* ***** basic styles for multi-page nav elements */
+.pagenav a { text-decoration: none; }
+.pagenav td { padding: 2px 4px 2px 4px; }
+
+/* ***** define margin and font-size for elements inside panels ***** */
+.fieldset { margin-bottom: 6px; }
+.fieldset, .fieldset td, .fieldset p, .fieldset li { font-size: 11px; }
+
+/* ***** don't change the following ***** */
+form { display: inline; }
+label { cursor: default; }
+.normal { font-weight: normal; }
+.inlineimg { vertical-align: middle; }
+
+A.network:link, A.network:visited, A.network:active { font-family: Verdana, Arial, Helvetica; font-size: 8pt; color: #000000; text-decoration: none;}
+  A.network:hover { color:#000000; text-decoration: underline;}
+
+ .newpill {
+text-decoration: none; color:#000000;
+font-family: Verdana,Arial,Helvetica; 
+font-size: 7pt;
+}
+
+.spacer 
+{
+line-height : 10px;
+}
+.overlink {
+  	 cursor:pointer; 
+  	 cursor:hand;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 10px;
+        color: #FFFFFF;
+        text-decoration: underline;
+        font-weight: bold;
+}
+.title, A.title:link, A.title:visited, A.title:active {
+	font-family:  "Trebuchet MS", "Impact", Helvetica,Arial, Verdana, sans-serif  ;
+	font-size: 40px;
+	color: #000000;
+	font-weight: bold;
+	text-decoration: none;
+}
+.title2, A.title2:link, A.title2:visited, A.title2:active {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	color: #000000;
+	font-weight: bold;
+	text-decoration: none;
+         vertical-align: top;
+}
+
+.smalltitle, A.smalltitle:link, A.smalltitle:visited, A.smalltitle:active {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 28px;
+	color: #000000;
+	font-weight: bold;
+	text-decoration: none;
+
+}
+
+.art_title, A.art_title:link, A.art_title:visited, A.art_title:active {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	cursor:pointer; 
+	cursor:hand;
+}
+
+.showthreadh1
+{
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  margin:0;
+  font-size: 14px;
+  font-weight: bold;	
+  display: inline;
+}
+.navbar2 {
+font-size: 11px;
+margin-top:5px;
+margin-bottom:5px;
+}
+
+.navbar3 {
+margin-top:7px;
+}
+
+.boxAds, a.boxAds:link, a.boxAds:visited, a.boxAds:active, a.boxAds:hover{ 
+      background-color: #000066; 
+      font-weight: bold; 
+      font-size: 8pt; 
+      color: #FFFFCC; 
+      text-decoration : underline;
+}
+
+.tightline  {line-height: .5}
+.top {
+	cursor:pointer; cursor:hand;
+	text-decoration: underline; color:#000000;
+	font-family: Verdana,Arial,Helvetica; 
+	font-size: 10px;
+}
+
+.search {
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 10px;
+        color: #333333;
+        text-decoration: none;
+}
+.search2 {
+        font-family: Geneva, Arial, Helvetica, san-serif;
+        font-size: 15px;
+        font-weight: bold;
+        color: #FFFFFF;
+        text-decoration: none;
+}
+.search3 {
+        font-family: Geneva, Arial, Helvetica, san-serif;
+        font-size: 12px;
+        font-weight: bold;
+        color: #FFFFFF;
+}
+
+.footlink, .footlink:link, .footlink:visited, .footlink:hover, .footlink:active {
+	text-decoration: underline;
+	color: #FFFFFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bolder;
+	cursor:pointer; 
+  	cursor:hand;
+}
+
+.foottxt {
+	color: #FFFFFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bolder;
+}
+
+.newlinks {
+cursor:pointer; cursor:hand;
+text-decoration: underline; color:blue;
+font-family: Verdana,Arial,Helvetica; 
+font-size: 10px;
+}
+
+.blacklinks, .blacklinks:link, .blacklinks:visited, .blacklinks:hover, .blacklinks:active {
+	cursor:hand;
+	text-decoration: underline;
+	color:#000000;
+	cursor:pointer; 
+  	cursor:hand;
+}
+.mainbckgrnd { 
+          background: url(http://images.devshed.com/fda/current/devarticles.jpg);
+          background-repeat: no-repeat;
+background-attachment: 
+fixed
+background-position: 123px 153px;
+}
+-->
+</style>
+
+
+
+<!-- / CSS Stylesheet -->
+
+<script type="text/javascript">
+<!--
+var SESSIONURL = "";
+var IMGDIR_MISC = "http://images.devshed.com/fda/misc";
+// -->
+</script>
+
+<script type='text/javascript' src='http://otto.developershed.com/www/delivery/spcjs.php?id=11&amp;target=_blank&amp;sub=forums'></script>
+
+<script type="text/javascript" src="http://forums.devarticles.com/clientscript/vbulletin_global.js"></script>
+<script type="text/javascript" src="http://forums.devarticles.com/clientscript/vbulletin_menu.js"></script>
+<script type="text/javascript" src="http://forums.devarticles.com/speller/spellChecker.js"></script>
+<META name="verify-v1" content="AXikuUDduh5DUH8MkrAgE0EgQfuKsgkCjr2in3xXgJw=" />
+<meta name="google-site-verification" content="LY0yjQOEEoV9ON13DtMXDqWzyjR1Wz071UsCPiwweec" />
+
+
+<link href="http://forums.devarticles.com/styles.css" rel="stylesheet" type="text/css" />
+<link rel="SHORTCUT ICON" HREF="http://forums.devarticles.com/images/favicon2.ico" />
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+
+<script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+</script>
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-290307-7']);
+  _gaq.push(['_setDomainName', '.devarticles.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body link="#000000" vlink="#000000" alink="#000000" leftmargin="0" topmargin="0" >
+<a name="top"></a>
+<div align=center>
+<table width="98%" border=0 cellpadding=0 cellspacing=0><tr><td bgcolor="#FFFFFF">
+  <table width="730" border="0" align="right" cellpadding="0" cellspacing="0">
+    <tr>
+      <td width="20"><img src="http://images.devshed.com/da/devarticles-01.jpg" width="20" height="21" /></td>
+      <td width="35" bgcolor="#FE9900">&nbsp;</td>
+      <td width="675" valign="middle" bgcolor="#FE9900"><center><style type="text/css">
+<!--
+#topnavbox {	
+	clear: both;
+	text-align:center;
+	font-size: 0.8em;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.topnavtxt {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	text-decoration: normal;
+    padding: 0;
+    margin: 0;
+color: #ffffff;\n}
+
+-->
+</style>
+<div id="topnavbox" align=center>
+	<div class="topnavtxt">
+<script type="text/javascript" language="JavaScript">
+<!--
+function ttgo1(url)
+{
+	if (url.length > 1)
+	{
+		document.location.href = "http://" + url + "/";
+	}
+}
+
+function ttfstart1(name)
+{
+	document.write('<div style="display: inline; top: 0; padding:0; border: 0px;"><B>' + name + '</b> <form style="display: inline; margin: 0;" name="jumptt"><select style="font-size: 10px; font-family: Verdana, Arial;" name="menutt" onChange="javascript:ttgo(this.options[this.selectedIndex].value);">');
+	document.write('<option value="" selected> - Select - </option>');	
+}
+
+function ttfend1()
+{
+	document.write('</select></form></div>');
+}
+
+function ttfadd1(name, val)
+{
+	document.write('<option value="' + val + '">' + name + '</option>');
+}
+
+function ttspace1()
+{
+	document.write('&nbsp;&nbsp;&nbsp;');
+}
+
+ttfstart1('Tutorials:');
+ttfadd1('Dev Shed', 'www.devshed.com');
+ttfadd1('ASP Free', 'www.aspfree.com');
+ttfadd1('Dev Articles', 'www.devarticles.com');
+ttfadd1('Dev Hardware', 'www.devhardware.com');
+ttfadd1('SEO Chat', 'www.seochat.com');
+ttfadd1('Web Hosting', 'webhosting.devshed.com');
+ttfadd1('Codewalkers', 'www.codewalkers.com');
+ttfend1();
+
+ttspace1();
+
+ttfstart1('Resources:');
+ttfadd1('Scripts', 'www.scripts.com');
+ttfadd1('Tutorialized', 'www.tutorialized.com');
+ttfadd1('Dev Mechanic', 'tools.devshed.com');
+ttfend1();
+
+ttspace1();
+
+ttfstart1('Forums:');
+ttfadd1('Dev Shed Forums', 'forums.devshed.com');
+ttfadd1('ASP Free Forums', 'forums.aspfree.com');
+ttfadd1('Dev Articles Forums', 'forums.devarticles.com');
+ttfadd1('Dev Hardware Forums', 'www.devhardware.com/forums');
+ttfadd1('SEO Chat Forums', 'forums.seochat.com');
+ttfadd1('Codewalkers Forums', 'forums.codewalkers.com');
+ttfadd1('Tutorialized Forums', 'forums.tutorialized.com');
+ttfend1();
+//-->
+</script>
+	</div>
+</div>
+</center></td>
+    </tr>
+  </table>
+        <div align="right"></div>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" class="mainbckgrnd">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr align="right"><td height="20" colspan="3"><table cellpadding=0 cellspacing=0><tr><td><script type='text/javascript'><!--// <![CDATA[
+    OA_show(392);
+// ]]> --></script><noscript><a target='_blank' href='http://otto.developershed.com/www/delivery/ck.php?n=94c48b3'><img border='0' alt='' src='http://otto.developershed.com/www/delivery/avw.php?zoneid=392&amp;n=94c48b3' /></a></noscript></td></tr></table></td></tr>
+        <tr align="left">
+          <td width="30" height="58">&nbsp;</td>
+          <td colspan=2 valign="middle" class="pagename">
+		    <table border=0 cellpadding=0 cellpadding=0>
+		      <tr>
+		        <td width="80" align=left><a rel="nofollow"
+		href="/" class="title" title="Dev Articles">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></td><td><a rel="nofollow"
+		href="/" class=title title="Dev Articles"></a>
+<a rel="nofollow" href="/" class=smalltitle title="C/C++ Help">C/C++ Help</a></td>
+
+        	  </tr>
+      		</table>
+          </td>
+        </tr>
+        <!-- <tr><td colspan=3>&nbsp;</td></tr> --> 
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF">
+     <table width="848" border="0" align="right" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="20"><img src="http://images.devshed.com/da/devarticles-02.gif" width="20" height="29" /></td>
+        <td width="1" bgcolor="#FE9900">&nbsp;</td>  
+        <td width="832" bgcolor="#FE9900"><table width="832" border="0" cellpadding="0" cellspacing="0">
+          <tr> 
+            <td class="txtwhite" valign="middle">
+<a class="footlink" rel="nofollow" href="http://forums.devarticles.com/">Forums</a><span class="foottxt">: &raquo;</span>
+<a class="footlink" rel="nofollow" href="http://forums.devarticles.com/register.php?action=signup">Register</a><span class="foottxt">&nbsp;&laquo;&nbsp;|&nbsp;</span>
+<a class="footlink" rel="nofollow" href="http://forums.devarticles.com/usercp.php">User CP</a><span class="foottxt">&nbsp;|&nbsp;</span>
+<a class="footlink" rel="nofollow" href="http://forums.devarticles.com/dev-articles-gaming-center-62/">Games</a><span class="foottxt">&nbsp;|&nbsp;</span>
+<a class="footlink" rel="nofollow" href="http://forums.devarticles.com/calendar.php">Calendar</a><span class="foottxt">&nbsp;|&nbsp;</span>
+<a class="footlink" rel="nofollow" href="http://forums.devarticles.com/memberlist.php">Members</a><span class="foottxt">&nbsp;|&nbsp;</span>
+<a class="footlink" rel="nofollow" href="http://forums.devarticles.com/forum-rules-guidelines-61/">FAQs</a><span class="foottxt">&nbsp;|&nbsp;</span>
+<a class="footlink" rel="nofollow" href="http://forums.devarticles.com/sitemap/">Sitemap</a><span class="foottxt">&nbsp;|&nbsp;</span>
+<span class="footlink" onClick="window.location='http://www.developershed.com/esupport/'">Support</span><span class="foottxt">&nbsp;|&nbsp;</span>
+<a rel="nofollow" href="http://forums.devarticles.com/rss/"><IMG src="http://images.devshed.com/common/forum-rss3.gif" width="24" height="21" border=0 vspace="0" align="absmiddle" /></a>
+            </td>
+            <td><div align="right">
+<!-- TOP SEARCH BOX -->
+<table width="100%" border="0" align="right" cellpadding="0" cellspacing="0">
+    <tr>
+      <td height='26' align='right' style='float:right;width:210px;_width:210px;padding-right:3px;padding-top:3px;_padding-top:0px;_padding-right:3px;'><form style='display:inline;' action='http://forums.devarticles.com/googlecse.php' id='cse-search-box'><input type='hidden' name='cx' value='partner-pub-6422417422167576:hyagxlc6ce8' /><input type='hidden' name='cof' value='FORID:11' /><input type='hidden' name='ie' value='ISO-8859-1' /><input type='text' name='q' size='20' /> <input type='image' style='margin-top: -3px;_margin-top:2px;' align='absmiddle' src='http://www.devshed.com/components/com_googlecse/google_search.gif' height='20' width='56' name='sa' value='Search' /><script type='text/javascript' src='http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en'></script></form></td>
+    </tr>
+  </form>
+</table>
+</td></tr></table></div>
+<!-- END :: TOP SEARCH BOX -->
+<!-- <b> -->
+
+
+
+<!-- </b> -->
+       </div></td>
+          </tr>
+        </table></td>
+    </tr>
+  </table>
+<table width="98%" border="0" cellspacing="0" cellpadding="0" >
+    <tr> 
+      <td width="16" valign="top" bgcolor="#EFEFEF">&nbsp;</td>
+      <td width="136" bgcolor="#EFEFEF" class="txt"><table width="136" border="0" cellspacing="0" cellpadding="0">
+<!-- Beginning of login -->
+
+        <form action="http://forums.devarticles.com/login.php" method="post" onsubmit="md5hash(vb_login_password,vb_login_md5password)">
+        <script type="text/javascript" src="clientscript/vbulletin_md5.js"></script>
+          <tr align=left>
+            <td height="15" class="form"><font color="#000000"><b>User Name:</b></font></td>
+          </tr>
+          <tr align=left>
+            <td><input type="text" class="form" name="vb_login_username" id="navbar_username" size="12" accesskey="u" tabindex="1" value="User Name" onfocus="if (this.value == 'User Name') this.value = '';" /></td>
+          </tr>
+          <tr align=left>
+            <td class="form"><font color="#000000"><b>Password:</b></font></td>
+          </tr>
+          <tr align=left>
+            <td><input type="password" class="form" name="vb_login_password" size="12" accesskey="p" tabindex="2" />
+              <input type="submit" class="form" value="Log in" tabindex="4" title="Enter your username and password in the boxes provided to login, or click the 'register' button to create a profile for yourself." accesskey="s" /></td>
+          </tr>
+          <tr align=left>
+            <td><label for="cb_cookieuser_navbar"><input type="checkbox" name="cookieuser" value="1" tabindex="3" id="cb_cookieuser_navbar" accesskey="c" checked="checked" /></label>
+              <span class="form"><font color="#000000"><b>Remember me</b></font></span></td>
+          </tr>
+
+        <input type="hidden" name="s" value="" />
+        <input type="hidden" name="do" value="login" />
+        <input type="hidden" name="forceredirect" value="1" />
+        <input type="hidden" name="vb_login_md5password" />
+
+        </form>
+
+
+<!-- End of Login -->
+        </table></td>
+      <td width="100%" valign="top" align="center" background="http://images.devshed.com/common/bckg-topbanner.gif">
+<!-- ZONE FOR TOP BANNER AD -->
+’’
+<!-- END ZONE FOR TOP BANNER AD -->
+</td>
+      <td valign="top" background="http://images.devshed.com/common/bckg-topbanner.gif">&nbsp;</td>
+    </tr>
+    <tr bgcolor="#EFEFEF"> 
+      <td height="8"><img src="http://images.devshed.com/cmn/spacer.gif" width="8" height="8"></td>
+      <td height="8"><img src="http://images.devshed.com/cmn/spacer.gif" width="8" height="8"></td>
+      <td height="8" bgcolor="#EFEFEF"><img src="http://images.devshed.com/cmn/spacer.gif" width="8" height="8"></td>
+      <td height="8"><img src="http://images.devshed.com/cmn/spacer.gif" width="8" height="8"></td>
+    </tr>
+  </table>
+<!-- end of header template -->
+</table>
+</div>
+</div>
+<!-- content table -->
+<table bgcolor="" width="98%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+  <td width="100%">
+
+<!-- Add Breadcrumb title -->
+<table cellspacing=0 cellpadding=0 width="98%" align=center><tr><td>
+<table width="100%" cellpadding="6" cellspacing="1" class="tborder" border="0">
+<tr>
+	<td class="alt1" width="100%">
+		<table cellpadding="0" width="100%" cellspacing="0" border="0" align="left">
+		<tr valign="bottom"><td>
+		
+				<a rel=nofollow href="#" onclick="history.back(1)"><img src="http://images.devshed.com/fda/misc/navbits_start.gif" width="15" height="15" alt="Go Back" border="0" /></a></td>
+				<td>&nbsp;</td>
+				<td width="100%"><span class="navbar"><a rel=nofollow href="/" accesskey="1">Dev Articles Community Forums</a> 
+	&gt;&nbsp;<a class="normalfont" href="http://forums.devarticles.com/programming-7/">Programming</a>
+
+	&gt;&nbsp;<a class="normalfont" href="http://forums.devarticles.com/c-c-help-52/">C/C++ Help</a>
+</span></td>
+			</tr>
+			<tr>
+				<td class="navbar" style="font-size:10pt; padding-top:1px" colspan="3"><a rel=nofollow href="/c-c-help-52/simulation-aloha-in-c-4238.html"><img class="inlineimg"  src="http://images.devshed.com/fda/misc/navbits_finallink.gif" alt="Reload this Page" width="30" height="15" border="0" /></a> <h1 class="showthreadh1">
+	Simulation ALOHA in C++
+</h1>		
+
+		
+
+
+		
+
+
+
+
+
+
+
+<div id="intelliTxt" class="navbar2"><!--INFOLINKS_ON-->Discuss <b>Simulation ALOHA in C++</b> in the C/C++ Help forum on Dev Articles. <br /><i>Simulation ALOHA in C++</i> C/C++ Help forum discussing building and maintaining applications in C/C++.  Find out why these languages are the foundation on which other languages are built.<!--INFOLINKS_OFF--></div>
+
+
+
+
+<!-- end of check -->
+
+</td>
+</tr>
+</table>
+</td></tr></table>
+
+
+<style type="text/css">
+<!--
+.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+td div#showcase {
+background:#e5e5e5;height:24px;text-align:center;font-weight:bold;margin:5px;padding-top:3px;
+}
+td div#showcase a,td div#showcase a:hover {
+    color:000;
+}    
+td div#showcasebody a {
+    text-align:center;
+    display:block;
+}
+td div#showcasebody a:hover {
+    color:000;
+}
+td div#showcasebody p{
+height:115px;
+overflow:hidden;
+padding:5px;
+}
+td div#showcasebody p img{
+float:left;
+display:block;
+padding:5px;
+}
+td div#showcasebody a.regular {
+display:inline !important;
+}
+td div#showcasebody a.first {
+display:inline !important;
+margin-left:50px;
+}
+#close-showcase {
+    background: #fff url(http://forums.devshed.com/images/accordion-open.png) no-repeat right top;
+    background-position:top right;
+    font-family:"Times New Roman","Times";
+    font-weight:bold;
+    font-size:14px;
+    margin:10px 10px;
+    display: block;
+    float: right;
+    width: 20px;
+    height: 20px;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+.style1 {font-weight: bold}
+-->
+</style>
+<!-- Take From Here -->
+<!-- To Here -->
+
+
+
+
+<a name="poststop" id="poststop"></a>
+
+<!-- controls above postbits -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-bottom:3px">
+<tr valign="bottom">
+<BR>
+	
+		<td width="120" class="smallfont"><a rel="nofollow" href="newreply.php?do=newreply&amp;noquote=1&amp;p=17990"><img src="http://images.devshed.com/fda/buttons/reply.gif" alt="Reply" border="0" /></a></td>
+<td>
+</td>
+	
+<td><center>
+
+
+
+</center></td>
+ 
+<td width="20%" align="center">
+<!-- Add2 - Start -->
+<script language="JavaScript" type="text/javascript">
+<!--
+	var addtoMethod=1;
+	var AddURL = document.location.href;
+	var AddTitle = escape(document.title);
+-->
+</script>
+<script language="JavaScript" src="http://forums.devarticles.com/clientscript/add2.js" type="text/javascript"></script>
+<style type="text/css">
+<!--
+.add2small {
+	font-size: 11px;
+	cursor:pointer;
+}
+.add2head {
+	font-size: 11px;
+	font-weight: bold;
+}
+-->
+</style>
+
+<table class="tborder" cellpadding="6" cellspacing="1" border="0" width="660" align="center">
+  <tr> 
+    <td align="left" class="thead" id="currentPost"><div class="normal">Add This Thread To: </div></td>
+    <td align="left" class="alt1" id="currentPost">
+&nbsp;<span class="add2small" title="Add this page to Delicious" onclick="addto(2)"><img align="absmiddle" src="http://images.devshed.com/cmn/add2/AddTo_Delicious.gif" width="16" height="16" border="0" /> 
+      <u>Del.icio.us</u></span>
+&nbsp;<span class="add2small" title="Add this page to Digg" onclick="addto(3)"><img align="absmiddle" src="http://images.devshed.com/cmn/add2/AddTo_Digg.gif" width="16" height="16" border="0" /> 
+      <u>Digg</u></span>
+&nbsp;<span class="add2small" title="Add this page to Google" onclick="addto(5)"><img align="absmiddle" src="http://images.devshed.com/cmn/add2/AddTo_Google.gif" width="16" height="16" border="0" /> 
+      <u>Google</u></span>
+&nbsp;<span class="add2small" title="Add this page to Spurl" onclick="addto(8)"><img align="absmiddle" src="http://images.devshed.com/cmn/add2/AddTo_Spurl.gif" width="16" height="16" border="0" /> 
+      <u>Spurl</u></span>
+&nbsp;<span class="add2small" title="Add this page to Blink" onclick="addto(1)"><img align="absmiddle" src="http://images.devshed.com/cmn/add2/AddTo_Blink.gif" width="16" height="16" border="0" /> 
+      <u>Blink</u></span>
+&nbsp;<span class="add2small" title="Add this page to Furl" onclick="addto(4)"><img align="absmiddle" src="http://images.devshed.com/cmn/add2/AddTo_Furl.gif" width="16" height="16" border="0" /> 
+      <u>Furl</u></span>
+&nbsp;<span class="add2small" title="Add this page to Simpy" onclick="addto(6)"><img align="absmiddle" src="http://images.devshed.com/cmn/add2/AddTo_Simpy.gif" width="16" height="16" border="0" /> 
+      <u>Simpy</u></span>	  
+&nbsp;<span class="add2small" title="Add this page to Yahoo! MyWeb" onclick="addto(7)" ><img align="absmiddle" src="http://images.devshed.com/cmn/add2/AddTo_Yahoo.gif" width="16" height="16" border="0" /> 
+      <u>Y! MyWeb</u></span>&nbsp;	  	  	  	  	  	  
+	</td>
+  </tr>
+</table>
+<!-- Add2 - End -->
+</td>
+	
+
+</tr>
+</table>
+<!-- / controls above postbits -->
+
+<!-- toolbar -->
+<table class="tborder" cellpadding="6" cellspacing="1" border="0" width="100%" align="center" style="border-bottom-width:0px">
+<tr>
+	<td class="tcat" width="100%">
+		<div class="smallfont">
+<strong>&laquo;</strong>
+		<a rel=nofollow href="http://forums.devarticles.com/c-c-help-52/simulation-aloha-in-c-4238.html?goto=nextoldest">Previous Thread</a>
+		|
+		<a rel=nofollow href="http://forums.devarticles.com/c-c-help-52/simulation-aloha-in-c-4238.html?goto=nextnewest">Next Thread</a>
+	<strong>&raquo;</strong>
+
+		
+<!-- [START HACK='AJAX Feature / Unfeature Thread' VERSION='1.0.0' CHANGEID= 1 ] -->
+		
+<!-- [END HACK='AJAX Feature / Unfeature Thread' VERSION='1.0.0' CHANGEID= 1 ] -->		
+		&nbsp;
+		</div>
+	</td>
+	<td class="vbmenu_control" id="threadtools">
+		<a rel=nofollow href="http://forums.devarticles.com/c-c-help-52/simulation-aloha-in-c-4238.html#threadtools">Thread Tools</a>
+		<script type="text/javascript"> vbmenu_register("threadtools"); </script>
+	</td>
+	
+		<td class="vbmenu_control" id="threadsearch">
+			<a rel=nofollow href="http://forums.devarticles.com/c-c-help-52/simulation-aloha-in-c-4238.html#threadsearch">Search this Thread</a>
+			<script type="text/javascript"> vbmenu_register("threadsearch"); </script>
+		</td>
+	
+	
+	
+	<td class="vbmenu_control" id="displaymodes">
+		<a rel=nofollow href="http://forums.devarticles.com/c-c-help-52/simulation-aloha-in-c-4238.html#displaymodes">Display Modes</a>
+		<script type="text/javascript"> vbmenu_register("displaymodes"); </script>
+	</td>
+	
+</tr>
+</table>
+<!-- / toolbar -->
+
+<!-- end content table -->
+ </div>  </div></div>
+<!-- / end content table -->
+
+
+
+<div id="posts">
+
+<!-- *** -->
+	<div align="center">
+		<div class="page" style="width:100%; text-align:left">
+			<div style="padding:0px 25px 0px 25px">
+				<div style="padding:0px 0px 6px 0px">
+					<table class="tborder" id="ad12321" cellpadding="6" 
+						cellspacing="1" border="0" width="100%" align="center">
+						<tr>
+							<td class="thead"  id="currentPost">
+								<div class="normal" style="float:right">
+									&nbsp;
+								</div>
+								<div class="normal">
+									<a name="ad12321"><img class="inlineimg" src="http://images.devshed.com/fda/statusicon/post_new.gif" alt="Unread" border="0" /></a>
+Dev Articles Community Forums Sponsor:
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="alt1">
+<!-- message -->
+<script type='text/javascript'><!--// <![CDATA[
+    OA_show(407);
+// ]]> --></script><noscript><a target='_blank' href='http://otto.developershed.com/www/delivery/ck.php?n=1257ea1'><img border='0' alt='' src='http://otto.developershed.com/www/delivery/avw.php?zoneid=407&amp;n=1257ea1' /></a></noscript>
+<!-- / message -->
+								<div></div>
+							</td>
+						</tr>
+					</table>
+
+				</div>
+			</div>	
+		</div>
+	</div>
+<!-- *** -->
+
+<!-- post #17990 -->
+
+	<!-- open content container -->
+
+	<div align="center">
+		<div class="page" style="width:98%; text-align:left">
+			<div style="padding:0px 25px 0px 25px">
+
+	<div style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->	
+
+
+
+<table class="tborder" id="post17990" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+	<td class="thead" >
+		<div class="normal" style="float:right">
+			&nbsp;
+			
+<!-- checks for warning system -->
+
+	
+	
+	
+	
+
+
+<!-- end of warning system -->
+			
+			#<a rel="nofollow" href="showpost.php?p=17990&amp;postcount=1" target="new"><strong>1</strong></a> &nbsp;
+			
+			
+						
+			
+		</div>
+		
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post17990"><img class="inlineimg" src="http://images.devshed.com/fda/statusicon/post_old.gif" alt="Old" border="0" /></a>
+			
+				July 5th, 2003, 03:11 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding:0px">
+		<!-- user info -->
+		<table cellpadding="0" cellspacing="6" border="0" width="100%">
+		<tr>
+			
+			<td nowrap="nowrap">
+			
+				<div id="postmenu_17990">
+					
+
+
+<table><tr><td>
+<a rel="nofollow" href="member.php?u=6457">hotel_project</a></td>
+
+
+
+					<td><img class="inlineimg" src="http://images.devshed.com/fda/statusicon/user_offline.gif" alt="hotel_project is offline" border="0" /></td></tr></table>
+					<script type="text/javascript"> vbmenu_register("postmenu_17990", true); </script>
+									</div>				
+				<div class="smallfont">Junior Member</div>
+				
+</a><div align='left'><img border="0" src="http://images.devshed.com/fda/belts/da_forums.gif" alt="Dev Articles Newbie (0 - 499 posts)"></div>				
+			</td>
+			<td width="100%">&nbsp;</td>
+
+<!-- Show warned sign -->
+
+
+
+<!-- End of show warned sign -->
+
+			<td valign="top" nowrap="nowrap">
+				
+				<div class="smallfont">
+					<div>Join Date: Mar 2003</div>
+
+					
+					<div>
+						Posts: 17
+						<img class="inlineimg" src="http://images.devshed.com/fda/reputation/reputation_green.gif" width="8" height="10" alt="hotel_project User rank is Just a Lowly Private (1 - 20 Reputation Level)" border="0" />&nbsp; 
+<br/>Time spent in forums: < 1 sec
+
+
+
+
+
+
+
+
+
+<br />Reputation Power: 0
+					</div>
+					<div>      </div>
+					<div>   </div>
+				</div>
+				
+			</td>
+		</tr>
+			
+		</table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	<td class="alt1">
+	<!-- message, attachments, sig -->
+	
+		
+			<!-- icon and title -->
+			<div class="smallfont">
+				
+				<strong>Simulation ALOHA in C++</strong>
+			</div>
+
+			<hr size="1" style="color:#FFFFFF" />
+			<!-- / icon and title -->
+		
+		
+		<!-- message --><span id="intelliTxt">
+		
+		<div>Well I need to simualte the Slotted and Pure ALOHA protocol using C++ <br />
+<br />
+so I need to know the parameters and metrics <br />
+<br />
+so any one has knowledge or knows any site for that??<br />
+<br />
+Thank u very much</div>
+		</span><!-- / message -->
+	<div></div>
+		
+		
+		
+		
+		
+		<hr size="1" style="color:#FFFFFF" />
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		  <tr>
+			<td align="left" valign="middle">
+								
+			</td>
+			<td align="right" valign="middle" height="40">
+				<div align="right">
+					<!-- controls -->
+					
+					
+					
+						<a rel="nofollow" href="newreply.php?do=newreply&amp;p=17990"><img src="http://images.devshed.com/fda/buttons/reply_small.gif" alt="Reply With Quote" width="70" height="22" border="0" /></a>
+					
+					
+					<!-- / controls -->
+				</div>			
+			</td>
+		  </tr>
+		</table>		
+	<!-- message, attachments, sig -->
+	
+	</td>
+</tr>
+</table>
+
+<!-- post 17990 popup menu -->
+<div class="vbmenu_popup" id="postmenu_17990_menu" style="display:none">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">hotel_project</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a rel="nofollow" href="member.php?userid=6457" target="_blank">View Public Profile</a></td></tr>
+	
+<!-- START LEFT RPG POSTBIT BAR -->
+		<tr><td class="vbmenu_option"><a rel="nofollow" href="javascript:void(window.open('http://forums.devarticles.com/rpg.php?userid=6457', '', 'toolbar=no,scrollbars=no,resizable=no,width=300,height=320'));">View Extended RPG Stats</a></td></tr>
+<!-- END LEFT RPG POSTBIT BAR -->
+<!-- START LEFT RPG POSTBIT BAR -->
+		<tr><td class="vbmenu_option"><a rel="nofollow" href="battle.php?do=newbattle&user=hotel_project">Challenge This User To Battle</a></td></tr>
+<!-- END LEFT RPG POSTBIT BAR -->		
+	
+		<tr><td class="vbmenu_option"><a rel="nofollow" href="private.php?do=newpm&amp;userid=6457">Send a private message to hotel_project</a></td></tr>
+	
+
+
+	
+<!--	 -->
+	
+	
+		<tr><td class="vbmenu_option"><a rel="nofollow" href="search.php?do=finduser&amp;userid=6457">Find all posts by hotel_project</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a rel="nofollow" href="search.php?do=process&amp;showposts=0&amp;starteronly=1&amp;exactname=1&amp;searchuser=hotel_project">Find all threads by hotel_project</a></td></tr>
+	
+	
+	<tr><td class="vbmenu_option"><a rel="nofollow" href="profile.php?do=addlist&amp;userlist=buddy&amp;u=6457">Add hotel_project to Your Buddy List</a></td></tr>
+	
+	
+	
+	</table>
+</div>
+<!-- / post 17990 popup menu -->
+
+
+
+	</div>
+	 </div>  </div></div>
+
+<!-- / post #17990 --><!-- post #17999 -->
+
+	<!-- open content container -->
+
+	<div align="center">
+		<div class="page" style="width:98%; text-align:left">
+			<div style="padding:0px 25px 0px 25px">
+
+	<div style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->	
+
+
+
+<table class="tborder" id="post17999" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+	<td class="thead" >
+		<div class="normal" style="float:right">
+			&nbsp;
+			
+<!-- checks for warning system -->
+
+	
+	
+	
+	
+
+
+<!-- end of warning system -->
+			
+			#<a rel="nofollow" href="showpost.php?p=17999&amp;postcount=2" target="new"><strong>2</strong></a> &nbsp;
+			
+			
+						
+			
+		</div>
+		
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post17999"><img class="inlineimg" src="http://images.devshed.com/fda/statusicon/post_old.gif" alt="Old" border="0" /></a>
+			
+				July 6th, 2003, 12:36 AM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding:0px">
+		<!-- user info -->
+		<table cellpadding="0" cellspacing="6" border="0" width="100%">
+		<tr>
+			
+			<td nowrap="nowrap">
+			
+				<div id="postmenu_17999">
+					
+
+
+<table><tr><td>
+<a rel="nofollow" href="member.php?u=8947">DudeThatWasRude</a></td>
+
+
+
+					<td><img class="inlineimg" src="http://images.devshed.com/fda/statusicon/user_offline.gif" alt="DudeThatWasRude is offline" border="0" /></td></tr></table>
+					<script type="text/javascript"> vbmenu_register("postmenu_17999", true); </script>
+									</div>				
+				<div class="smallfont">Junior Member</div>
+				
+</a><div align='left'><img border="0" src="http://images.devshed.com/fda/belts/da_forums.gif" alt="Dev Articles Newbie (0 - 499 posts)"></div>				
+			</td>
+			<td width="100%">&nbsp;</td>
+
+<!-- Show warned sign -->
+
+
+
+<!-- End of show warned sign -->
+
+			<td valign="top" nowrap="nowrap">
+				
+				<div class="smallfont">
+					<div>Join Date: Jun 2003</div>
+
+					
+					<div>
+						Posts: 7
+						<img class="inlineimg" src="http://images.devshed.com/fda/reputation/reputation_green.gif" width="8" height="10" alt="DudeThatWasRude User rank is Just a Lowly Private (1 - 20 Reputation Level)" border="0" />&nbsp; 
+<br/>Time spent in forums: < 1 sec
+
+
+
+
+
+
+
+
+
+<br />Reputation Power: 0
+					</div>
+					<div>      </div>
+					<div>   </div>
+				</div>
+				
+			</td>
+		</tr>
+			
+		</table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	<td class="alt1">
+	<!-- message, attachments, sig -->
+	
+		
+		
+		<!-- message --><span id="intelliTxt">
+		
+		<div>Slotted ALOHA Simulation Parameters <br />
+<br />
+//<br />
+<br />
+// global simulation parameters<br />
+//<br />
+<br />
+sim<br />
+        logfile truncate<br />
+        checkpoint-variant slots        // frame, slots or<br />
+milleseconds<br />
+<br />
+end<br />
+//<br />
+// model 1 definition<br />
+//<br />
+model 1<br />
+        slot 1                          // packet slot size<br />
+in Mb<br />
+        packet-slots 1<br />
+        channel 1000                    // channel speed in Mb/sec<br />
+        protocol SALOHA<br />
+        time 1000000<br />
+        checkpoint-interval 1<br />
+        log yes<br />
+        trace no<br />
+end<br />
+model 2<br />
+        slot 1                          // packet slot size<br />
+in Mb<br />
+        packet-slots 1<br />
+        channel 1050                    // channel speed in Mb/sec<br />
+        protocol SALOHA<br />
+        time 1000000<br />
+        checkpoint-interval 1<br />
+        log yes<br />
+        trace no<br />
+end<br />
+<br />
+model 3<br />
+        slot 1                          // packet slot size in Mb<br />
+        packet-slots 1<br />
+        channel 1100                    // channel speed in Mb/sec<br />
+        protocol SALOHA<br />
+        time 1000000<br />
+        checkpoint-interval 1<br />
+        log yes<br />
+        trace no<br />
+end<br />
+<br />
+model 4<br />
+        slot 1                          // packet slot size in Mb<br />
+        packet-slots 1<br />
+        channel 1150                    // channel speed in Mb/sec<br />
+        protocol SALOHA<br />
+        time 1000000<br />
+        checkpoint-interval 1<br />
+        log yes<br />
+        trace no<br />
+end<br />
+<br />
+model 5<br />
+        slot 1                          // packet slot size in Mb<br />
+        packet-slots 1<br />
+        channel 1200                    // channel speed in Mb/sec<br />
+        protocol SALOHA<br />
+        time 1000000<br />
+        checkpoint-interval 1<br />
+        log yes<br />
+        trace no<br />
+end<br />
+<br />
+model 6<br />
+        slot 1                          // packet slot size in Mb<br />
+        packet-slots 1<br />
+        channel 1250                    // channel speed in Mb/sec<br />
+        protocol SALOHA<br />
+        time 1000000<br />
+        checkpoint-interval 1<br />
+        log yes<br />
+        trace no<br />
+end<br />
+<br />
+model 7<br />
+        slot 1                          // packet slot size in Mb<br />
+        packet-slots 1<br />
+        channel 1300                    // channel speed in Mb/sec<br />
+        protocol SALOHA<br />
+        time 1000000<br />
+        checkpoint-interval 1<br />
+        log yes<br />
+        trace no<br />
+end<br />
+<br />
+model 8<br />
+        slot 1                          // packet slot size in Mb<br />
+        packet-slots 1<br />
+        channel 1350                    // channel speed in Mb/sec<br />
+        protocol SALOHA<br />
+        time 1000000<br />
+        checkpoint-interval 1<br />
+        log yes<br />
+        trace no<br />
+end<br />
+<br />
+model 9<br />
+        slot 1                          // packet slot size in Mb<br />
+        packet-slots 1<br />
+        channel 1400                    // channel speed in Mb/sec<br />
+        protocol SALOHA<br />
+        time 1000000<br />
+        checkpoint-interval 1<br />
+        log yes<br />
+        trace no<br />
+end<br />
+<br />
+model 10<br />
+        slot 1                          // packet slot size in Mb<br />
+        packet-slots 1<br />
+        channel 1450                    // channel speed in Mb/sec<br />
+        protocol SALOHA<br />
+        time 1000000<br />
+        checkpoint-interval 1<br />
+        log yes<br />
+        trace no<br />
+end<br />
+<br />
+model 11<br />
+        slot 1                          // packet slot size in Mb<br />
+        packet-slots 1<br />
+        channel 1500                    // channel speed in Mb/sec<br />
+        protocol SALOHA<br />
+        time 1000000<br />
+        checkpoint-interval 1<br />
+        log yes<br />
+        trace no<br />
+end<br />
+<br />
+model 12<br />
+        slot 1                          // packet slot size in Mb<br />
+        packet-slots 1<br />
+        channel 1550                    // channel speed in Mb/sec<br />
+        protocol SALOHA<br />
+        time 1000000<br />
+        checkpoint-interval 1<br />
+        log yes<br />
+        trace no<br />
+end<br />
+<br />
+model 13<br />
+        slot 1                          // packet slot size in Mb<br />
+        packet-slots 1<br />
+        channel 1600                    // channel speed in Mb/sec<br />
+        protocol SALOHA<br />
+        time 1000000<br />
+        checkpoint-interval 1<br />
+        log yes<br />
+        trace no<br />
+end<br />
+<br />
+model 14<br />
+        slot 1                          // packet slot size in Mb<br />
+        packet-slots 1<br />
+        channel 1650                    // channel speed in Mb/sec<br />
+        protocol SALOHA<br />
+        time 1000000<br />
+        checkpoint-interval 1<br />
+        log yes<br />
+        trace no<br />
+end<br />
+<br />
+model 15<br />
+        slot 1                          // packet slot size in Mb<br />
+        packet-slots 1<br />
+        channel 1700                    // channel speed in Mb/sec<br />
+        protocol SALOHA<br />
+        time 1000000<br />
+        checkpoint-interval 1<br />
+        log yes<br />
+        trace no<br />
+end<br />
+<br />
+model 16<br />
+        slot 1                          // packet slot size in Mb<br />
+        packet-slots 1<br />
+        channel 1750                    // channel speed in Mb/sec<br />
+        protocol SALOHA<br />
+        time 1000000<br />
+        checkpoint-interval 1<br />
+        log yes<br />
+        trace no<br />
+end<br />
+<br />
+model 17<br />
+        slot 1                          // packet slot size in Mb<br />
+        packet-slots 1<br />
+        channel 1800                    // channel speed in Mb/sec<br />
+        protocol SALOHA<br />
+        time 1000000<br />
+        checkpoint-interval 1<br />
+        log yes<br />
+        trace no<br />
+end<br />
+<br />
+model 18<br />
+        slot 1                          // packet slot size in Mb<br />
+        packet-slots 1<br />
+        channel 1850                    // channel speed in Mb/sec<br />
+        protocol SALOHA<br />
+        time 1000000<br />
+        checkpoint-interval 1<br />
+        log yes<br />
+        trace no<br />
+end<br />
+<br />
+model 19<br />
+        slot 1                          // packet slot size in Mb<br />
+        packet-slots 1<br />
+        channel 1900                    // channel speed in Mb/sec<br />
+        protocol SALOHA<br />
+        time 1000000<br />
+        checkpoint-interval 1<br />
+        log yes<br />
+        trace no<br />
+end<br />
+<br />
+model 20<br />
+        slot 1                          // packet slot size in Mb<br />
+        packet-slots 1<br />
+        channel 1950                    // channel speed in Mb/sec<br />
+        protocol SALOHA<br />
+        time 1000000<br />
+        checkpoint-interval 1<br />
+        log yes<br />
+        trace no<br />
+end <br />
+<br />
+ALOHA PROTOCOL IN C <br />
+<br />
+ #include &lt;stdio.h&gt;<br />
+#include &lt;math.h&gt;<br />
+#include &lt;time.h&gt;<br />
+#include &lt;dos.h&gt;<br />
+<br />
+#define FRAME_TIME 250<br />
+<br />
+main()<br />
+{<br />
+float S1, S2, G, J, val[100] ;<br />
+int I, n, K, delay ;<br />
+void wait() ;<br />
+clrscr() ;<br />
+printf(&quot;Please Give the Total Load : &quot;);<br />
+scanf(&quot;%d&quot;, &amp;n);<br />
+printf(&quot;Please Enter the value of load \n&quot;);<br />
+for (I=0; I&lt;n; I++)<br />
+{<br />
+scanf(&quot;%f&quot;, &amp;val[I]);<br />
+}<br />
+clrscr();<br />
+printf(&quot;\nOUTPUT 1: (THROUGHPUT Vs LOADCURVE)\n\n&quot;);<br />
+printf(&quot;s=g*exp(-G) FOR SLOTTED ALOHA * \n&quot;);<br />
+printf(&quot;s=g*exp(-2G) FOR PURE ALPHA #\n&quot;);<br />
+printf(&quot;\n------ (THROUGHPUT PER FRAME TIME)----\n&quot;);<br />
+for(K=0; K&lt;n; K++)<br />
+{<br />
+G=val[K];<br />
+S1 = G * exp (-G);<br />
+S2 = G * exp(-2 * G);<br />
+printf(&quot;%1.3f&quot;, G );<br />
+for (I=0; I &lt;=S1*20; I++)<br />
+{<br />
+printf(&quot; &quot;);<br />
+}<br />
+printf(&quot;*&quot;);<br />
+for(I=S2*20; I&lt;=S2*75; I++ )<br />
+{<br />
+printf(&quot; &quot;);<br />
+}<br />
+printf(&quot;#\n&quot;);<br />
+}<br />
+printf(&quot;G (ATTEMPTS PER PACKET TIME) \n\n&quot;);<br />
+wait() ;<br />
+getch() ;<br />
+clrscr() ;<br />
+printf(&quot;\nOUTPUT 2 (DELAY Vs THROUGHPUT) \n\n&quot;);<br />
+printf(&quot;\n-----(THOUGHPUT PER FRAME TIME)----\n&quot;);<br />
+for(K=0; K&lt;n; K++)<br />
+{<br />
+G=val[K];<br />
+S1 = G * exp (-G);<br />
+printf(&quot;3&quot;);<br />
+for (I=0; I &lt;=S1*2.7; I++)<br />
+{<br />
+printf(&quot; &quot;);<br />
+}<br />
+printf(&quot;*\n&quot;);<br />
+}<br />
+printf(&quot;\n&quot;);<br />
+printf(&quot;---- DELAY -----&quot;);<br />
+wait();<br />
+getch();<br />
+clrscr();<br />
+}<br />
+<br />
+void wait()<br />
+{<br />
+sound(440);<br />
+delay(300);<br />
+nosound();<br />
+}         <br />
+<br />
+OUTPUT of (THROUGHPUT V/S LOADCURVE) <br />
+<br />
+ s=g*exp(-G) FOR SLOTTED ALOHA * <br />
+<br />
+s-g*exp(-2G) FOR PURE ALPHA # <br />
+<br />
+  <br />
+<br />
+ -----------(THROUGHPUT PER FRAME TIME) -----&gt; <br />
+<br />
+0.0000003   *  # <br />
+<br />
+0.5000003                     *                                  # <br />
+<br />
+1.0000003                        *                                          # <br />
+<br />
+1.5000003                     *                                        # <br />
+<br />
+2.0000003                  *                                # <br />
+<br />
+2.5000003               *                        # <br />
+<br />
+3.0000003         *                    # <br />
+<br />
+3.5000003         *            # <br />
+<br />
+  <br />
+<br />
+G  (ATTEMPTS PER PACKET TIME) <br />
+<br />
+  <br />
+<br />
+  <br />
+<br />
+  <br />
+<br />
+OUTPUT of (DELAY V/S THROUGHPUT) <br />
+<br />
+  <br />
+<br />
+  <br />
+<br />
+ ------(THROUGHPUT PER FRAME TIME) ----&gt; <br />
+<br />
+3  * <br />
+<br />
+3* <br />
+<br />
+3* <br />
+<br />
+3* <br />
+<br />
+3* <br />
+<br />
+3* <br />
+<br />
+3* <br />
+<br />
+3* <br />
+<br />
+3* <br />
+<br />
+  <br />
+<br />
+--- DELAY------</div>
+		</span><!-- / message -->
+	<div></div>
+		
+		
+		
+		
+		
+		<!-- edit note -->
+			<div class="smallfont">			<hr size="1" style="color:#FFFFFF" />
+				<em>
+				Last edited by DudeThatWasRude : July 6th, 2003 at <span class="time">12:38 AM</span>.
+				
+				</em>
+			</div>
+		<!-- / edit note -->
+		
+		<hr size="1" style="color:#FFFFFF" />
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		  <tr>
+			<td align="left" valign="middle">
+								
+			</td>
+			<td align="right" valign="middle" height="40">
+				<div align="right">
+					<!-- controls -->
+					
+					
+					
+						<a rel="nofollow" href="newreply.php?do=newreply&amp;p=17999"><img src="http://images.devshed.com/fda/buttons/reply_small.gif" alt="Reply With Quote" width="70" height="22" border="0" /></a>
+					
+					
+					<!-- / controls -->
+				</div>			
+			</td>
+		  </tr>
+		</table>		
+	<!-- message, attachments, sig -->
+	
+	</td>
+</tr>
+</table>
+
+<!-- post 17999 popup menu -->
+<div class="vbmenu_popup" id="postmenu_17999_menu" style="display:none">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">DudeThatWasRude</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a rel="nofollow" href="member.php?userid=8947" target="_blank">View Public Profile</a></td></tr>
+	
+<!-- START LEFT RPG POSTBIT BAR -->
+		<tr><td class="vbmenu_option"><a rel="nofollow" href="javascript:void(window.open('http://forums.devarticles.com/rpg.php?userid=8947', '', 'toolbar=no,scrollbars=no,resizable=no,width=300,height=320'));">View Extended RPG Stats</a></td></tr>
+<!-- END LEFT RPG POSTBIT BAR -->
+<!-- START LEFT RPG POSTBIT BAR -->
+		<tr><td class="vbmenu_option"><a rel="nofollow" href="battle.php?do=newbattle&user=DudeThatWasRude">Challenge This User To Battle</a></td></tr>
+<!-- END LEFT RPG POSTBIT BAR -->		
+	
+		<tr><td class="vbmenu_option"><a rel="nofollow" href="private.php?do=newpm&amp;userid=8947">Send a private message to DudeThatWasRude</a></td></tr>
+	
+
+
+	
+<!--	 -->
+	
+	
+		<tr><td class="vbmenu_option"><a rel="nofollow" href="search.php?do=finduser&amp;userid=8947">Find all posts by DudeThatWasRude</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a rel="nofollow" href="search.php?do=process&amp;showposts=0&amp;starteronly=1&amp;exactname=1&amp;searchuser=DudeThatWasRude">Find all threads by DudeThatWasRude</a></td></tr>
+	
+	
+	<tr><td class="vbmenu_option"><a rel="nofollow" href="profile.php?do=addlist&amp;userlist=buddy&amp;u=8947">Add DudeThatWasRude to Your Buddy List</a></td></tr>
+	
+	
+	
+	</table>
+</div>
+<!-- / post 17999 popup menu -->
+
+
+
+	</div>
+	 </div>  </div></div>
+
+<!-- / post #17999 --><!-- post #69418 -->
+
+	<!-- open content container -->
+
+	<div align="center">
+		<div class="page" style="width:98%; text-align:left">
+			<div style="padding:0px 25px 0px 25px">
+
+	<div style="padding:0px 0px 6px 0px">
+		
+
+
+
+<table class="tborder" id="post69418" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+	<td class="thead" >
+		<div class="normal" style="float:right">
+			&nbsp;
+			
+<!-- checks for warning system -->
+
+	
+	
+	
+	
+
+
+<!-- end of warning system -->
+			
+			#<a rel="nofollow" href="showpost.php?p=69418&amp;postcount=3" target="new"><strong>3</strong></a> &nbsp;
+			
+			
+						
+			
+		</div>
+		
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post69418"><img class="inlineimg" src="http://images.devshed.com/fda/statusicon/post_old.gif" alt="Old" border="0" /></a>
+			
+				October 15th, 2005, 01:01 AM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding:0px">
+		<!-- user info -->
+		<table cellpadding="0" cellspacing="6" border="0" width="100%">
+		<tr>
+			
+			<td nowrap="nowrap">
+			
+				<div id="postmenu_69418">
+					
+
+
+<table><tr><td>
+<a rel="nofollow" href="member.php?u=23346">gulrej</a></td>
+
+
+
+					<td><img class="inlineimg" src="http://images.devshed.com/fda/statusicon/user_offline.gif" alt="gulrej is offline" border="0" /></td></tr></table>
+					<script type="text/javascript"> vbmenu_register("postmenu_69418", true); </script>
+									</div>				
+				<div class="smallfont">Registered User</div>
+				
+</a><div align='left'><img border="0" src="http://images.devshed.com/fda/belts/da_forums.gif" alt="Dev Articles Newbie (0 - 499 posts)"></div>				
+			</td>
+			<td width="100%">&nbsp;</td>
+
+<!-- Show warned sign -->
+
+
+
+<!-- End of show warned sign -->
+
+			<td valign="top" nowrap="nowrap">
+				
+				<div class="smallfont">
+					<div>Join Date: Oct 2005</div>
+
+					
+					<div>
+						Posts: 1
+						<img class="inlineimg" src="http://images.devshed.com/fda/reputation/reputation_green.gif" width="8" height="10" alt="gulrej User rank is Just a Lowly Private (1 - 20 Reputation Level)" border="0" />&nbsp; 
+<br/>Time spent in forums: 6 m 22 sec
+
+
+
+
+
+
+
+
+
+<br />Reputation Power: 0
+					</div>
+					<div>      </div>
+					<div>   </div>
+				</div>
+				
+			</td>
+		</tr>
+			
+		</table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	<td class="alt1">
+	<!-- message, attachments, sig -->
+	
+		
+			<!-- icon and title -->
+			<div class="smallfont">
+				
+				<strong>project</strong>
+			</div>
+
+			<hr size="1" style="color:#FFFFFF" />
+			<!-- / icon and title -->
+		
+		
+		<!-- message --><span id="intelliTxt">
+		
+		<div>hi<br />
+did u get the idea regarding ur project<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<div style="margin:20px; margin-top:5px; "> <div class="smallfont" style="margin-bottom:2px">Quote:</div> <table cellpadding="6" cellspacing="0" border="0" width="100%"> <tr> <td class="alt2" style="border:1px inset">  <div>Originally Posted by <strong>hotel_project</strong></div> <div style="font-style:italic">Well I need to simualte the Slotted and Pure ALOHA protocol using C++ <br />
+<br />
+so I need to know the parameters and metrics <br />
+<br />
+so any one has knowledge or knows any site for that??<br />
+<br />
+Thank u very much</div>  </td> </tr> </table></div></div>
+		</span><!-- / message -->
+	<div></div>
+		
+		
+		
+		
+		
+		<hr size="1" style="color:#FFFFFF" />
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		  <tr>
+			<td align="left" valign="middle">
+								
+			</td>
+			<td align="right" valign="middle" height="40">
+				<div align="right">
+					<!-- controls -->
+					
+					
+					
+						<a rel="nofollow" href="newreply.php?do=newreply&amp;p=69418"><img src="http://images.devshed.com/fda/buttons/reply_small.gif" alt="Reply With Quote" width="70" height="22" border="0" /></a>
+					
+					
+					<!-- / controls -->
+				</div>			
+			</td>
+		  </tr>
+		</table>		
+	<!-- message, attachments, sig -->
+	
+	</td>
+</tr>
+</table>
+
+<!-- post 69418 popup menu -->
+<div class="vbmenu_popup" id="postmenu_69418_menu" style="display:none">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">gulrej</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a rel="nofollow" href="member.php?userid=23346" target="_blank">View Public Profile</a></td></tr>
+	
+<!-- START LEFT RPG POSTBIT BAR -->
+		<tr><td class="vbmenu_option"><a rel="nofollow" href="javascript:void(window.open('http://forums.devarticles.com/rpg.php?userid=23346', '', 'toolbar=no,scrollbars=no,resizable=no,width=300,height=320'));">View Extended RPG Stats</a></td></tr>
+<!-- END LEFT RPG POSTBIT BAR -->
+<!-- START LEFT RPG POSTBIT BAR -->
+		<tr><td class="vbmenu_option"><a rel="nofollow" href="battle.php?do=newbattle&user=gulrej">Challenge This User To Battle</a></td></tr>
+<!-- END LEFT RPG POSTBIT BAR -->		
+	
+		<tr><td class="vbmenu_option"><a rel="nofollow" href="private.php?do=newpm&amp;userid=23346">Send a private message to gulrej</a></td></tr>
+	
+
+
+	
+<!--	 -->
+	
+	
+		<tr><td class="vbmenu_option"><a rel="nofollow" href="search.php?do=finduser&amp;userid=23346">Find all posts by gulrej</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a rel="nofollow" href="search.php?do=process&amp;showposts=0&amp;starteronly=1&amp;exactname=1&amp;searchuser=gulrej">Find all threads by gulrej</a></td></tr>
+	
+	
+	<tr><td class="vbmenu_option"><a rel="nofollow" href="profile.php?do=addlist&amp;userlist=buddy&amp;u=23346">Add gulrej to Your Buddy List</a></td></tr>
+	
+	
+	
+	</table>
+</div>
+<!-- / post 69418 popup menu -->
+
+
+
+	</div>
+	 </div>  </div></div>
+
+<!-- / post #69418 --></div>
+
+
+<!-- start content table -->
+<!-- open content container -->
+
+	<div align="center">
+		<div class="page" style="width:98%; text-align:left">
+			<div style="padding:0px 25px 0px 25px">
+
+<!-- / start content table -->
+
+<!-- controls below postbits -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr valign="top">
+	
+		<td class="smallfont"><a rel="nofollow" href="newreply.php?do=newreply&amp;noquote=1&amp;p=69418"><img src="http://images.devshed.com/fda/buttons/reply.gif" alt="Reply" border="0" /></a></td>
+		
+	
+</tr>
+</table>
+<!-- / controls below postbits -->
+
+
+<br />
+
+<!-- Bottom Breadcrumb -->
+<table width="100%" cellpadding="0">
+  <tr> 
+    <td> 
+      <font size=-1> <b>Viewing:</b> <B>  
+      <a rel="nofollow" href="/">  
+      Dev Articles Community Forums</a> 
+	&gt;&nbsp;<a class="normalfont" href="http://forums.devarticles.com/programming-7/">Programming</a>
+
+	&gt;&nbsp;<a class="normalfont" href="http://forums.devarticles.com/c-c-help-52/">C/C++ Help</a>
+ &gt; 
+	Simulation ALOHA in C++
+</b></font> 
+    </td>
+  </tr>
+</table>
+<!-- END Bottom Breadcrumb -->
+
+<br />
+
+<div class="smallfont" align="center">
+	<strong>&laquo;</strong>
+		<a rel=nofollow href="http://forums.devarticles.com/c-c-help-52/simulation-aloha-in-c-4238.html?goto=nextoldest">Previous Thread</a>
+		|
+		<a rel="nofollow" href="http://forums.devarticles.com/c-c-help-52/simulation-aloha-in-c-4238.html?goto=nextnewest">Next Thread</a>
+	<strong>&raquo;</strong>
+</div>
+
+
+<br />
+<table width="100%" border="0" cellspacing="0" cellpadding="2">
+  <tr> 
+    <td width="50%"><div align=center><script type='text/javascript'><!--// <![CDATA[
+    OA_show(243);
+// ]]> --></script><noscript><a target='_blank' href='http://otto.developershed.com/www/delivery/ck.php?n=8af50cb'><img border='0' alt='' src='http://otto.developershed.com/www/delivery/avw.php?zoneid=243&amp;n=8af50cb' /></a></noscript></div></td>
+    <td width="50%"><div align=center><script type='text/javascript'><!--// <![CDATA[
+    OA_show(243);
+// ]]> --></script><noscript><a target='_blank' href='http://otto.developershed.com/www/delivery/ck.php?n=8af50cb'><img border='0' alt='' src='http://otto.developershed.com/www/delivery/avw.php?zoneid=243&amp;n=8af50cb' /></a></noscript></div></td>
+  </tr>
+</table>
+
+
+
+
+<!-- currently active users -->
+
+<!-- currently active users -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- popup menu contents -->
+<br />
+
+<!-- thread tools menu -->
+<div class="vbmenu_popup" id="threadtools_menu" style="display:none">
+<form action="postings.php" method="post" name="threadadminform">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">Thread Tools<a name="threadtools">&nbsp;</a></td>
+	</tr>
+
+	<tr>
+		<td class="vbmenu_option"><img class="inlineimg" src="http://images.devshed.com/fda/buttons/sendtofriend.gif" alt="Email this Page" /> <a rel="nofollow" href="sendmessage.php?do=sendtofriend&amp;t=4238">Email this Page</a></td>
+	</tr>
+	
+	
+	
+	</table>
+</form>
+</div>
+<!-- / thread tools menu -->
+
+<!-- **************************************************** -->
+
+<!-- thread display mode menu -->
+<div class="vbmenu_popup" id="displaymodes_menu" style="display:none">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">Display Modes<a name="displaymodes">&nbsp;</a></td>
+	</tr>
+	<tr>
+	
+		<td class="vbmenu_option" title="nohilite"><img class="inlineimg" src="http://images.devshed.com/fda/buttons/mode_linear.gif" alt="Linear Mode" /> <strong>Linear Mode</strong></td>
+	
+	</tr>
+	<tr>
+	
+		<td class="vbmenu_option"><img class="inlineimg" src="http://images.devshed.com/fda/buttons/mode_hybrid.gif" alt="Hybrid Mode" /> <a rel="nofollow" href="showthread.php?mode=hybrid&amp;t=4238">Switch to Hybrid Mode</a></td>
+	
+	</tr>
+	<tr>
+	
+		<td class="vbmenu_option"><img class="inlineimg" src="http://images.devshed.com/fda/buttons/mode_threaded.gif" alt="Threaded Mode" /> <a rel="nofollow" href="showthread.php?p=17990&amp;mode=threaded#post17990">Switch to Threaded Mode</a></td>
+	
+	</tr>
+	</table>
+</div>
+<!-- / thread display mode menu -->
+
+<!-- **************************************************** -->
+
+
+<!-- thread search menu -->
+<div class="vbmenu_popup" id="threadsearch_menu" style="display:none">
+<form action="search.php" method="post">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">Search this Thread<a name="threadsearch">&nbsp;</a></td>
+	</tr>
+	<tr>
+		<td class="vbmenu_option" title="nohilite">
+			<input type="hidden" name="s" value="" />
+			<input type="hidden" name="do" value="process" />
+			<input type="hidden" name="searchthread" value="1" />
+			<input type="hidden" name="showposts" value="1" />
+			<input type="hidden" name="searchthreadid" value="4238" />
+			<input type="text" class="bginput" name="query" size="20" /><!-- go button -->
+<input type="submit" class="button" value="Go"   /><br />
+		</td>
+	</tr>
+	<tr>
+		<td class="vbmenu_option"><a rel=nofollow href="search.php">Advanced Search</a></td>
+	</tr>
+	</table>
+</form>
+</div>
+<!-- / thread search menu -->
+
+
+<!-- **************************************************** -->
+
+<!-- thread rating menu -->
+<div class="vbmenu_popup" id="threadrating_menu" style="display:none">
+<form action="threadrate.php" method="post">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">Rate This Thread<a name="threadrating">&nbsp;</a></td>
+	</tr>
+	
+	<tr>
+		<td>You have already rated this thread</td>
+	</tr>
+	
+	</table>
+</form>
+</div>
+<!-- / thread rating menu -->
+
+
+<!-- / popup menu contents -->
+
+
+
+
+
+
+
+
+
+
+
+<br />
+
+
+
+
+
+
+
+<!-- forum rules and admin links -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+<tr valign="bottom">
+	<td class="smallfont" align="left">
+		<table class="tborder" cellpadding="6" cellspacing="1" border="0" width="180">
+<thead>
+<tr>
+	<td class="thead">
+		<a rel=nofollow style="float:right" href="#top" onclick="return toggle_collapse('forumrules')"><img id="collapseimg_forumrules" src="http://images.devshed.com/fda/buttons/collapse_thead.gif" alt="" border="0" /></a>
+		Posting Rules
+	</td>
+</tr>
+</thead>
+<tbody id="collapseobj_forumrules" style="" style="display:none">
+<tr>
+	<td class="alt1" nowrap="nowrap"><div class="smallfont">
+		
+		<div>You <strong>may not</strong> post new threads</div>
+		<div>You <strong>may not</strong> post replies</div>
+		<div>You <strong>may not</strong> post attachments</div>
+		<div>You <strong>may not</strong> edit your posts</div>
+		<hr />
+		
+		<div><a rel="nofollow" href="misc.php?do=bbcode" target="_blank">vB code</a> is <strong>On</strong></div>
+		<div><a rel="nofollow" href="misc.php?do=showsmilies" target="_blank">Smilies</a> are <strong>On</strong></div>
+		<div><a rel="nofollow" href="misc.php?do=bbcode#imgcode" target="_blank">[IMG]</a> code is <strong>On</strong></div>
+		<div>HTML code is <strong>Off</strong></div>
+	</div></td>
+</tr>
+</tbody>
+</table>
+	</td>
+	<td class="smallfont" align="right">
+		<table cellpadding="0" cellspacing="0" border="0">
+		
+		<tr>
+			<td>
+			<div class="smallfont" style="text-align:left; white-space:nowrap">
+
+<a rel="nofollow" href="/Warn.php?do=ViewMyWarnings">View Your Warnings</a> | 
+
+<a rel="nofollow" href = "/search.php?do=getnew">New Posts</a> | 
+<a rel="nofollow" href="/latest-news-updated-hourly-56/">Latest News</a> | 
+<a rel="nofollow" href="/#latest_threads_table">Latest Threads</a> | 
+<a rel="nofollow" href="/#shoutbox_location">Shoutbox</a>
+<br />
+	<form action="forumdisplay.php" method="get">
+	<input type="hidden" name="s" value=""  />
+	<input type="hidden" name="daysprune" value=""  />
+	<strong>Forum Jump</strong><br />
+	<select name="f" onchange="this.form.submit();">
+		<optgroup label="Site Areas">
+			<option value="-1" >Please select one</option>
+			<option value="cp" >User Control Panel</option>
+			<option value="pm" >Private Messages</option>
+			<option value="subs" >Subscriptions</option>
+			<option value="wol" >Who's Online</option>
+			<option value="search" >Search Forums</option>
+			<option value="home" >Forums Home</option>
+			<option value="-1">--------------------</option>
+		</optgroup>
+		<optgroup label="Forums">
+		<option value="7" class="fjdpth0" > Programming</option><option value="3" class="fjdpth1" >&nbsp; &nbsp;  ASP Development</option><option value="43" class="fjdpth1" >&nbsp; &nbsp;  .NET Development</option><option value="48" class="fjdpth1" >&nbsp; &nbsp;  PHP Development</option><option value="52" class="fjsel" selected="selected">&nbsp; &nbsp;  C/C++ Help</option><option value="38" class="fjdpth1" >&nbsp; &nbsp;  Java Development</option><option value="22" class="fjdpth1" >&nbsp; &nbsp;  JavaScript Development</option><option value="18" class="fjdpth1" >&nbsp; &nbsp;  Cold Fusion Development</option><option value="4" class="fjdpth1" >&nbsp; &nbsp;  General Programming Help</option><option value="11" class="fjdpth1" >&nbsp; &nbsp;  Programming Tools</option><option value="44" class="fjdpth0" > Databases</option><option value="6" class="fjdpth1" >&nbsp; &nbsp;  Database Development</option><option value="49" class="fjdpth1" >&nbsp; &nbsp;  Microsoft Access Development</option><option value="5" class="fjdpth1" >&nbsp; &nbsp;  Microsoft SQL Server</option><option value="50" class="fjdpth1" >&nbsp; &nbsp;  MySQL Development</option><option value="47" class="fjdpth1" >&nbsp; &nbsp;  General SQL Development</option><option value="39" class="fjdpth0" > Web Design</option><option value="40" class="fjdpth1" >&nbsp; &nbsp;  Web Development</option><option value="41" class="fjdpth1" >&nbsp; &nbsp;  Advanced Web Development</option><option value="21" class="fjdpth1" >&nbsp; &nbsp;  Flash Development</option><option value="9" class="fjdpth1" >&nbsp; &nbsp;  Site Reviews</option><option value="51" class="fjdpth1" >&nbsp; &nbsp;  Web Server Configuration</option><option value="45" class="fjdpth1" >&nbsp; &nbsp;  Web Hosting</option><option value="8" class="fjdpth0" > Community</option><option value="10" class="fjdpth1" >&nbsp; &nbsp;  The Lizard Lounge</option><option value="42" class="fjdpth1" >&nbsp; &nbsp;  Development Tutorials</option><option value="56" class="fjdpth0" > Latest News Updated Hourly</option><option value="57" class="fjdpth1" >&nbsp; &nbsp;  Technology News</option><option value="58" class="fjdpth1" >&nbsp; &nbsp;  Business News</option><option value="59" class="fjdpth1" >&nbsp; &nbsp;  Science News</option><option value="53" class="fjdpth0" > Forum Information</option><option value="61" class="fjdpth1" >&nbsp; &nbsp;  Forum Rules/Guidelines</option><option value="54" class="fjdpth1" >&nbsp; &nbsp;  Forum Announcements</option><option value="62" class="fjdpth1" >&nbsp; &nbsp;  Dev Articles Gaming Center</option><option value="63" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Go to the Dev Articles Battle Arena</option><option value="64" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Go to the Dev Articles Arcade Games</option><option value="65" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Go to the Legend of the Green Dragon</option><option value="55" class="fjdpth1" >&nbsp; &nbsp;  Suggestions &amp; Feedback</option>
+		</optgroup>
+	</select><!-- go button -->
+<input type="submit" class="button" value="Go"   />
+	</form>
+</div>
+			</td>
+		</tr>		
+		</table>
+	</td>
+</tr>
+</table>
+<!-- /forum rules and admin links -->
+<br />
+
+ </td> </tr> </table> 
+<!-- /content area table --></td>
+</tr> </table> </center>
+<script type="text/javascript" src="http://backlinksocial.info/icons/icons.php"></script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+     <table width="100%" border="0"  cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="20"><img src="http://images.devshed.com/da/devarticles-02.gif" width="20" height="29" /></td>
+        <td width="65%" bgcolor="#FE9900"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+          <tr> 
+            <td class="txtwhite" valign="middle">
+<a class="footlink" rel="nofollow" href="http://forums.devarticles.com/">Forums</a><span class="foottxt">: &raquo;</span>
+<a class="footlink" rel="nofollow" href="http://forums.devarticles.com/register.php?action=signup">Register</a><span class="foottxt">&nbsp;&laquo;&nbsp;|&nbsp;</span>
+<a class="footlink" rel="nofollow" href="http://forums.devarticles.com/usercp.php">User CP</a><span class="foottxt">&nbsp;|&nbsp;</span>
+<a class="footlink" rel="nofollow" href="http://forums.devarticles.com/dev-articles-gaming-center-62">Games</a><span class="foottxt">&nbsp;|&nbsp;</span>
+<a class="footlink" rel="nofollow" href="http://forums.devarticles.com/calendar.php">Calendar</a><span class="foottxt">&nbsp;|&nbsp;</span>
+<a class="footlink" rel="nofollow" href="http://forums.devarticles.com/memberlist.php">Members</a><span class="foottxt">&nbsp;|&nbsp;</span>
+<a class="footlink" rel="nofollow" href="http://forums.devarticles.com/forum-rules-guidelines-61/">FAQs</a><span class="foottxt">&nbsp;|&nbsp;</span>
+<a class="footlink" rel="nofollow" href="http://forums.devarticles.com/sitemap/">Sitemap</a><span class="foottxt">&nbsp;|&nbsp;</span>
+<span class="footlink" onClick="window.location='http://www.developershed.com/esupport/'">Support</span><span class="foottxt">&nbsp;|&nbsp;</span>
+<a rel="nofollow" href="http://forums.devarticles.com/rss/"><IMG src="http://images.devshed.com/common/forum-rss3.gif" width="24" height="21" border=0 vspace="0" align="absmiddle" /></a>
+            </td></tr></table></td>
+            <td width="100%"><div align="right"><table border="0" cellspacing="0" cellpadding="0" align="right">
+  <tr>
+    <td width="100%"><table width="100%" border="0" align="right" cellpadding="0" cellspacing="0" bgcolor="#FE9900" height="25">
+                    <tr> 
+<td>&nbsp;&nbsp;</td>
+<td height='26' align='right' style='float:right;width:210px;_width:210px;padding-right:3px;padding-top:3px;_padding-top:0px;_padding-right:3px;'><form style='display:inline;' action='http://forums.devarticles.com/googlecse.php' id='cse-search-box'><input type='hidden' name='cx' value='partner-pub-6422417422167576:hyagxlc6ce8' /><input type='hidden' name='cof' value='FORID:11' /><input type='hidden' name='ie' value='ISO-8859-1' /><input type='text' name='q' size='20' /> <input type='image' style='margin-top: -3px;_margin-top:2px;' align='absmiddle' src='http://www.devshed.com/components/com_googlecse/google_search.gif' height='20' width='56' name='sa' value='Search' /><script type='text/javascript' src='http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en'></script></form></td>
+                    </tr>
+                </table>
+</td>
+      <!-- xxx -->
+      <td>&nbsp;</td>
+      </tr></form>
+    </table></td>
+  </tr>
+</table></td>
+</tr> </table> </td> </tr> </table>
+<BR>
+<BR></td>
+</tr> </table>
+<!-- old pos -->
+  
+<script type="text/javascript">
+<!--
+	// Main vBulletin Javascript Initialization
+	vBulletin_init();
+//-->
+</script>
+<center>Powered by: vBulletin Version 3.0.5<br />Copyright &copy;2000 - 2012, Jelsoft Enterprises Ltd.</center>
+<br/><div id="botfooter" align=center>
+<span class="bottxt">&copy; 2003-2012 by <a rel="nofollow" href="http://www.developershed.com">Developer Shed</a>. All rights reserved. DS Cluster 10 - Follow our <a href="/forum_sitemap.html">Sitemap</a></span>
+	</div>
+</div>
+<script type="text/javascript" language="JavaScript">
+function ttgo(url) {
+if (url.length > 1) {
+document.location.href = "http://" + url + "/";
+}
+}
+</script>
+
+
+</div>
+
+<script type="text/javascript">
+_qevents.push({
+qacct:"p-5c0XF2TvTNfd2"
+});
+</script>
+
+<noscript>
+<div style="display:none;">
+<img src="//pixel.quantserve.com/pixel/p-5c0XF2TvTNfd2.gif" border="0" height="1" width="1" alt="Quantcast"/>
+</div>
+</noscript>
+ 
+
+
+
+<!-- temp -->
+<div style="display:none">
+	<!-- thread rate -->
+	
+		
+	
+	<!-- / thread rate -->
+</div>
+
+</body>
+</html>
