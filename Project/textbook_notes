@@ -1,0 +1,8 @@
+Pure ALOHA
+1. Users transmit frames whenever they have.
+2. Colliding frames will be damaged.
+3. A sender can find out whether its transmission succeed by
+	1). listening to the channel.
+	2). acknowledgement.
+4. If the frame was damaged, wait a random time + send again.
+5. Frame size is uniform.
