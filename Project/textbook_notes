@@ -12,4 +12,8 @@ Pure ALOHA
 	G: load, average # of transmission attempts per frame time(X).(includes both the old and new frames)
 	P: probability of a successful frame transmission.
 	S: throughout, average # of successful frame transmission per frame time(X).
-S = GP
+
+	S = GP
+
+Slotted ALOHA
+The vulnerable period is halved
