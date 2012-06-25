@@ -3,23 +3,46 @@
  Simulating Protocol 6
 
 
-Events: 100000    Parameters: 40 20 10
-Tick 2. Proc 0 sent frame: type=Data  seq=0  ack=7  payload=0
-Tick 1. Proc 1 sent frame: type=Data  seq=0  ack=7  payload=0
-Tick 3. Proc 1 sent frame: type=Data  seq=1  ack=7  payload=1
-Tick 4. Proc 1 sent frame that got lost: type=Data  seq=2  ack=7  payload=2
-Tick 5. Proc 1 sent frame that got lost: type=Data  seq=3  ack=7  payload=3
-Tick 7. Proc 0 sent frame: type=Data  seq=1  ack=7  payload=1
-Tick 8. Proc 0 sent frame that got lost: type=Data  seq=2  ack=7  payload=2
-Tick 11. Proc 0 sent frame that got lost: type=Data  seq=3  ack=7  payload=3
-Tick 41. Proc 1 sent frame that got lost: type=Data  seq=0  ack=7  payload=0
-Tick 43. Proc 1 sent frame: type=Data  seq=1  ack=7  payload=1
-Tick 45. Proc 0 sent frame that got lost: type=Data  seq=0  ack=7  payload=0
-Tick 44. Proc 1 sent frame that got lost: type=Data  seq=2  ack=7  payload=2
-Tick 47. Proc 0 sent frame: type=Data  seq=1  ack=7  payload=1
-Tick 48. Proc 0 sent frame that got lost: type=Data  seq=2  ack=7  payload=2
-Tick 46. Proc 1 sent frame: type=Data  seq=3  ack=7  payload=3
-Tick 52. Proc 0 sent frame: type=Data  seq=3  ack=7  payload=3
+Events: 100    Parameters: 40 0 0
+
+Process 1:
+	Total data frames sent:         12
+	Data frames lost:                0
+	Data frames not lost:           12
+	Frames retransmitted:            8
+	Good ack frames rec'd:           0
+	Bad ack frames rec'd:            0
+
+	Good data frames rec'd:          0
+	Bad data frames rec'd:           0
+	Payloads accepted:               0
+	Total ack frames sent:           0
+	Ack frames lost:                 0
+	Ack frames not lost:             0
+	Timeouts:                        8
+	Ack timeouts:                    0
+
+Process 0:
+	Total data frames sent:         12
+	Data frames lost:                0
+	Data frames not lost:           12
+	Frames retransmitted:            8
+	Good ack frames rec'd:           0
+	Bad ack frames rec'd:            0
+
+	Good data frames rec'd:          0
+	Bad data frames rec'd:           0
+	Payloads accepted:               0
+	Total ack frames sent:           0
+	Ack frames lost:                 0
+	Ack frames not lost:             0
+	Timeouts:                        8
+	Ack timeouts:                    0
+
+Efficiency (payloads accepted/data pkts sent) = 0%
+End of simulation.  Time=100
+
+3
 Tick 81. Proc 1 sent frame: type=Data  seq=0  ack=7  payload=0
 Tick 85. Proc 0 sent frame: type=Data  seq=0  ack=7  payload=0
 Tick 87. Proc 1 sent frame: type=Data  seq=1  ack=7  payload=1
