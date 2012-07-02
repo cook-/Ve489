@@ -7,7 +7,7 @@ Pure ALOHA
 4. If the frame was damaged, wait a random time + send again.
 5. Frame size is uniform.
 
-	X: frame transmission time.
+	X: frame transmission time.(frame length/bit rate)
 	N: average # of frames generated per frame time(X).(0 < N < 1)
 	G: load, average # of transmission attempts per frame time(X).(includes both the old and new frames)
 	P: probability of a successful frame transmission.
