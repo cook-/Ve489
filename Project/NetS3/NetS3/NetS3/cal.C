@@ -1,6 +1,14 @@
 #include <iostream>
 #include <math.h>
 using namespace std;
+
+int
+fac(double base, int exp)
+{
+	double result;
+	for (int i = 0)
+}
+
 int
 main()
 {
