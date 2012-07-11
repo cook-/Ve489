@@ -7,9 +7,9 @@ int main()
 	
 	float s =0.0f;
 	
-	//FILE *f1,*f2,*f3;
+	FILE *f1,*f2,*f3;
 
-	//f1 = fopen("PureAloha.txt", "w");
+	f1 = fopen("PureAloha.txt", "w");
 	for(int i=0; i<7; i++)
 	{
 		for(float p1 = 0.0f; p1 < 1.0f; p1+=0.1f)
@@ -18,7 +18,7 @@ int main()
 
 			printf("%4.3f ", s/MAX_SIMULATE_TIMES);
 
-		//fprintf(f1, "%.3f,", s/MAX_SIMULATE_TIMES);
+		fprintf(f1, "%.3f,", s/MAX_SIMULATE_TIMES);
 		}
 		printf("\n");
 
@@ -27,7 +27,7 @@ int main()
 	}
 
 	
-	/*fclose(f1);
+	fclose(f1);
 	printf("\n");
 	f2 = fopen("SlotAloha.txt", "w");
 	float s1 = 0.0f;
@@ -52,6 +52,6 @@ int main()
 		fprintf(f3, "%.3f,", s2/MAX_SIMULATE_TIMES);
 	}
 	
-	fclose(f3);*/
+	fclose(f3);
 	return 0;
 }
