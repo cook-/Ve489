@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cunistd>
+#include <sys/wait>
 using namespace std;
 
 int
