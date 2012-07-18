@@ -25,7 +25,7 @@ main()
 
 	for (int i = 0; i != MAX_USER_NUM; ++i) {
 		for (int j = 0; j != MAX_TIME_SLOT; ++j) {
-			cout << *(a+i*(MAX_TIME_SLOT)+j) << " ";
+			cout << a[i][j] << " ";
 		}
 		cout << endl;
 	}
