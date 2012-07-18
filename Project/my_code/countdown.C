@@ -1,5 +1,5 @@
 #include<iostream>
-#include<syswait>
+#include<cstdlib>
 main()
 {
     int m,s;
