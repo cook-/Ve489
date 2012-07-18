@@ -7,7 +7,7 @@ main()
 {
 	for (int i = 0; i != 5; ++i) {
 		cout << "sleep for 10s..." << endl;
-		sleep(1);
+		sleep(10);
 	}
 	return 0;
 }
