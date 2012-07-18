@@ -7,7 +7,7 @@ using namespace std;
 int
 main()
 {
-	char *a[MAX_USER_NUM][MAX_TIME_SLOT];
+	int *a[MAX_USER_NUM][MAX_TIME_SLOT];
 	double p = 0.3;
 	srand(time(NULL));
 	for (int i = 0; i != MAX_USER_NUM; ++i) {
