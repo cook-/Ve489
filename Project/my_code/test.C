@@ -1,5 +1,5 @@
 #include <iostream>
-#include <sys/wait>
+#include "unistd.h"
 using namespace std;
 
 int
