@@ -32,5 +32,28 @@ main()
 		cout << endl;
 	}
 	
+	
+	for (int i = 0; i != MAX_TIME_SLOT; ++i) {
+		int cnt = 0;
+		for (int j = 0; j != MAX_USER_NUM; ++j) {
+			if (a[i][j] == 1)
+				++cnt;
+		}
+		if (cnt > 1) {
+		// wait for random time.
+			for (int j = 0; j != MAX_USER_NUM; ++j) {
+				if (a[i][j] == 1)
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+
 	return 0;
 }
