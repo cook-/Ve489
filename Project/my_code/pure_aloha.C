@@ -1,13 +1,6 @@
 #include <iostream>
+#include <ctime>
+#include <cstdlib>
 using namespace std;
 
-void
-int
-main()
-{
-	
-
-
-
-	return 0;
-}
+void initUsers(*a)
