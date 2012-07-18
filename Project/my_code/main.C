@@ -8,7 +8,7 @@ int
 main()
 {
 	int a[MAX_USER_NUM][MAX_TIME_SLOT];
-	double p = 0.3;
+	double p = 0.03;
 	srand((unsigned)time(NULL));
 	for (int i = 0; i != MAX_USER_NUM; ++i) {
 		for (int j = 0; j != MAX_TIME_SLOT; ++j) {
