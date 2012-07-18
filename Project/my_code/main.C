@@ -14,12 +14,12 @@ main()
 		for (int j = 0; j != MAX_TIME_SLOT; ++j) {
 			if (rand() < RAND_MAX*p) {
 				for (int k = 0; k != MAX_FRAME_LEN && j != MAX_TIME_SLOT; ++k) {
-					a[i*(MAX_TIME_SLOT)][j] = 1;
+					a[i][j] = 1;
 					++j;
 				}
 			}
 			else
-				a[i*(MAX_TIME_SLOT)][j] = 0;
+				a[i][j] = 0;
 		 }
 	}
 
