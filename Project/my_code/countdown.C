@@ -1,5 +1,5 @@
 #include<iostream>
-#include<conio>
+#include<syswait.h>
 main()
 {
     int m,s;
