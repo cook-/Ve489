@@ -134,17 +134,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
 
-! You can't use `macro parameter character #' in math mode.
-l.23 	\(G: load, average #
-                           of transmission attempts per frame time\)
-? x
- 
+
+Overfull \hbox (158.09483pt too wide) in paragraph at lines 20--29
+\OML/cmm/m/it/10.95 N \OT1/cmr/m/n/10.95 : \OML/cmm/m/it/10.95 average[]offrame
+sgeneretedperframetime$ $G \OT1/cmr/m/n/10.95 : \OML/cmm/m/it/10.95 load; avera
+ge\OT1/cmr/m/n/10.95 #\OML/cmm/m/it/10.95 oftransmissionattemptsperframetime$
+ []
+
+
+Overfull \hbox (97.63277pt too wide) in paragraph at lines 20--29
+\OML/cmm/m/it/10.95 k \OT1/cmr/m/n/10.95 : #\OML/cmm/m/it/10.95 oftransmissions
+attemptsperframetime$ $P \OT1/cmr/m/n/10.95 : \OML/cmm/m/it/10.95 probablityofa
+successfulframetransmission$
+ []
+
+[1] [2] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 907 strings out of 493611
- 10250 string characters out of 3142449
- 61032 words of memory out of 3000000
+ 909 strings out of 493611
+ 10272 string characters out of 3142449
+ 62032 words of memory out of 3000000
  4273 multiletter control sequences out of 15000+200000
  9401 words of font info for 34 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  27i,6n,20p,542b,181s stack positions out of 5000i,500n,10000p,200000b,50000s
-Output written on report.dvi (1 page, 400 bytes).
+
+Output written on report.dvi (3 pages, 2952 bytes).
