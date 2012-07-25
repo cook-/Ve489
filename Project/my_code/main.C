@@ -41,8 +41,6 @@ main()
 		}
 		if (cnt > 1) {
 		// wait for random time.
-			for (int j = 0; j != MAX_USER_NUM; ++j) {
-				if (a[i][j] == 1)
 			}
 		}
 	}
