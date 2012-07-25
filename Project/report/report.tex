@@ -39,8 +39,19 @@ Given the following parameters: \\
 \qquad	\(S\): throughput, average \# of successful frames per frame time \\
 
 We can get that \\
+The probability that \(k\) frames are generated duringa frame time \(X\) is given by the Poisson distribution:\\
 
 \qquad	\(P(k) = \frac{G^ke^{-G}}{k!}\) \\
+
+So the probability of zero frames during the \(2G\) vulnerable time is \\
+
+\qquad \(P(0)|_G=2G = e^(-2G)\) \\
+
+Then the throughput is given by \\
+
+\qquad \(S = Ge^{-2G}\) \\
+
+for which the maximum occurs at \(G = 0.5\) with \(S = 1/2e \approx 0.184\) \\
 
 \subsection*{Assumptions}
 
