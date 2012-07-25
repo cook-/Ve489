@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2012.6.6)  25 JUL 2012 14:26
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2012.6.6)  25 JUL 2012 14:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -139,6 +139,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--28
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--35
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
 [1] [2] (./report.aux) ) 
 Here is how much of TeX's memory you used:
  909 strings out of 493611
@@ -147,6 +157,6 @@ Here is how much of TeX's memory you used:
  4273 multiletter control sequences out of 15000+200000
  9401 words of font info for 34 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 27i,6n,20p,542b,179s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,6n,20p,543b,179s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on report.dvi (3 pages, 2868 bytes).
+Output written on report.dvi (3 pages, 3044 bytes).
