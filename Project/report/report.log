@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2012.6.6)  25 JUL 2012 13:19
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2012.6.6)  25 JUL 2012 13:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -129,22 +129,14 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
  [1
 
-]
-Runaway argument?
-{
-! Paragraph ended before \@sect was complete.
-<to be read again> 
-                   \par 
-l.13 
-     
-? x
- 
+] [1] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 900 strings out of 493611
- 10142 string characters out of 3142449
+ 905 strings out of 493611
+ 10203 string characters out of 3142449
  60032 words of memory out of 3000000
- 4267 multiletter control sequences out of 15000+200000
- 7649 words of font info for 28 fonts, out of 3000000 for 9000
+ 4269 multiletter control sequences out of 15000+200000
+ 8254 words of font info for 30 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  27i,6n,20p,223b,181s stack positions out of 5000i,500n,10000p,200000b,50000s
-Output written on report.dvi (1 page, 400 bytes).
+
+Output written on report.dvi (2 pages, 528 bytes).
