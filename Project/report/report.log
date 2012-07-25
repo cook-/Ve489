@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2012.6.6)  25 JUL 2012 14:24
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2012.6.6)  25 JUL 2012 14:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -130,7 +130,12 @@ LaTeX Font Info:    ... okay on input line 6.
  [1
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 19--20
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
 
  []
 
