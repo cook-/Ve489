@@ -6,20 +6,27 @@
 \begin{document}
 
 \title{Project2 Report}
+
 \author{Ye Feiyang \and Li Jianliang \and Yuan Xiaojie}
+
 \date{July 25, 2012}
+
 \maketitle
 
 \section*{Introduction}
+
 What is MAC protocol?\\
 In this project, we will simulate four MAC protocals including ALOHA, Slotted ALOHA, CSMA and CSMA/CD. For each protocal, the basic thoeries will be introduced first, then several assumptions that clarify ...
 
 \section*{Pure ALOHA}
+
 \subsection*{Theories}
+
 ALOHA was devised by Norman Abramson in the 1970s to solve the channel allocation problem. The basic idea of pure ALOHA is that users(or stations) can transimit frames whenever they have, which is totally random. Of course, when different users are transmiting their frames at the same time, those frames will collide and all of them will be damaged. A sender can find out whether its transmission succeed by checking the acknoeledgements from the receiver. If the frame was damadged, it waits for a random time and send again.\\
 
 Given the following parameters,\\
-	\(X\): frame transmission time
+
+\qquad	\(X\): frame transmission time
 	\(N\): average \# of frames genereted per frame time
 	\(G\): load, average \# of transmission attempts per frame time
 	\(k\): \# of transmissions attempts per frame time
