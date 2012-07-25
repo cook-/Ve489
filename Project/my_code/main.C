@@ -41,7 +41,6 @@ main()
 		}
 		if (cnt > 1) {
 		// wait for random time.
-			}
 		}
 	}
 
