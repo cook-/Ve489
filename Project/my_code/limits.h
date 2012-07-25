@@ -2,7 +2,8 @@
 #define LIMITS_H
 
 const unsigned int MAX_USER_NUM = 5;
-const unsigned int MAX_TIME_SLOT = 30;
+const unsigned int MAX_SLOT_NUM = 30;
 const unsigned int MAX_FRAME_LEN = 4;
+const unsigned int MAX_WAIT_TIME = RAND_MAX/5;
 
 #endif
