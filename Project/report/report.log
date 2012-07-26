@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2012.6.6)  26 JUL 2012 18:34
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2012.6.6)  26 JUL 2012 18:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -224,16 +224,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--53
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--55
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 63--67
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 70--71
 
  []
@@ -274,38 +264,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 84--85
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
- []
+! LaTeX Error: There's no line here to end.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 98--99
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 100--101
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 102--103
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 104--105
-
- []
-
-[3] (./report.aux) ) 
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.91 
+     
+? xx
+ 
 Here is how much of TeX's memory you used:
- 1214 strings out of 493611
- 14277 string characters out of 3142449
- 68928 words of memory out of 3000000
+ 1213 strings out of 493611
+ 14391 string characters out of 3142449
+ 67928 words of memory out of 3000000
  4559 multiletter control sequences out of 15000+200000
  9747 words of font info for 35 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  27i,6n,20p,548b,179s stack positions out of 5000i,500n,10000p,200000b,50000s
-
-Output written on report.dvi (4 pages, 6712 bytes).
+Output written on report.dvi (3 pages, 5184 bytes).
