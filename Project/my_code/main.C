@@ -72,13 +72,13 @@ main()
 }
 
 
-void generate_frame(char a[][], float p)
+void generate_frame(char a[][MAX_SIMULATE_TIME], float p)
 {
 	srand((unsigned)time(NULL));
 	for (int i = 0; i != MAX_USER_NUM; ++i) {
-		for (int j = 0; j != MAX_SLOT_NUM; ++j) {
+		for (int j = 0; j != MAX_SIMULATE_TIME; ++j) {
 			if (rand() < RAND_MAX*p) {
-				for (int k = 0; k != FRAME_LEN && j != MAX_SLOT_NUM; ++k) {
+				for (int k = 0; k != FRAME_LEN && j != MAX_SIMULATE_TIME; ++k) {
 					a[i][j] = 1;
 					++j;
 				}
@@ -91,7 +91,7 @@ void generate_frame(char a[][], float p)
 }
 
 
-void wait_for_random_time(char a[][], int userIndex, int curTime)
+void wait_for_random_time(char a[][MAX_SIMULATE_TIME], int userIndex, int curTime)
 {
 	srand((unsigned int)time(NULL));
 	int wait = rand()%MAX_WAIT_TIME + FRAME_LEN;
@@ -109,7 +109,7 @@ void wait_for_random_time(char a[][], int userIndex, int curTime)
 }
 
 
-int check_conflict(char a[][], int curTime)
+int check_conflict(char a[][MAX_SIMULATE_TIME], int curTime)
 {
 	int oneNum = 0;
 
