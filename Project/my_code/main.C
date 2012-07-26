@@ -11,11 +11,11 @@ const int COLLISION = -1;
 const int NO_COLLISION = 1;
 const int IDLE = 0;
 
-void generate_frame(char a[][], float p);
-void wait_for_random_time(char a[][], int userIndex, int curTime);
-int check_conflict(char a[][], int curTime);
-void pure_aloha_simulate(char a[][], float p);
-void slotted_aloha_simulate(char a[][], float p);
+void generate_frame(char a[][MAX_SIMULATE_TIME], float p);
+void wait_for_random_time(char a[][MAX_SIMULATE_TIME], int userIndex, int curTime);
+int check_conflict(char a[][MAX_SIMULATE_TIME], int curTime);
+void pure_aloha_simulate(char a[][MAX_SIMULATE_TIME], float p);
+void slotted_aloha_simulate(char a[][MAX_SIMULATE_TIME], float p);
 
 int
 main()
