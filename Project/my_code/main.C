@@ -121,7 +121,7 @@ int check_conflict(char a[][MAX_SIMULATE_TIME], unsigned int curTime)
 
 	if (oneNum > 1)
 		return COLLISION;
-	else if (oneNum = 1)
+	else if (oneNum == 1)
 		return NO_COLLISION;
 	else
 		return IDLE;
