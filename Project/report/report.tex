@@ -125,6 +125,25 @@ for which the maximum occurs at \(G = 1\) with \(S = 1/e \approx 0.368\) and the
 
 \section*{CSMA/CD}
 
+\subsection*{Theories}
+
+At a given moment, user A has a packet to send. Before starting transmission, it checks whether the medium is idle or not. If the medium is busy, the user waits a random time and then tries again. If the medium is idle, the user starts to transmit, and keeps sensing the medium. Once a collision signal is detected, rather than finishing sending the packet, the station stops sending immediately and waits for the next attempt. \\
+
+For choosing the random time, the protocol uses the Binary Exponential Backoff Algorithm. According to the algorithm, time is divided into discrete slots whose length is equal to the worst-case round-trip propagation time on the ether. After the first collision, the station waits either 0 or 1 slot time before another try. After the second collision, the station chooses either 0, 1, 2 or 3 slots randomly and waits that number of slot time. Thus, by the same rule, after kth collision, the number of time slots to wait is chosen randomly from the interval 0 to \(2^k-1\). \\
+
+Theoretically, the maximum throughput is given by: \\
+
+\qquad \(\rou_{max} = \frac{X}{X+t_{prop}+2et_{prop}} = \frac{1}{1+(2e+1)a}\) \\
+
+where \(a = \frac{t_{prop}}{X} = \frac{Rd}{vL}\)(\(R\): transmission rate, \(L\): frame length, \(v\): light speed in medium, \(d\): diameter of system, \(X\): frame time). \\
+
+\subsection*{Analysis}
+
+Although comparing to ALOHA and Slotted ALOHA, CSMA has greatly improved the efficiency of transmission. However, a user who is sending a frame needs time, which is twice of the propagation time, to capture the medium. During this small time interval, other users who happen to have packets to send may regard the medium as idle and begins to transit and thus destroys both packets. And with the increasing of propagation time caused by longer distance or lower transmission rate, this kind of fault will have larger effect and reduces the efficiency rapidly. \\
+
+In order to minimize the influence of problem mentioned above, CSMA/CD (collision detection) is invented. It tells users whether their packets are having collisions with other packets or not. If true, both the users stop transmission to save time and wait for another chance. 
+
 
 \end{document}
+
 
