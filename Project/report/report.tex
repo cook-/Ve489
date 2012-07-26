@@ -79,7 +79,7 @@ states[\emph{N}][\emph{M}]: \\
 
 \qquad\quad \(\vdots\) \hspace{35mm} \(\vdots\) \\
 
-\qquad userN: \hspace{-0.5mm}000000011111100\(\cdots\)1111110000001111110000 \\
+\qquad userN: \hspace{-0.5mm}\(\underbarce{000000011111100\cdots1111110000001111110000}_\text{M short time intervals \Delta t}\) \\
 
 Since the frame length(frameLen) is assumed to be constant, the number of consetutive 1s remains the same(except the frames at the end of each row). The above example always has 6 consetutive 1s which represents a 6-slot length frame. \\
 
@@ -133,7 +133,7 @@ For choosing the random time, the protocol uses the Binary Exponential Backoff A
 
 Theoretically, the maximum throughput is given by: \\
 
-\qquad \(\rou_{max} = \frac{X}{X+t_{prop}+2et_{prop}} = \frac{1}{1+(2e+1)a}\) \\
+\qquad \(\rho_{max} = \frac{X}{X+t_{prop}+2et_{prop}} = \frac{1}{1+(2e+1)a}\) \\
 
 where \(a = \frac{t_{prop}}{X} = \frac{Rd}{vL}\)(\(R\): transmission rate, \(L\): frame length, \(v\): light speed in medium, \(d\): diameter of system, \(X\): frame time). \\
 
