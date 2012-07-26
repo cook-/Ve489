@@ -79,7 +79,7 @@ states[\emph{N}][\emph{M}]: \\
 
 \qquad\quad \(\vdots\) \hspace{35mm} \(\vdots\) \\
 
-\qquad userN: \hspace{-0.5mm}\(\underbrace{000000011111100\cdots1111110000001111110000}_\text{M short time intervals Delta t}\) \\
+\qquad userN: \hspace{-0.5mm}\(\underbrace{000000011111100\cdots1111110000001111110000}_\text{M short time intervals}\) \\
 
 Since the frame length(frameLen) is assumed to be constant, the number of consetutive 1s remains the same(except the frames at the end of each row). The above example always has 6 consetutive 1s which represents a 6-slot length frame. \\
 
@@ -136,6 +136,40 @@ Theoretically, the maximum throughput is given by: \\
 \qquad \(\rho_{max} = \frac{X}{X+t_{prop}+2et_{prop}} = \frac{1}{1+(2e+1)a}\) \\
 
 where \(a = \frac{t_{prop}}{X} = \frac{Rd}{vL}\)(\(R\): transmission rate, \(L\): frame length, \(v\): light speed in medium, \(d\): diameter of system, \(X\): frame time). \\
+
+\subsection*{Assumptions}
+
+1. The propagation time is assumed to be the smallest time unit in the entire design and set to be 1 time slot. \\
+2. The "medium" is set to be a station with 1 time slot delay to all other stations. \\
+3. The duration of the simulation is in the unit of time slots. \\
+4. The states of all users during the whole process are saved in a large array and the size of it is the number of users times the duration.
+
+\subsection*{Simulation}
+
+The Simplified Procedure of the Program:
+1) The program user sets the number of stations, the probability of a station having a frame to send and the duration of the program. \\
+
+2) The program forms a new array and fills it with numbers other than 0 and 1. \\
+
+3) Using the function "setFrame()" to make the array initialized with 0s and 1s. If the frame time is set to be 4, then every 4 consecutive 1s at a position of the array means a certain station at that time will have a frame to send. \\
+
+4) The program set a "for" loop that repeats the value of duration times. In each loop, it contains another "for" loop, which repeats the number of stations times. In each small loop, the program checks the state of one station. \\
+
+(i) If the station has something to send and the medium is idle, then the station begins to send and the data it is sending will be received by the medium in the next larger loop. \\
+
+
+(ii) If the station has something to send and the medium is busy but has no collisions, it first checks whether it sent data in the last two loops. If true, it keeps sending. If false, it waits a random number of slots based on the Binary Exponential Backoff Algorithm. The act “Waiting” is realized by postponing the value in the array by a given slots. Values, which are moved out of bound, are just discarded and the newly - produced empty slots are filled by 0s. \\
+
+
+(iii) If the station has something to send and the medium is busy and has collisions, it does the same backoff strategy as in the previous part. \\
+
+(iv) In all other states, the station does nothing. \\
+
+(v) After each small loop, the program checks the state of the medium and report the change by changing values of several parameters. These parameters will be checked at the first of next large loop in order to simulate the one-slot delay. \\
+
+(vi) Another array with comparatively small size will be used to record the number of successively transmitted frames of each station.
+
+\subsection*{Results}
 
 \subsection*{Analysis}
 
