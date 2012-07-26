@@ -1,6 +1,7 @@
 \documentclass[11pt,oneside,a4paper]{report}
 \usepackage{amsmath}
 \usepackage{booktabs}
+\usepackage{graphicx}
 \everymath{\displaystyle}
 \setlength\parindent{0pt}
 \begin{document}
@@ -50,11 +51,39 @@ Then the throughput is given by \\
 
 \qquad \(S = Ge^{-2G}\) \\
 
-for which the maximum occurs at \(G = 0.5\) with \(S = 1/2e \approx 0.184\) \\
+for which the maximum occurs at \(G = 0.5\) with \(S = 1/2e \approx 0.184\) and the \(S - G\) graph is shown on figure 1. \\
+
+%\begin{figure}
+%\includegraphics{1.eps}
+%\caption{ALOHA}
+%\end{figure}
 
 \subsection*{Assumptions}
 
+1. The length of each remains the same. \\
+2. There is no propagation delay which means that one user can know whether its frames transmission succeed as soon as it finished its transimission. \\
+3. The probability of an arrival during a short time interval \(\Delta t\) is propotional to the length of interval, and does not depend on the origin of the interval. \\
+4. The probability of having multiple(\(>\) 1) arrivals during a short time interval \(\Delta t\) approaches 0; \\
+
 \subsection*{Simulation}
+
+In the simulation program, an two-dimensional array containing 0s and 1s is used to represent states of different users at each short time interval \(\Delta t\). For example, statest[\emph{userNum}][\emph{slotNum}] is an \emph{userNum}\(\times\)\emph{slotNum} array, its Nth(0 \(<\) N \(<\) \emph{userNum}) row represents that the Nth user's states from 0th to (\emph{slotNum}-1)th short time interval. "0" is used when the user is not transmitting data at a certain short time interval and "1" is used otherwise. \\
+
+The array can be expressed graphically like this: \\
+
+states[\emph{N}][\emph{M}]: \\
+
+\qquad user1: 111111000111111\(\cdots\)0000000001111110000000 \\
+
+\qquad user2: 001111110000000\(\cdots\)0001111110000000000111 \\
+
+\qquad\quad \(\vdots\) \hspace{35mm} \(\vdots\) \\
+
+\qquad userN: \hspace{-0.5mm}000000011111100\(\cdots\)1111110000001111110000 \\
+
+Since the frame length(frameLen) is assumed to be constant, the number of consetutive 1s remains the same(except the frames at the end of each row). The above example always has 6 consetutive 1s which represents a 6-slot length frame. \\
+
+At the beginnig of each simulation, the array need to be initialized based on a given probability \(p\) which is the probability that a user generates a frame during a certain short time interval \(\Delta t\). Once the first state is initialized to be 1, its consetutive (frameLen - 1) states should all be set to 1.\\
 
 \subsection*{Results}
 
