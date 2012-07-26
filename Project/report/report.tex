@@ -23,7 +23,7 @@ In this project, we will simulate four MAC protocals including ALOHA, Slotted AL
 
 \subsection*{Theories}
 
-ALOHA was devised by Norman Abramson in the 1970s to solve the channel allocation problem. The basic idea of pure ALOHA is that users(or stations) can transimit frames whenever they have, which is totally random. Of course, when different users are transmiting their frames at the same time, those frames will collide and all of them will be damaged. A sender can find out whether its transmission succeed by checking the acknoeledgements from the receiver. If the frame was damadged, it waits for a random time and send again. \\
+ALOHA was devised by Norman Abramson in the 1970s to solve the channel allocation problem. The basic idea of pure ALOHA is that users(or stations) can transimit frames whenever they have, which is totally random. Of course, when different users are transmiting their frames at the same time, those frames will collide and all of them will be damaged. A sender can find out whether its transmission succeed by checking the acknowledgements from the receiver. If the frame was damadged, it waits for a random time and send again. \\
 
 Given the following parameters: \\
 
@@ -51,7 +51,7 @@ Then the throughput is given by \\
 
 \qquad \(S = Ge^{-2G}\) \\
 
-for which the maximum occurs at \(G = 0.5\) with \(S = 1/2e \approx 0.184\) and the \(S - G\) graph is shown on figure 1. \\
+for which the maximum occurs at \(G = 0.5\) with \(S = 1/2e \approx 0.184\) and the \(S - G\) graph is shown on Figure 1. \\
 
 %\begin{figure}
 %\includegraphics{1.eps}
@@ -60,7 +60,7 @@ for which the maximum occurs at \(G = 0.5\) with \(S = 1/2e \approx 0.184\) and 
 
 \subsection*{Assumptions}
 
-1. The length of each remains the same. \\
+1. The length of each frame remains the same. \\
 2. There is no propagation delay which means that one user can know whether its frames transmission succeed as soon as it finished its transimission. \\
 3. The probability of an arrival during a short time interval \(\Delta t\) is propotional to the length of interval, and does not depend on the origin of the interval. \\
 4. The probability of having multiple(\(>\) 1) arrivals during a short time interval \(\Delta t\) approaches 0; \\
@@ -90,7 +90,28 @@ At the beginnig of each simulation, the array need to be initialized based on a 
 \subsection*{Analysis}
 
 \section*{Slotted ALOHA}
+
+\subsection*{Theories}
+
 Slotted ALOHA is an advanced version of pure ALOHA. It divides time into descrete slots that each frame can only be sent at the beginning of each time slot. Moreover, slotted ALOHA requires global time synchronization so that the same slot boundaries can be agreed by all the users.
+
+The vulnerable time for slotted ALOHA is half of the one for pure ALOHA. So the probability of zero frames during the G vulnerable time is \\
+
+\qquad \(P(0)|_{G=G} = e^{-G}\) \\
+
+Then the throughput is given by \\
+
+\qquad \(S = Ge^{-G}\) \\
+
+for which the maximum occurs at \(G = 1\) with \(S = 1/e \approx 0.368\) and the \(S - G\) graph is shown on Figure 1.
+
+\subsection*{Assumptions} \\
+
+\subsection*{Simulation} \\
+
+\subsection*{Results} \\
+
+\subsection*{Analysis} \\
 
 \section*{CSMA}
 
