@@ -3,8 +3,8 @@
 #include <ctime>
 using namespace std;
 
-const unsigned int USER_NUM = 50;
-const unsigned int SIMULATE_TIME = 1000;
+const unsigned int USER_NUM = 100;
+const unsigned int SIMULATE_TIME = 10000;
 const unsigned int FRAME_LEN = 4;
 const unsigned int MAX_WAIT_TIME = RAND_MAX;
 const int COLLISION = -1;
@@ -26,7 +26,7 @@ main()
 
 	// the probability for a single user to generate a frame during 
 	// a short time interval.
-	double p = 0.7;
+	double p = 0.005;
 
 //	for (int i = 0; i != 1000; ++i)
 		pure_aloha_simulate(a, p);
