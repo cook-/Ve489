@@ -126,7 +126,7 @@ pure_aloha_simulate(int a[][SIMULATE_TIME], float p)
 
 	generate_frame(a, p);
 
-//	for (unsigned int t = 0; t != SIMULATE_TIME - FRAME_LEN + 1; ++t) {
+	for (unsigned int t = 0; t != SIMULATE_TIME - FRAME_LEN + 1; ++t) {
 //		cout << "t = " << t << ": " << endl;
 //		for (int i = 0; i != USER_NUM; ++i) {
 //			for (int j = 0; j != SIMULATE_TIME; ++j)
