@@ -3,26 +3,26 @@
 #include <ctime>
 using namespace std;
 
-const unsigned int USER_NUM = 10;
-const unsigned int SIMULATE_TIME = 80;
+const unsigned int USER_NUM = 5;
+const unsigned int SIMULATE_TIME = 40;
 const unsigned int FRAME_LEN = 4;
 const unsigned int MAX_WAIT_TIME = RAND_MAX;
 const int COLLISION = -1;
 const int NO_COLLISION = 1;
 const int IDLE = 0;
 
-void generate_frame(char a[][SIMULATE_TIME], float p);
-int wait_for_random_time(char a[][SIMULATE_TIME], int userIndex, int curTime);
-int check_collision(char a[][SIMULATE_TIME], int curTime);
-void pure_aloha_simulate(char a[][SIMULATE_TIME], float p);
-void slotted_aloha_simulate(char a[][SIMULATE_TIME], float p);
+void generate_frame(int a[][SIMULATE_TIME], float p);
+int wait_for_random_time(int a[][SIMULATE_TIME], int userIndex, int curTime);
+int check_collision(int a[][SIMULATE_TIME], int curTime);
+void pure_aloha_simulate(int a[][SIMULATE_TIME], float p);
+void slotted_aloha_simulate(int a[][SIMULATE_TIME], float p);
 
 
 int
 main()
 {
 	// using a two-dimentional array to represent all the states.
-	char a[USER_NUM][SIMULATE_TIME];
+	int a[USER_NUM][SIMULATE_TIME];
 
 	// the probability for a single user to generate a frame during 
 	// a short time interval.
@@ -35,7 +35,7 @@ main()
 
 
 void 
-generate_frame(char a[][SIMULATE_TIME], float p)
+generate_frame(int a[][SIMULATE_TIME], float p)
 {
 	for (unsigned int i = 0; i != USER_NUM; ++i) {
 		for (unsigned int j = 0; j != SIMULATE_TIME; ++j)
@@ -66,7 +66,7 @@ generate_frame(char a[][SIMULATE_TIME], float p)
 
 
 int
-wait_for_random_time(char a[][SIMULATE_TIME], int userIndex, int curTime)
+wait_for_random_time(int a[][SIMULATE_TIME], int userIndex, int curTime)
 {
 	srand((unsigned int)time(NULL));
 	int wait = rand()%SIMULATE_TIME + FRAME_LEN;
@@ -87,7 +87,7 @@ wait_for_random_time(char a[][SIMULATE_TIME], int userIndex, int curTime)
 
 
 int
-check_collision(char a[][SIMULATE_TIME], unsigned int curTime)
+check_collision(int a[][SIMULATE_TIME], unsigned int curTime)
 {
 	int oneNum = 0;
 
@@ -106,7 +106,7 @@ check_collision(char a[][SIMULATE_TIME], unsigned int curTime)
 
 
 void
-pure_aloha_simulate(char a[][SIMULATE_TIME], float p)
+pure_aloha_simulate(int a[][SIMULATE_TIME], float p)
 {
 	int totalFrameNum = 0;
 	int successFrameNum = 0;
