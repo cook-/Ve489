@@ -28,6 +28,8 @@ main()
 	// a short time interval.
 	double p = 0.03;
 
+	pure_aloha_simulate(a, p);
+
 	return 0;
 }
 
