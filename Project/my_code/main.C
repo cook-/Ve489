@@ -4,7 +4,7 @@
 using namespace std;
 
 const unsigned int USER_NUM = 3;
-const unsigned int SIMULATE_TIME = 1000;
+const unsigned int SIMULATE_TIME = 10000;
 const unsigned int FRAME_LEN = 4;
 const unsigned int MAX_WAIT_TIME = RAND_MAX;
 const int COLLISION = -1;
