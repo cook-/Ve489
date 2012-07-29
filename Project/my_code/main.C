@@ -4,7 +4,7 @@
 using namespace std;
 
 const unsigned int USER_NUM = 10;
-const unsigned int SIMULATE_TIME = 100;
+const unsigned int SIMULATE_TIME = 1000;
 const unsigned int FRAME_LEN = 4;
 const unsigned int MAX_WAIT_TIME = RAND_MAX;
 const int COLLISION = -1;
@@ -165,8 +165,7 @@ pure_aloha_simulate(int a[][SIMULATE_TIME], float p)
 		}
 	}
 
-	cout << successFrameNum << " of " << totalFrameNum
-		 << " are transmitted successfully." << endl;
+	cout << successFrameNum/250 << endl;
 
 //	total[n] = totalFrameNum;
 //	success[n] = successFrameNum;
