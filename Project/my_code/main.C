@@ -26,7 +26,7 @@ main()
 
 	// the probability for a single user to generate a frame during 
 	// a short time interval.
-	double p = 0.1;
+	double p = 0.05;
 
 	pure_aloha_simulate(a, p);
 
@@ -44,9 +44,9 @@ generate_frame(char a[][SIMULATE_TIME], float p)
 
 	srand((unsigned)time(NULL));
 	for (unsigned int i = 0; i != USER_NUM; ++i) {
-		for (unsigned int j = 0; j != SIMULATE_TIME - FRAME_LEN; ++j) {
+		for (unsigned int j = 0; j != SIMULATE_TIME; ++j) {
 			if (rand() < RAND_MAX*p) {
-				for (unsigned int k = 0; k != FRAME_LEN; ++k) {
+				for (unsigned int k = 0; k != FRAME_LEN && j != SIMULATE_TIME; ++k) {
 					a[i][j] = 1;
 					j++;
 				}
@@ -55,6 +55,12 @@ generate_frame(char a[][SIMULATE_TIME], float p)
 			else
 				a[i][j] = 0;
 		 }
+	}
+
+	for (unsigned int i = 0; i != USER_NUM; ++i) {
+		for (unsigned int j = 0; j != SIMULATE_TIME; ++j)
+			cout << a[i][j];
+		cout << endl;
 	}
 }
 
