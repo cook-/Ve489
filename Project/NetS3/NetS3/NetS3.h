@@ -92,9 +92,9 @@ NET_STATUS CheckConflict(char *a, UINT pos);
 
 NET_STATUS CarrierSense(char *a, UINT pos);
 
-void PureAloha(char *a, float& s, float p);
+void PureAloha(char *a, float p);
 
-void SlotAloha(char *a, float& s, float p);
+void SlotAloha(char *a, float p);
 
 void CSMA_0(char *a, float& s, float p);
 void CSMA_1(char *a, float& s, float p);
