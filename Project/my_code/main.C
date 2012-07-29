@@ -29,6 +29,7 @@ main()
 	double p = 0.05;
 
 	pure_aloha_simulate(a, p);
+	cout << "RAND_MAX = " << RAND_MAX << endl;
 
 	return 0;
 }
