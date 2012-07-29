@@ -4,19 +4,19 @@
 using namespace std;
 
 const unsigned int USER_NUM = 5;
-const unsigned int SIMULATE_TIME = 10000;
+const unsigned int SIMULATE_TIME = 40;
 const unsigned int FRAME_LEN = 4;
 const unsigned int MAX_WAIT_TIME = RAND_MAX;
 const int COLLISION = -1;
 const int NO_COLLISION = 1;
 const int IDLE = 0;
-int total[1000];
-int success[1000];
+//int total[1000];
+//int success[1000];
 
 void generate_frame(int a[][SIMULATE_TIME], float p);
 int wait_for_random_time(int a[][SIMULATE_TIME], int userIndex, int curTime);
 int check_collision(int a[][SIMULATE_TIME], int curTime);
-void pure_aloha_simulate(int a[][SIMULATE_TIME], float p, int n);
+void pure_aloha_simulate(int a[][SIMULATE_TIME], float p);
 void slotted_aloha_simulate(int a[][SIMULATE_TIME], float p);
 
 
@@ -30,18 +30,18 @@ main()
 	// a short time interval.
 	double p = 0.5;
 
-	for (int i = 0; i != 1000; ++i)
-		pure_aloha_simulate(a, p, i);
+//	for (int i = 0; i != 1000; ++i)
+		pure_aloha_simulate(a, p);
 
 	double totalFrameNum = 0;
 	double successFrameNum = 0;
-	for (int i = 0; i != 1000; ++i) {
-		totalFrameNum += total[i];
-		successFrameNum += success[i];
-	}
-	totalFrameNum /= 1000;
-	successFrameNum /= 1000;
-	cout << "G: " << totalFrameNum/250 << " S: " << successFrameNum/totalFrameNum << endl;
+//	for (int i = 0; i != 1000; ++i) {
+//		totalFrameNum += total[i];
+//		successFrameNum += success[i];
+//	}
+//	totalFrameNum /= 1000;
+//	successFrameNum /= 1000;
+//	cout << "G: " << totalFrameNum/250 << " S: " << successFrameNum/totalFrameNum << endl;
 
 	return 0;
 }
@@ -65,11 +65,11 @@ generate_frame(int a[][SIMULATE_TIME], float p)
 		 }
 	}
 
-//	for (unsigned int i = 0; i != USER_NUM; ++i) {
-//		for (unsigned int j = 0; j != SIMULATE_TIME; ++j)
-//			cout << a[i][j];
-//		cout << endl;
-//	}
+	for (unsigned int i = 0; i != USER_NUM; ++i) {
+		for (unsigned int j = 0; j != SIMULATE_TIME; ++j)
+			cout << a[i][j];
+		cout << endl;
+	}
 }
 
 
@@ -114,7 +114,7 @@ check_collision(int a[][SIMULATE_TIME], unsigned int curTime)
 
 
 void
-pure_aloha_simulate(int a[][SIMULATE_TIME], float p, int n)
+pure_aloha_simulate(int a[][SIMULATE_TIME], float p)
 {
 	int totalFrameNum = 0;
 	int successFrameNum = 0;
@@ -129,6 +129,13 @@ pure_aloha_simulate(int a[][SIMULATE_TIME], float p, int n)
 	generate_frame(a, p);
 
 	for (unsigned int t = 0; t != SIMULATE_TIME - FRAME_LEN + 1; ++t) {
+		cout << "t = 0: " << endl;
+		for (int i = 0; i != USER_NUM; ++i) {
+			for (int j = 0; j != SIMULATE_TIME; ++j)
+				cout << a[i][j];
+			cout << endl;
+		}
+
 		for (unsigned int i = 0; i != USER_NUM; ++i) {
 			if (a[i][t] == 1 && beginTime[i] == -1) {
 				beginTime[i] = t;
