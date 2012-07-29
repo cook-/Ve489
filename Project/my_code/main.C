@@ -14,7 +14,7 @@ int total[1000];
 int success[1000];
 
 void generate_frame(int a[][SIMULATE_TIME], float p);
-int wait_for_random_time(int a[][SIMULATE_TIME], int userIndex, int curTime, int n);
+int wait_for_random_time(int a[][SIMULATE_TIME], int userIndex, int curTime);
 int check_collision(int a[][SIMULATE_TIME], int curTime);
 void pure_aloha_simulate(int a[][SIMULATE_TIME], float p, int n);
 void slotted_aloha_simulate(int a[][SIMULATE_TIME], float p);
@@ -74,9 +74,9 @@ generate_frame(int a[][SIMULATE_TIME], float p)
 
 
 int
-wait_for_random_time(int a[][SIMULATE_TIME], int userIndex, int curTime, int n)
+wait_for_random_time(int a[][SIMULATE_TIME], int userIndex, int curTime)
 {
-	srand((unsigned int)time(NULL) + n);
+	srand((unsigned int)time(NULL) + userIndex);
 	int wait = rand()%(SIMULATE_TIME/4) + FRAME_LEN;
 
 	if ((curTime + wait + 1) >= SIMULATE_TIME) {
@@ -150,7 +150,7 @@ pure_aloha_simulate(int a[][SIMULATE_TIME], float p, int n)
 					beginTime[i] = -1;
 				}
 				else {
-					beginTime[i] += wait_for_random_time(a, i, beginTime[i], n);
+					beginTime[i] += wait_for_random_time(a, i, beginTime[i]);
 					collisTime[i] = -1;
 				}
 			}
