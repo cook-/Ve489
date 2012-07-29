@@ -157,7 +157,8 @@ pure_aloha_simulate(int a[][SIMULATE_TIME], float p)
 		}
 	}
 
-	cout << successFrameNum << endl;
+	double d = successFrameNum;
+	cout << d/250 << endl;
 
 //	total[n] = totalFrameNum;
 //	success[n] = successFrameNum;
