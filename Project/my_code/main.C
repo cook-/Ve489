@@ -145,5 +145,5 @@ pure_aloha_simulate(char a[][SIMULATE_TIME], float p)
 void
 slotted_aloha_simulate(char a[][SIMULATE_TIME], float p)
 {
-
+	;
 }
