@@ -91,7 +91,7 @@ check_collision(int a[][SIMULATE_TIME], unsigned int curTime)
 {
 	int oneNum = 0;
 
-	for (unsigned int i = 0; i != SIMULATE_TIME; ++i) {
+	for (unsigned int i = 0; i != USER_NUM; ++i) {
 		if (a[i][curTime] == 1)
 			oneNum++;
 	}
