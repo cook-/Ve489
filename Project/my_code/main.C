@@ -3,7 +3,7 @@
 #include <ctime>
 using namespace std;
 
-const unsigned int USER_NUM = 3;
+const unsigned int USER_NUM = 5;
 const unsigned int SIMULATE_TIME = 10000;
 const unsigned int FRAME_LEN = 4;
 const unsigned int MAX_WAIT_TIME = RAND_MAX;
@@ -26,7 +26,7 @@ main()
 
 	// the probability for a single user to generate a frame during 
 	// a short time interval.
-	double p = 0.05;
+	double p = 0.1;
 
 	pure_aloha_simulate(a, p);
 	cout << "RAND_MAX = " << RAND_MAX << endl;
