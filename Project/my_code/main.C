@@ -44,13 +44,13 @@ generate_frame(char a[][SIMULATE_TIME], float p)
 
 	srand((unsigned)time(NULL));
 	for (unsigned int i = 0; i != USER_NUM; ++i) {
-		for (unsigned int j = 0; j != SIMULATE_TIME; ++j) {
+		for (unsigned int j = 0; j != SIMULATE_TIME - FRAME_LEN; ++j) {
 			if (rand() < RAND_MAX*p) {
-				for (unsigned int k = 0; k != FRAME_LEN && j != SIMULATE_TIME; ++k) {
+				for (unsigned int k = 0; k != FRAME_LEN; ++k) {
 					a[i][j] = 1;
-					++j;
+					j++;
 				}
-				--j;
+				j--;
 			}
 			else
 				a[i][j] = 0;
