@@ -17,7 +17,7 @@ void generate_frame(int a[][SIMULATE_TIME], float p);
 int wait_for_random_time(int a[][SIMULATE_TIME], int userIndex, int curTime);
 int check_collision(int a[][SIMULATE_TIME], int curTime);
 void pure_aloha_simulate(int a[][SIMULATE_TIME], float p);
-void slotted_aloha_simulate(int a[][SIMULATE_TIME], float p);
+void slotted_aloha_simulate(int a[][SIMULATE_TIME], float p, int i);
 
 
 int
