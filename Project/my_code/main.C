@@ -150,7 +150,8 @@ pure_aloha_simulate(int a[][SIMULATE_TIME], float p, int n)
 					beginTime[i] = -1;
 				}
 				else {
-					beginTime[i] += wait_for_random_time(a, i, beginTime[i]);
+					waitTime = wait_for_random_time(a, i, beginTime[i]);
+					beginTime[i] += waitTime;
 					collisTime[i] = -1;
 				}
 			}
