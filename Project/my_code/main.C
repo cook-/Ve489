@@ -168,8 +168,8 @@ pure_aloha_simulate(int a[][SIMULATE_TIME], float p)
 	cout << successFrameNum << " of " << totalFrameNum
 		 << " are transmitted successfully." << endl;
 
-	total[n] = totalFrameNum;
-	success[n] = successFrameNum;
+//	total[n] = totalFrameNum;
+//	success[n] = successFrameNum;
 }
 
 
