@@ -174,7 +174,7 @@ NET_STATUS CheckConflict(char *a, UINT pos)
 }
 
 
-void PureAloha(char *a, float& s, float p)
+void PureAloha(char *a, float p)
 {
 
 	int total = 0;
@@ -265,7 +265,7 @@ void PureAloha(char *a, float& s, float p)
 	//s = s/MAX_SIMULATE_TIMES; 
 }
 
-void SlotAloha(char *a, float& s, float p)
+void SlotAloha(char *a, float p)
 {
 	s = 0.0f; 
 
