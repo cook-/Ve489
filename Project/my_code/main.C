@@ -37,6 +37,11 @@ main()
 void 
 generate_frame(char a[][SIMULATE_TIME], float p)
 {
+	for (unsigned int i = 0; i != USER_NUM; ++i) {
+		for (unsigned int j = 0; j != SIMULATE_TIME; ++j)
+			a[i][j] = -1;
+	}
+
 	srand((unsigned)time(NULL));
 	for (unsigned int i = 0; i != USER_NUM; ++i) {
 		for (unsigned int j = 0; j != SIMULATE_TIME; ++j) {
