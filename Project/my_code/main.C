@@ -22,7 +22,7 @@ int
 main()
 {
 	// using a two-dimentional array to represent all the states.
-	int a[USER_NUM][SIMULATE_TIME];
+	char a[USER_NUM][SIMULATE_TIME];
 
 	// the probability for a single user to generate a frame during 
 	// a short time interval.
