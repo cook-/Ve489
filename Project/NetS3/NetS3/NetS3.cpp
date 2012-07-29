@@ -267,7 +267,7 @@ void PureAloha(char *a, float p)
 
 void SlotAloha(char *a, float p)
 {
-	s = 0.0f; 
+	int s = 0; 
 
 	int *pos = new int[MAX_USER_NUMBER];
 	
@@ -324,7 +324,7 @@ void SlotAloha(char *a, float p)
 				{
 					//printf("success\n");
 
-					s = s + 1.0f;
+					s++;
 
 				}
 				if (status == CONFLICT_HAPPEN)
@@ -347,10 +347,10 @@ void SlotAloha(char *a, float p)
 	
 	//printf("s = %f\n", s);
 }
-void CSMA_0(char *a, float& s, float p)
+void CSMA_0(char *a, float p)
 {
 
-	s = 0.0f;
+	int s = 0;
 
 	int startTime = -1;
 	int busy = 0;
@@ -408,7 +408,7 @@ void CSMA_0(char *a, float& s, float p)
 
 				if(t==(startTime+MAX_FRAME_LEN-1))
 				{
-					s = s + 1.0f;
+					s++;
 					//printf("success\n");
 					busy = 0;
 				}
@@ -438,10 +438,10 @@ void CSMA_0(char *a, float& s, float p)
 	
 }
 
-void CSMA_1(char *a, float& s, float p)
+void CSMA_1(char *a, float p)
 {
 
-	s = 0.0f;
+	int s = 0;
 
 	int startTime = -1;
 	int busy = 0;
@@ -498,7 +498,7 @@ void CSMA_1(char *a, float& s, float p)
 
 				if(t==(startTime+MAX_FRAME_LEN-1))
 				{
-					s = s + 1.0f;
+					s++;
 					//printf("success\n");
 					busy = 0;
 				}
@@ -528,9 +528,9 @@ void CSMA_1(char *a, float& s, float p)
 
 	
 }
-void CSMA_P(char *a, float&s, float p)
+void CSMA_P(char *a, float p)
 {
-	s = 0.0f;
+	int s = 0;
 
 	int startTime = -1;
 	int busy = 0;
