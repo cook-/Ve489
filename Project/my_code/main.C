@@ -4,7 +4,7 @@
 using namespace std;
 
 const unsigned int USER_NUM = 10;
-const unsigned int SIMULATE_TIME = 100;
+const unsigned int SIMULATE_TIME = 1000;
 const unsigned int FRAME_LEN = 4;
 const unsigned int MAX_WAIT_TIME = RAND_MAX;
 const int COLLISION = -1;
@@ -61,12 +61,6 @@ generate_frame(int a[][SIMULATE_TIME], float p)
 			else
 				a[i][j] = 0;
 		 }
-	}
-
-	for (unsigned int i = 0; i != USER_NUM; ++i) {
-		for (unsigned int j = 0; j != SIMULATE_TIME; ++j)
-			cout << a[i][j];
-		cout << endl;
 	}
 }
 
@@ -163,7 +157,7 @@ pure_aloha_simulate(int a[][SIMULATE_TIME], float p)
 		}
 	}
 
-	cout << successFrameNum/250 << endl;
+	cout << successFrameNum << endl;
 
 //	total[n] = totalFrameNum;
 //	success[n] = successFrameNum;
