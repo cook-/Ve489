@@ -129,7 +129,7 @@ pure_aloha_simulate(char a[][SIMULATE_TIME], float p)
 					beginTime[i] = -1;
 				}
 				else {
-					beginTime[i] += waitForRandomTime(a, i, beginTime[i]);
+					beginTime[i] += wait_for_random_time(a, i, beginTime[i]);
 					collisTime[i] = -1;
 				}
 			}
