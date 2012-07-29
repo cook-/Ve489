@@ -10,8 +10,6 @@ const unsigned int MAX_WAIT_TIME = RAND_MAX;
 const int COLLISION = -1;
 const int NO_COLLISION = 1;
 const int IDLE = 0;
-//int total[1000];
-//int success[1000];
 
 void generate_frame(int a[][SIMULATE_TIME], float p);
 int wait_for_random_time(int a[][SIMULATE_TIME], int userIndex, int curTime);
@@ -128,13 +126,13 @@ pure_aloha_simulate(int a[][SIMULATE_TIME], float p)
 
 	generate_frame(a, p);
 
-	for (unsigned int t = 0; t != SIMULATE_TIME - FRAME_LEN + 1; ++t) {
-		cout << "t = " << t << ": " << endl;
-		for (int i = 0; i != USER_NUM; ++i) {
-			for (int j = 0; j != SIMULATE_TIME; ++j)
-				cout << a[i][j];
-			cout << endl;
-		}
+//	for (unsigned int t = 0; t != SIMULATE_TIME - FRAME_LEN + 1; ++t) {
+//		cout << "t = " << t << ": " << endl;
+//		for (int i = 0; i != USER_NUM; ++i) {
+//			for (int j = 0; j != SIMULATE_TIME; ++j)
+//				cout << a[i][j];
+//			cout << endl;
+//		}
 
 		for (unsigned int i = 0; i != USER_NUM; ++i) {
 			if (a[i][t] == 1 && beginTime[i] == -1) {
