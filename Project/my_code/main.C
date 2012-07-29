@@ -17,6 +17,7 @@ int check_conflict(char a[][MAX_SIMULATE_TIME], int curTime);
 void pure_aloha_simulate(char a[][MAX_SIMULATE_TIME], float p);
 void slotted_aloha_simulate(char a[][MAX_SIMULATE_TIME], float p);
 
+
 int
 main()
 {
@@ -31,7 +32,8 @@ main()
 }
 
 
-void generate_frame(char a[][MAX_SIMULATE_TIME], float p)
+void 
+generate_frame(char a[][MAX_SIMULATE_TIME], float p)
 {
 	srand((unsigned)time(NULL));
 	for (unsigned int i = 0; i != MAX_USER_NUM; ++i) {
@@ -50,7 +52,8 @@ void generate_frame(char a[][MAX_SIMULATE_TIME], float p)
 }
 
 
-void wait_for_random_time(char a[][MAX_SIMULATE_TIME],
+void
+wait_for_random_time(char a[][MAX_SIMULATE_TIME],
 							unsigned int userIndex, unsigned int curTime)
 {
 	srand((unsigned int)time(NULL));
@@ -69,7 +72,8 @@ void wait_for_random_time(char a[][MAX_SIMULATE_TIME],
 }
 
 
-int check_conflict(char a[][MAX_SIMULATE_TIME], unsigned int curTime)
+int
+check_conflict(char a[][MAX_SIMULATE_TIME], unsigned int curTime)
 {
 	int oneNum = 0;
 
@@ -84,4 +88,18 @@ int check_conflict(char a[][MAX_SIMULATE_TIME], unsigned int curTime)
 		return NO_COLLISION;
 	else
 		return IDLE;
+}
+
+
+void
+pure_aloha_simulate(char a[][MAX_SIMULATE_TIME], float p)
+{
+	
+}
+
+
+void
+slotted_aloha_simulate(char a[][MAX_SIMULATE_TIME], float p)
+{
+
 }
