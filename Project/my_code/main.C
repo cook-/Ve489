@@ -4,7 +4,7 @@
 using namespace std;
 
 const unsigned int USER_NUM = 5;
-const unsigned int SIMULATE_TIME = 100000;
+const unsigned int SIMULATE_TIME = 10000;
 const unsigned int FRAME_LEN = 4;
 const unsigned int MAX_WAIT_TIME = RAND_MAX;
 const int COLLISION = -1;
@@ -52,11 +52,11 @@ generate_frame(int a[][SIMULATE_TIME], float p)
 		 }
 	}
 
-	for (unsigned int i = 0; i != USER_NUM; ++i) {
-		for (unsigned int j = 0; j != SIMULATE_TIME; ++j)
-			cout << a[i][j];
-		cout << endl;
-	}
+//	for (unsigned int i = 0; i != USER_NUM; ++i) {
+//		for (unsigned int j = 0; j != SIMULATE_TIME; ++j)
+//			cout << a[i][j];
+//		cout << endl;
+//	}
 }
 
 
