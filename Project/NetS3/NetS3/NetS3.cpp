@@ -177,7 +177,8 @@ NET_STATUS CheckConflict(char *a, UINT pos)
 void PureAloha(char *a, float& s, float p)
 {
 
-	s = 0.0f; //初始化s为0.0
+	int total = 0;
+	int s = 0; //初始化s为0.0
 
 	int *conllision = new int[MAX_USER_NUMBER]; //记录每个用户发生冲突的时刻
 	int *pos  = new int[MAX_USER_NUMBER];   // 记录每个用户待发帧的开始位置
@@ -212,6 +213,7 @@ void PureAloha(char *a, float& s, float p)
 				if ( (1== a[n*MAX_TIME_SLOT+t]) && (-1 == pos[n]))
 				{
 					pos[n] = t; // 记录每个主机新帧的开始位置
+					total++;
 				}
 
 			}
@@ -259,6 +261,7 @@ void PureAloha(char *a, float& s, float p)
 			//DisplayInfo(a);
 		}
 		
+	cout << s " of " << total;
 	//s = s/MAX_SIMULATE_TIMES; 
 }
 
