@@ -261,7 +261,7 @@ void PureAloha(char *a, float& s, float p)
 			//DisplayInfo(a);
 		}
 		
-	cout << s " of " << total;
+	printf("%d of %d\n", s, total);
 	//s = s/MAX_SIMULATE_TIMES; 
 }
 
