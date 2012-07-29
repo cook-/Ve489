@@ -41,7 +41,7 @@ main()
 	}
 	totalFrameNum /= 1000;
 	successFrameNum /= 1000;
-	cout << "G: " << totalFrameNum << " S: " << successFrameNum/totalFrameNum << endl;
+	cout << "G: " << totalFrameNum/250 << " S: " << successFrameNum/totalFrameNum << endl;
 
 	return 0;
 }
