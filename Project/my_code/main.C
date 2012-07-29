@@ -17,7 +17,7 @@ void generate_frame(int a[][SIMULATE_TIME], float p);
 int wait_for_random_time(int a[][SIMULATE_TIME], int userIndex, int curTime);
 int check_collision(int a[][SIMULATE_TIME], int curTime);
 void pure_aloha_simulate(int a[][SIMULATE_TIME], float p);
-void slotted_aloha_simulate(int a[][SIMULATE_TIME], float p, int i);
+void slotted_aloha_simulate(int a[][SIMULATE_TIME], float p, int n);
 
 
 int
@@ -114,7 +114,7 @@ check_collision(int a[][SIMULATE_TIME], unsigned int curTime)
 
 
 void
-pure_aloha_simulate(int a[][SIMULATE_TIME], float p, int i)
+pure_aloha_simulate(int a[][SIMULATE_TIME], float p, int n)
 {
 	int totalFrameNum = 0;
 	int successFrameNum = 0;
@@ -160,8 +160,8 @@ pure_aloha_simulate(int a[][SIMULATE_TIME], float p, int i)
 //	cout << successFrameNum << " of " << totalFrameNum
 //		 << " are transmitted successfully." << endl;
 
-	total[i] = totalFrameNum;
-	success[i] = successFrameNum;
+	total[n] = totalFrameNum;
+	success[n] = successFrameNum;
 }
 
 
