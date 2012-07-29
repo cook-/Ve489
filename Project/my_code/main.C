@@ -12,7 +12,7 @@ const int NO_COLLISION = 1;
 const int IDLE = 0;
 
 void generate_frame(char a[][SIMULATE_TIME], float p);
-void wait_for_random_time(char a[][SIMULATE_TIME], int userIndex, int curTime);
+int wait_for_random_time(char a[][SIMULATE_TIME], int userIndex, int curTime);
 int check_collision(char a[][SIMULATE_TIME], int curTime);
 void pure_aloha_simulate(char a[][SIMULATE_TIME], float p);
 void slotted_aloha_simulate(char a[][SIMULATE_TIME], float p);
@@ -52,7 +52,7 @@ generate_frame(char a[][SIMULATE_TIME], float p)
 }
 
 
-void
+int
 wait_for_random_time(char a[][SIMULATE_TIME],
 							unsigned int userIndex, unsigned int curTime)
 {
@@ -69,6 +69,8 @@ wait_for_random_time(char a[][SIMULATE_TIME],
 		for (unsigned int i = curTime; i != curTime + wait; ++i)
 			a[userIndex][i] = 0;
 	}
+
+	return wait;
 }
 
 
@@ -114,9 +116,9 @@ pure_aloha_simulate(char a[][SIMULATE_TIME], float p)
 			}
 		}
 
-		if ((status = check_collision(a, t)) == COLLISION) {
+		if ((int status = check_collision(a, t)) == COLLISION) {
 			for (unsigned int i = 0; i != USER_NUM; ++i) {
-				if (a[i][t] == 1 && collision[i] == -1)
+				if (a[i][t] == 1 && collisTime[i] == -1)
 					collision[i] = t;
 			}
 		}
