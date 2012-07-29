@@ -3,7 +3,7 @@
 #include <ctime>
 using namespace std;
 
-const unsigned int USER_NUM = 5;
+const unsigned int USER_NUM = 1;
 const unsigned int SIMULATE_TIME = 1000;
 const unsigned int FRAME_LEN = 4;
 const unsigned int MAX_WAIT_TIME = RAND_MAX;
