@@ -16,8 +16,7 @@
 
 \section*{Introduction}
 
-What is MAC protocol?\\
-In this project, we will simulate four MAC protocals including ALOHA, Slotted ALOHA, CSMA and CSMA/CD. For each protocal, the basic thoeries will be introduced first, then several assumptions that clarify ...
+In the MAC sublayer, Random Access Control is a very important part. There are merely four kinds of Random Access Control protocols: pure ALOHA, slotted ALOHA, CSMA and CSMA/CD. This project will simulate these four protocols to see their transmission efficiency and compare their performance. By doing this, it can be determined which protocol is suitable for a certain situation and helps us to understand how each protocol works. \\
 
 \section*{Pure ALOHA}
 
@@ -174,9 +173,19 @@ The Simplified Procedure of the Program: \\
 
 \subsection*{Analysis}
 
-Although comparing to ALOHA and Slotted ALOHA, CSMA has greatly improved the efficiency of transmission. However, a user who is sending a frame needs time, which is twice of the propagation time, to capture the medium. During this small time interval, other users who happen to have packets to send may regard the medium as idle and begins to transit and thus destroys both packets. And with the increasing of propagation time caused by longer distance or lower transmission rate, this kind of fault will have larger effect and reduces the efficiency rapidly. \\
+From the figures of Sample 1 and Sample 4, which show the difference between experimental and theoretical results, it can be inferred by both curves that the highest transmission efficiency happens when \(n = 1/p\), and \(G = 1\). However, there are some obvious errors between two results. One of them is that the simulation cannot reach as high efficiency as in theory. The most important reason may be that in the process of calculating the theoretical result, it doesn’t take the influence of random waiting time into account because the theoretical result is just based on the probability of just one attempt per frame time. So with different scope of random waiting slots, the result may differ a lot. \\ 
 
-In order to minimize the influence of problem mentioned above, CSMA/CD (collision detection) is invented. It tells users whether their packets are having collisions with other packets or not. If true, both the users stop transmission to save time and wait for another chance. 
+Another big difference is that according to the theory, the efficiency at the point \(p = 1\) should be zero. But in the simulation, the value is a positive integer. It is quite reasonable to see that because since the number of slots ranges from 0 to a number larger than half of the entire duration. If some of stations just wait a few slots while others wait much more time, then these stations would have enough time to finish their transmission. But this kind of transmission will cause a very large delay, which means that it is not suitable for many heavy-traffic users. \\
+
+Between the two figures, we can see that the one with smaller \(A\) (propagation time divided by frame time) has better performance, which is the same as illustrated in the textbook. \\
+
+In the second simulation, which compares the program both with and without BEBA. From the figure, it is clear that the one with BEBA performs much better than the one without BEBA. And instead of having bad performance, the one with BEBA has a better efficiency when p increases. Thus as a conclusion of the result of simulation, it is better to choose BEBA as the algorithm of setting random waiting time when the traffic is very heavy. \\
+
+For the third simulation, it tells that when user numbers are larger, the performance will be better. This result is expected because when calculating the maximum efficiency, an approximation is made at \((1-\frac{1}{n})^(n-1)\) when \(n\) is large enough. However, one problem emerges. In the theory, the probability of a transmission success is \(P_s = np(1-p)^(n-1)\), and the maximum value happens when \(n = \frac{1}{p}\). Thus the peak value of \(S\) should happens at \(p = \frac{1}{n}\), but in the figure, the two peak values of different curves happen at the same point. This error may be caused by the scale of simulation or some little errors in the design of simulation. \\
+
+Comparing to ALOHA and Slotted ALOHA, CSMA has greatly improved the efficiency of transmission. However, a user who is sending a frame needs time, which is twice of the propagation time, to capture the medium. During this small time interval, other users who happen to have packets to send may regard the medium as idle and begins to transit and thus destroys both packets. And with the increasing of propagation time caused by longer distance or lower transmission rate, this kind of fault will have larger effect and reduces the efficiency rapidly. \\
+
+In order to minimize the influence of problem mentioned above, CSMA/CD (collision detection) is invented. It tells users whether their packets are having collisions with other packets or not. If true, both the users stop transmission to save time and wait for another chance. \\
 
 
 \end{document}
