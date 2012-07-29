@@ -119,7 +119,7 @@ pure_aloha_simulate(char a[][SIMULATE_TIME], float p)
 		if ((check_collision(a, t)) == COLLISION) {
 			for (unsigned int i = 0; i != USER_NUM; ++i) {
 				if (a[i][t] == 1 && collisTime[i] == -1)
-					collision[i] = t;
+					collisTime[i] = t;
 			}
 		}
 
