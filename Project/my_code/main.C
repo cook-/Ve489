@@ -53,8 +53,7 @@ generate_frame(char a[][SIMULATE_TIME], float p)
 
 
 int
-wait_for_random_time(char a[][SIMULATE_TIME],
-							unsigned int userIndex, unsigned int curTime)
+wait_for_random_time(char a[][SIMULATE_TIME], int userIndex, int curTime)
 {
 	srand((unsigned int)time(NULL));
 	int wait = rand()%MAX_WAIT_TIME + FRAME_LEN;
@@ -130,7 +129,7 @@ pure_aloha_simulate(char a[][SIMULATE_TIME], float p)
 					beginTime[i] = -1;
 				}
 				else {
-					waitTime = wait_for_random_time(a, i, beginTime[i]);
+					int waitTime = wait_for_random_time(a, i, beginTime[i]);
 					beginTime[i] += waitTime;
 					collisTime[i] = -1;
 				}
