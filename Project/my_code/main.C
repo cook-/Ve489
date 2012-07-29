@@ -10,6 +10,8 @@ const unsigned int MAX_WAIT_TIME = RAND_MAX;
 const int COLLISION = -1;
 const int NO_COLLISION = 1;
 const int IDLE = 0;
+int total[1000];
+int success[1000];
 
 void generate_frame(int a[][SIMULATE_TIME], float p);
 int wait_for_random_time(int a[][SIMULATE_TIME], int userIndex, int curTime);
@@ -28,7 +30,18 @@ main()
 	// a short time interval.
 	double p = 0.1;
 
-	pure_aloha_simulate(a, p);
+	for (int i = 0; i != 1000; ++i)
+		pure_aloha_simulate(a, p, i);
+
+	double totalFrameNum = 0;
+	double successFrameNum = 0;
+	for (int i = 0; i != 1000; ++i) {
+		totalFrameNum += total[i];
+		successFrameNum += success[i];
+	}
+	totalFrameNum /= 1000;
+	successFrameNum /= 1000;
+	cout << "G: " << totalFrameNum << "S: " << successFrameNum/totalFrameNum << endl;
 
 	return 0;
 }
@@ -101,7 +114,7 @@ check_collision(int a[][SIMULATE_TIME], unsigned int curTime)
 
 
 void
-pure_aloha_simulate(int a[][SIMULATE_TIME], float p)
+pure_aloha_simulate(int a[][SIMULATE_TIME], float p, int i)
 {
 	int totalFrameNum = 0;
 	int successFrameNum = 0;
@@ -144,8 +157,11 @@ pure_aloha_simulate(int a[][SIMULATE_TIME], float p)
 		}
 	}
 
-	cout << successFrameNum << " of " << totalFrameNum
-		 << " are transmitted successfully." << endl;
+//	cout << successFrameNum << " of " << totalFrameNum
+//		 << " are transmitted successfully." << endl;
+
+	total[i] = totalFrameNum;
+	success[i] = successFrameNum;
 }
 
 
