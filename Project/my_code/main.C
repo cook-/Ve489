@@ -77,7 +77,7 @@ int
 wait_for_random_time(int a[][SIMULATE_TIME], int userIndex, int curTime)
 {
 	srand((unsigned int)time(NULL) + userIndex);
-	int wait = rand()%(SIMULATE_TIME/4) + FRAME_LEN;
+	int wait = rand()%(SIMULATE_TIME/2) + FRAME_LEN;
 
 	if ((curTime + wait + 1) >= SIMULATE_TIME) {
 		for (unsigned int i = curTime; i != SIMULATE_TIME; ++i)
