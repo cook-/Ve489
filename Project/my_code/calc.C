@@ -6,12 +6,12 @@
 using namespace std;
 
 int
-main()
+main(int argc, char *argv[])
 {
 	fstream iFile;
 	istringstream iStream;
 	string line;
-	iFile.open("result");
+	iFile.open(argv[1]);
 	int num;
 	int total = 0;
 	for (int i = 0; i != 100; ++i) {
