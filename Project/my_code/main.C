@@ -28,7 +28,7 @@ main(int argc, char *argv[])
 
 	// the probability for a single user to generate a frame during 
 	// a short time interval.
-	double p = atoi(argv[1]);
+	float p = atof(argv[1]);
 
 	for (int i = 0; i != 100; ++i) {
 		pure_aloha_simulate(a, p);
