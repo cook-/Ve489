@@ -85,7 +85,7 @@ wait_for_fix_time(int a[][SIMULATE_TIME], int userIndex, int curTime, int waitTi
 	}
 	else {
 		for (unsigned int i = SIMULATE_TIME - 1; i != curTime + waitTime -1; --i)
-			a[userIndex][i] = a[userIndex][i - wait];
+			a[userIndex][i] = a[userIndex][i - waitTime];
 		for (unsigned int i = curTime; i != curTime + waitTime; ++i)
 			a[userIndex][i] = 0;
 	}
