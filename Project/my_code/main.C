@@ -28,7 +28,7 @@ main()
 
 	// the probability for a single user to generate a frame during 
 	// a short time interval.
-	double p = 0.02;
+	double p = 0.03;
 
 	for (int i = 0; i != 100; ++i) {
 		pure_aloha_simulate(a, p);
