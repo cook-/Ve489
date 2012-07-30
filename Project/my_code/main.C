@@ -196,7 +196,7 @@ void slotted_aloha_simulate(int a[][SIMULATE_TIME], float p)
 			if (status == COLLISION)
 				for (unsigned int i = 0; i != USER_NUM; ++i) {
 					if (beginTime[i] == t) {
-						wait_for_random_time(a, i, begin[i]);
+						wait_for_random_time(a, i, beginTime[i]);
 						beginTime[i] = -1;
 					}
 				}
