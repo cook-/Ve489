@@ -32,5 +32,6 @@ main()
 	}
 	cout << total/100 << " " << ((float)total/100)/250 << endl;
 
+	iFile.close();
 	return 0;
 }
