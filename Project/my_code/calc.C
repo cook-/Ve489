@@ -17,7 +17,7 @@ main()
 		getline(iFile, line);
 		iStream.str(line);
 		iStream >> num;
-		cout << num << " "; 
+		cout << line << " "; 
 		total += num;
 	}
 	cout << total/100 << " " << ((float)total/100)/250 << endl;
