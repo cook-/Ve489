@@ -19,8 +19,16 @@ main()
 		iStream >> num;
 		total += num;
 	}
-	cout << total/100 << endl;
+	cout << total/100 << (total/100)/250 << endl;
 
+	total = 0;
+	for (int i = 0; i != 100; ++i) {
+		getline(iFile, line);
+		iStream.str(line);
+		iStream >> num;
+		total += num;
+	}
+	cout << total/100 << (total/100)/250 << endl;
 
 	return 0;
 }
