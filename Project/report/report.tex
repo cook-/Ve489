@@ -102,18 +102,30 @@ Then the propability \emph{p} are set differently to archive various \emph{G}, a
 \begin{table}[htbp]
 \begin{tabular}{lccccc}
 \toprule
-Network & Fault \#1 & Fault \#2 & Fault \#3 & Fault \#4 & Fault \#5 \\
+p & 0.01 & 0.02  & 0.03 & 0.04 & 0.05 & 0.10 & 0.15 & 0.20 & 0.30 \\
 \midrule
-\#1 & 0 & 1.15992m & / & / & / \\
-\#2 & 0 & 1.25022m & 2.54823m & / & / \\
-\#3 & 0 & 1.21343m & 1.93665m & 2.66715m & 3.38915m \\
-\#4-matchaed & 0 & 1.21465m & 1.97063m & 2.90913m & 3.66096m \\
-\#4-short & 0 & 1.21485m & 1.96214m & 2.90913m & 3.32120m \\
+successNum &  &  &  &  &  &  &  &  & \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The number of attempts per frame time \(G\) is calculated as \(G = p*USER_NUM\) and throughput \(S\)is calculated as \(S = successNum/250\). The data are recorded in the following table. \\
+
+\begin{table}[htbp]
+\begin{tabular}{lccccc}
+\toprule
+G & 0.1 & 0.2  & 0.3 & 0.4 & 0.5 & 1.0 & 1.5 & 2.0 & 3.0 \\
+\midrule
+S &  &  &  &  &  &  &  &  & \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \subsection*{Analysis}
+
+From the data above, the maximum value of \(S\) is approximately    when \(G\) is . Unfortunately, the result doesn't match well with the theory with \(S_{max} = 0.184\) at \(G = 0.5\). This may come from some inevitable drawbacks of the simulation model. \\
+
+For example, the maximum random wait time is set to be \emph{SIMULATE\_TIME/2} and this may be a too long time so that when many users wait out of the simulate bound, the remaining users can almost send all of their frames. \\
 
 
 \section*{Slotted ALOHA}
@@ -135,15 +147,23 @@ for which the maximum occurs at \(G = 1\) with \(S = 1/e \approx 0.368\) and the
 
 \subsection*{Assumptions}
 
+1. Each frame can only be sent at the beginning of each time slot. \\
+2. All of the rest are same as pure ALOHA.
 
 \subsection*{Simulation}
 
 
 \subsection*{Results}
 
+Table for \(p\) and \(successNum\) is shown below.
+
+Table for \(G\) and \(S\) is shown below.
 
 \subsection*{Analysis}
 
+Similarly, the results of slotted ALOHA also doesn't match well with the theory with \(S_{max} = 0.368\) at \(G = 1.0\) \\
+
+However, fortunately, compared with data of pure ALOHA, the value of \(S\) of slotted ALOHA is always larger regardless of the value of \(G\). This phenomenon shows that slotted ALOHA has higher efficiency that pure ALOHA.
 
 \section*{CSMA}
 
