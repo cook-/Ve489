@@ -158,6 +158,7 @@ pure_aloha_simulate(int a[][SIMULATE_TIME], float p)
 	}
 
 	double d = successFrameNum;
+	cout << "successNum for pure aloha: " << d << endl;
 	cout << "S for pure aloha: " << d/250 << endl;
 }
 
@@ -205,5 +206,6 @@ void slotted_aloha_simulate(int a[][SIMULATE_TIME], float p)
 	}
 
 	double d = successFrameNum;
+	cout << "successNum for slotted aloha: " << d << endl;
 	cout << "S for slotted aloha: " << d/250 << endl;
 }
