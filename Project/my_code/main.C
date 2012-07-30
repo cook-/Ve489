@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include "unistd.h"
 using namespace std;
 
 const unsigned int USER_NUM = 10;
@@ -29,7 +30,11 @@ main()
 	// a short time interval.
 	double p = 0.01;
 
-	pure_aloha_simulate(a, p);
+	for (int i = 0; i != 100; ++i) {
+		pure_aloha_simulate(a, p);
+		sleep(1);
+	}
+
 	slotted_aloha_simulate(a, p);
 
 	return 0;
