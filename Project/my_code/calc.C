@@ -8,9 +8,11 @@ int
 main()
 {
 	fstream iFile;
+	stringstream iStream;
 	string line;
 	iFile.open("result");
 	int total = 0;
+	int num;
 	for (int i = 0; i != 100; ++i) {
 		getline(iFile, line);
 		iStream.str(line);
