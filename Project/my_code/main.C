@@ -79,12 +79,12 @@ wait_for_random_time(int a[][SIMULATE_TIME], int userIndex, int curTime)
 void
 wait_for_fix_time(int a[][SIMULATE_TIME], int userIndex, int curTime, int waitTime)
 {
-	if ((curTime + wait + 1) >= SIMULATE_TIME) {
+	if ((curTime + waitTime + 1) >= SIMULATE_TIME) {
 		for (unsigned int i = curTime; i != SIMULATE_TIME; ++i)
 			a[userIndex][i] = 0;
 	}
 	else {
-		for (unsigned int i = SIMULATE_TIME - 1; i != curTime + wait -1; --i)
+		for (unsigned int i = SIMULATE_TIME - 1; i != curTime + waitTime -1; --i)
 			a[userIndex][i] = a[userIndex][i - wait];
 		for (unsigned int i = curTime; i != curTime + waitTime; ++i)
 			a[userIndex][i] = 0;
