@@ -184,7 +184,7 @@ void slotted_aloha_simulate(int a[][SIMULATE_TIME], float p)
 				if (t%FRAME_LEN) {
 					int waitTime = FRAME_LEN - t%FRAME_LEN;
 					wait_for_fix_time(a, i, beginTime[i], waitTime);
-					beginTime[i] = -1
+					beginTime[i] = -1;
 				}
 			}
 		}
