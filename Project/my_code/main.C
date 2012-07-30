@@ -184,7 +184,7 @@ void slotted_aloha_simulate(int a[][SIMULATE_TIME], float p)
 				if (t%FRAME_LEN) {
 					int waitTime = FRAME_LEN - t%FRAME_LEN;
 					wait_for_fix_time(a, i, beginTime[i], waitTime);
-					begin[i] = -1
+					beginTime[i] = -1
 				}
 			}
 		}
@@ -197,7 +197,7 @@ void slotted_aloha_simulate(int a[][SIMULATE_TIME], float p)
 				for (unsigned int i = 0; i != USER_NUM; ++i) {
 					if (beginTime[i] == t) {
 						wait_for_random_time(a, i, begin[i]);
-						begin[i] = -1;
+						beginTime[i] = -1;
 					}
 				}
 		}
