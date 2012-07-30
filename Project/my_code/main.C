@@ -21,14 +21,14 @@ void slotted_aloha_simulate(int a[][SIMULATE_TIME], float p);
 
 
 int
-main()
+main(int argc, char *argv[])
 {
 	// using a two-dimentional array to represent all the states.
 	int a[USER_NUM][SIMULATE_TIME];
 
 	// the probability for a single user to generate a frame during 
 	// a short time interval.
-	double p = 0.03;
+	double p = argv[1];
 
 	for (int i = 0; i != 100; ++i) {
 		pure_aloha_simulate(a, p);
