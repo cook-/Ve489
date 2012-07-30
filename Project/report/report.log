@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2012.6.6)  30 JUL 2012 17:24
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2012.6.6)  30 JUL 2012 17:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -293,25 +293,177 @@ Underfull \hbox (badness 10000) in paragraph at lines 100--101
 
  []
 
-! Extra alignment tab has been changed to \cr.
-<recently read> \endtemplate 
-                             
-l.105 ...0.03 & 0.04 & 0.05 & 0.10 & 0.15 & 0.20 &
-                                                   0.30 \\
-? ^^[[A^^[[A^^[[A^^[[B^^[[B^^[[Bx
-Type <return> to proceed, S to scroll future error messages,
-R to run without stopping, Q to run quietly,
-I to insert something, E to edit your file,
-1 or ... or 9 to ignore the next 1 to 9 tokens of input,
-H for help, X to quit.
-? x
- 
+
+Overfull \hbox (6.89894pt too wide) in paragraph at lines 112--113
+[]\OT1/cmr/m/n/10.95 The num-ber of at-tempts per frame time $\OML/cmm/m/it/10.
+95 G$ \OT1/cmr/m/n/10.95 is cal-cu-lated as $\OML/cmm/m/it/10.95 G \OT1/cmr/m/n
+/10.95 = \OML/cmm/m/it/10.95 p \OMS/cmsy/m/n/10.95 ^^C \OML/cmm/m/it/10.95 USER
+[]UM$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 112--113
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
+
+ []
+
+[3]
+Overfull \hbox (10.23376pt too wide) in paragraph at lines 128--129
+[]\OT1/cmr/m/n/10.95 For ex-am-ple, the max-i-mum ran-dom wait time is set to b
+e \OT1/cmr/m/it/10.95 SIM-U-LATE[]TIME/2
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--129
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--143
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--145
+
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 164--165
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 175--176
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--180
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
+
+ []
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 195--197
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--199
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 202--203
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 204--205
+
+ []
+
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--208
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 210--211
+
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 212--213
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 214--215
+
+ []
+
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 222--223
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 224--225
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 226--227
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 228--229
+
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 230--231
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 232--233
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 234--235
+
+ []
+
+[8] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 1213 strings out of 493611
- 14273 string characters out of 3142449
- 68928 words of memory out of 3000000
+ 1215 strings out of 493611
+ 14295 string characters out of 3142449
+ 70928 words of memory out of 3000000
  4560 multiletter control sequences out of 15000+200000
  9747 words of font info for 35 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 27i,9n,20p,548b,187s stack positions out of 5000i,500n,10000p,200000b,50000s
-Output written on report.dvi (3 pages, 5280 bytes).
+ 27i,9n,20p,726b,189s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on report.dvi (9 pages, 21060 bytes).
