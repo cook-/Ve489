@@ -13,6 +13,7 @@ const int IDLE = 0;
 
 void generate_frame(int a[][SIMULATE_TIME], float p);
 int wait_for_random_time(int a[][SIMULATE_TIME], int userIndex, int curTime);
+int wait_for_fix_time(int a[][SIMULATE_TIME], int userIndex, int curTime, int waitTime);
 int check_collision(int a[][SIMULATE_TIME], int curTime);
 void pure_aloha_simulate(int a[][SIMULATE_TIME], float p);
 void slotted_aloha_simulate(int a[][SIMULATE_TIME], float p);
@@ -28,18 +29,7 @@ main()
 	// a short time interval.
 	double p = 0.99;
 
-//	for (int i = 0; i != 1000; ++i)
-		pure_aloha_simulate(a, p);
-
-//	double totalFrameNum = 0;
-//	double successFrameNum = 0;
-//	for (int i = 0; i != 1000; ++i) {
-//		totalFrameNum += total[i];
-//		successFrameNum += success[i];
-//	}
-//	totalFrameNum /= 1000;
-//	successFrameNum /= 1000;
-//	cout << "G: " << totalFrameNum/250 << " S: " << successFrameNum/totalFrameNum << endl;
+	pure_aloha_simulate(a, p);
 
 	return 0;
 }
@@ -86,6 +76,22 @@ wait_for_random_time(int a[][SIMULATE_TIME], int userIndex, int curTime)
 }
 
 
+void
+wait_for_fix_time(int a[][SIMULATE_TIME], int userIndex, int curTime, int waitTime)
+{
+	if ((curTime + wait + 1) >= SIMULATE_TIME) {
+		for (unsigned int i = curTime; i != SIMULATE_TIME; ++i)
+			a[userIndex][i] = 0;
+	}
+	else {
+		for (unsigned int i = SIMULATE_TIME - 1; i != curTime + wait -1; --i)
+			a[userIndex][i] = a[userIndex][i - wait];
+		for (unsigned int i = curTime; i != curTime + waitTime; ++i)
+			a[userIndex][i] = 0;
+	}
+}
+
+
 int
 check_collision(int a[][SIMULATE_TIME], unsigned int curTime)
 {
@@ -121,13 +127,6 @@ pure_aloha_simulate(int a[][SIMULATE_TIME], float p)
 	generate_frame(a, p);
 
 	for (unsigned int t = 0; t != SIMULATE_TIME - FRAME_LEN + 1; ++t) {
-//		cout << "t = " << t << ": " << endl;
-//		for (int i = 0; i != USER_NUM; ++i) {
-//			for (int j = 0; j != SIMULATE_TIME; ++j)
-//				cout << a[i][j];
-//			cout << endl;
-//		}
-
 		for (unsigned int i = 0; i != USER_NUM; ++i) {
 			if (a[i][t] == 1 && beginTime[i] == -1) {
 				beginTime[i] = t;
@@ -195,7 +194,7 @@ void slotted_aloha_simulate(int a[][SIMULATE_TIME], float p)
 			if (status == NO_COLLISION)
 				successFrameNum++;
 			if (status == COLLISION)
-				for (unsigned int i = 0; i != UER_NUM; ++i) {
+				for (unsigned int i = 0; i != USER_NUM; ++i) {
 					if (beginTime[i] == t) {
 						wait_for_random_time(a, i, begin[i]);
 						begin[i] = -1;
