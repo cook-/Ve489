@@ -31,8 +31,8 @@ main()
 //	for (int i = 0; i != 1000; ++i)
 		pure_aloha_simulate(a, p);
 
-	double totalFrameNum = 0;
-	double successFrameNum = 0;
+//	double totalFrameNum = 0;
+//	double successFrameNum = 0;
 //	for (int i = 0; i != 1000; ++i) {
 //		totalFrameNum += total[i];
 //		successFrameNum += success[i];
@@ -158,7 +158,7 @@ pure_aloha_simulate(int a[][SIMULATE_TIME], float p)
 	}
 
 	double d = successFrameNum;
-	cout << d << endl;
+	cout << d/250 << endl;
 
 //	total[n] = totalFrameNum;
 //	success[n] = successFrameNum;
