@@ -16,6 +16,7 @@ main()
 	int total = 0;
 	for (int i = 0; i != 100; ++i) {
 		getline(iFile, line);
+		iStream.clear();
 		iStream.str(line);
 		iStream >> num;
 		total += num;
@@ -25,6 +26,7 @@ main()
 	total = 0;
 	for (int i = 0; i != 100; ++i) {
 		getline(iFile, line);
+		iStream.clear();
 		iStream.str(line);
 		iStream >> num;
 		total += num;
