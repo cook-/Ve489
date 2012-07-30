@@ -80,12 +80,38 @@ states[\emph{N}][\emph{M}]: \\
 
 \qquad userN: \hspace{-0.5mm}\(\underbrace{000000011111100\cdots1111110000001111110000}_\text{M short time intervals}\) \\
 
-Since the frame length(frameLen) is assumed to be constant, the number of consetutive 1s remains the same(except the frames at the end of each row). The above example always has 6 consetutive 1s which represents a 6-slot length frame. \\
+Since the frame length(frameLen) is assumed to be constant, the number of consetutive 1s remains the same(except the frames at the end of each row). The above example always has 4 consetutive 1s which represents a 6-slot length frame. \\
 
-At the beginnig of each simulation, the array need to be initialized based on a given probability \(p\) which is the probability that a user generates a frame during a certain short time interval \(\Delta t\). Once the first state is initialized to be 1, its consetutive (frameLen - 1) states should all be set to 1.
+At the beginnig of each simulation, the array need to be initialized based on a given probability \(p\) which is the probability that a user generates a frame during a certain short time interval \(\Delta t\). Once the first state is initialized to be 1, its consetutive (frameLen - 1) states should all be set to 1. This initialization process is conducted by the function \emph{generate\_frame()}.\\
+
+Then at each short time interval, the states of each user are checked and using function \emph{check\_collision}, three status(\emph{COLLISION}, \emph{NO\_COLLISION} and \emph{IDLE}) are marked. \\
+
+If a collision is detected for a user, it pushs all its 1s and 0s backwards for a random time using function \emph{wait\_for\_random\_time()}. To be noticed, the random time should be between 0 and the maximum simulate time and it is set to \emph{SIMULATE\_TIME}/2 in the codes. \\
+
+Finally, the driven function \emph{pure\_aloha\_simulate()} is called in \(main()\) to simulate and output the throughput \emph{S}.
 
 \subsection*{Results}
 
+Several global parameters are set as below: \\
+\emph{USER\_NUM = 10} \\
+\emph{SIMULATE\_TIME = 1000} \\
+\emph{FRAME\_LEN = 4} \\
+
+Then the propability \emph{p} are set differently to archive various \emph{G}, and for each \emph{G}, the simulation is run 1000 times to get an average \emph{S}. The data are recorded in the following table. \\
+
+\begin{table}[htbp]
+\begin{tabular}{lccccc}
+\toprule
+Network & Fault \#1 & Fault \#2 & Fault \#3 & Fault \#4 & Fault \#5 \\
+\midrule
+\#1 & 0 & 1.15992m & / & / & / \\
+\#2 & 0 & 1.25022m & 2.54823m & / & / \\
+\#3 & 0 & 1.21343m & 1.93665m & 2.66715m & 3.38915m \\
+\#4-matchaed & 0 & 1.21465m & 1.97063m & 2.90913m & 3.66096m \\
+\#4-short & 0 & 1.21485m & 1.96214m & 2.90913m & 3.32120m \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \subsection*{Analysis}
 
