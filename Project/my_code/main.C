@@ -30,6 +30,7 @@ main()
 	double p = 0.99;
 
 	pure_aloha_simulate(a, p);
+	slotted_aloha_simulate(a, p);
 
 	return 0;
 }
