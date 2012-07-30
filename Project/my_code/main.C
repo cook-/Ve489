@@ -158,10 +158,57 @@ pure_aloha_simulate(int a[][SIMULATE_TIME], float p)
 	}
 
 	double d = successFrameNum;
-	cout << d/250 << endl;
-
-//	total[n] = totalFrameNum;
-//	success[n] = successFrameNum;
+	cout << "S for pure aloha: " << d/250 << endl;
 }
 
 
+void slotted_aloha_simulate(int a[][SIMULATE_TIME], float p)
+{
+	int totalFrameNum = 0;
+	int successFrameNum = 0;
+	int collisTime[USER_NUM];
+	int beginTime[USER_NUM];
+
+	for (unsigned int i = 0; i != USER_NUM; ++i) {
+		collisTime[i] = -1;
+		beginTime[i] = -1;
+	}
+
+	generate_frame(a, p);
+
+	for (unsigned int t = 0; t != SIMULATE_TIME - FRAME_LEN + 1; ++t) {
+//		cout << "t = " << t << ": " << endl;
+//		for (int i = 0; i != USER_NUM; ++i) {
+//			for (int j = 0; j != SIMULATE_TIME; ++j)
+//				cout << a[i][j];
+//			cout << endl;
+//		}
+
+		for (unsigned int i = 0; i != USER_NUM; ++i) {
+			if (a[i][t] == 1 && beginTime[i] == -1) {
+				beginTime[i] = t;
+				totalFrameNum++;
+				if (t%FRAME_LEN) {
+					int waitTime = FRAME_LEN - t%FRAME_LEN;
+					wait_for_fix_time(a, i, beginTime[i], waitTime);
+					begin[i] = -1
+				}
+			}
+		}
+
+		if (t%FRAME_LEN == 0) {
+			int status = check_collision(a, t);
+			if (status == NO_COLLISION)
+				successFrameNum++;
+			if (status == COLLISION)
+				for (unsigned int i = 0; i != UER_NUM; ++i) {
+					if (beginTime[i] == t) {
+						wait_for_random_time(a, i, begin[i]);
+						begin[i] = -1;
+					}
+				}
+		}
+
+	double d = successFrameNum;
+	cout << "S for slotted aloha: " << d/250 << endl;
+}
