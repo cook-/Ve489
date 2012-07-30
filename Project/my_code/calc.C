@@ -9,22 +9,25 @@ int
 main()
 {
 	fstream iFile;
-	stringstream iStream;
+	istringstream iStream;
 	string line;
 	iFile.open("result");
+	int num;
 	int total = 0;
 	for (int i = 0; i != 100; ++i) {
 		getline(iFile, line);
 		iStream.str(line);
-		total += atoi(line);
+		iStream >> num;
+		total += num;
 	}
 	cout << total/100 << " " << ((float)total/100)/250 << endl;
 
 	total = 0;
 	for (int i = 0; i != 100; ++i) {
 		getline(iFile, line);
-		iStream.str(line); 
-		total += atoi(line);
+		iStream.str(line);
+		iStream >> num;
+		total += num;
 	}
 	cout << total/100 << " " << ((float)total/100)/250 << endl;
 
