@@ -22,11 +22,6 @@
 
 In the MAC sublayer, Random Access Control is a very important part. There are merely four kinds of Random Access Control protocols: pure ALOHA, slotted ALOHA, CSMA and CSMA/CD. This project will simulate these four protocols to see their transmission efficiency and compare their performance. By doing this, it can be determined which protocol is suitable for a certain situation and helps us to understand how each protocol works. \\
 
-\begin{figure}
-\centering
-\includegraphics[width=0.6\textwidth]{2.jpg}
-\end{figure}
-
 \section*{Pure ALOHA}
 
 \subsection*{Theories}
@@ -195,6 +190,13 @@ where \(a = \frac{t_{prop}}{X} = \frac{Rd}{vL}\) \\
 4. The states of all users during the whole process are saved in a large array and the size of it is the number of users times the duration.
 
 \subsection*{Simulation}
+
+The Flow Chart of the Proggram: \\
+
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth]{4_1.eps}
+\end{figure}
 
 The Simplified Procedure of the Program: \\
 1) The program user sets the number of stations, the probability of a station having a frame to send and the duration of the program. \\
