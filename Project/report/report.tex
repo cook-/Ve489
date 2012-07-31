@@ -345,7 +345,7 @@ The Simplified Procedure of the Program: \\
 (vi) Another array with comparatively small size will be used to record the number of successively transmitted frames of each station.
 
 \subsection*{Results}
-1. For the original case, the frame time is set to be 4 slots. The whole process duration is 1000 slots, and the number of users is 10. The experiment data1 is in the following lists. (Since the theoretical values are measured without using BEBA, so in this case, all stations wait a random time from 0 to 1024 slots) \\
+1. For the original case, the frame time is set to be 4 slots. The whole process duration is 1000 slots, and the number of users is 10. The experiment data1 is in the following lists and the graph is shown on "Figure 7". (Since the theoretical values are measured without using BEBA, so in this case, all stations wait a random time from 0 to 1024 slots) \\
 \begin{table}[htbp]
 \begin{tabular}{lccccccccccc}
 \toprule
@@ -369,10 +369,10 @@ Num & 22 & 22 & 20 & 20 & 18 & 17 & 16 & 15 & 14 & 13 \\
 \begin{figure}
 \centering
 \includegraphics[width=0.6\textwidth]{4_2.eps}
-\caption{}
+\caption{n-p Graph for Sample 1}
 \end{figure}
 
-2. To show the influence of BEBA, the program simulates the same situation as in the first case both with BEBA and without it. The data of the one with BEBA is shown in the following list.
+2. To show the influence of BEBA, the program simulates the same situation as in the first case both with BEBA and without it. The data of the one with BEBA is shown in the following list. \\
 \begin{table}[htbp]
 \begin{tabular}{lccccccccccc}
 \toprule
@@ -393,14 +393,14 @@ Num & 82 & 86 & 93 & 98 & 104 & 111 & 114 & 118 & 119 & 119 \\
 \end{tabular}
 \end{table}
 
-The figure of the performance of this situation is shown in Figure ?, comparing to the performance of the one without Binary Exponential Backoff Algorithm.
+The figure of the performance of this situation is shown in Figure 8, comparing to the performance of the one without Binary Exponential Backoff Algorithm.
 \begin{figure}
 \centering
 \includegraphics[width=0.6\textwidth]{4_3.eps}
-\caption{}
+\caption{n-p Graph for Sample 2}
 \end{figure}
 
-3. In order to find out the relationship between performance and number of users, the first case is tested again by changing the number of users to be 5. The experiment data is in the following lists.
+3. In order to find out the relationship between performance and number of users, the first case is tested again by changing the number of users to be 5. The experiment data is in the following lists. \\
 \begin{table}[htbp]
 \begin{tabular}{lccccccccccc}
 \toprule
@@ -421,11 +421,11 @@ Num & 14 & 11 & 11 & 10 & 10 & 9 & 9 & 8 & 8 & 8 \\
 \end{tabular}
 \end{table}
 
-The figure of the performance of this situation is shown in "Figure ?", comparing to the performance of the one with ten users.
+The figure of the performance of this situation is shown in "Figure 8", comparing to the performance of the one with ten users.
 \begin{figure}
 \centering
 \includegraphics[width=0.6\textwidth]{4_4.eps}
-\caption{n-p Graph}
+\caption{n-p Graph for Sample 8}
 \end{figure}
 
 4. To see the efficiency change due to the ratio of propagation time and frame time, a new simulation is done with the set used in the first one except that the frame time is set to be 10. The whole process is 1000. The experiment data is in the following lists.
@@ -449,11 +449,11 @@ Num & 18 & 18 & 17 & 16 & 15 & 15 & 14 & 14 & 13 & 13 \\
 \end{tabular}
 \end{table}
 
-The figure of the performance of this situation is shown in "Figure ?", including the theoretic value at this situation.
+The figure of the performance of this situation is shown in "Figure 9", including the theoretic value at this situation.
 \begin{figure}
 \centering
 \includegraphics[width=0.6\textwidth]{4_5.eps}
-\caption{}
+\caption{n-p Graph for Sample 4}
 \end{figure}
 
 \subsection*{Analysis}
