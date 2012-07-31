@@ -321,7 +321,14 @@ Frames & 158 & 155 & 152 & 162 & 178 & 195 & 199 & 200 & 205 & 202 \\
 \end{figure}
 
 \subsection*{Analysis}
-
+The graphics of three carrier sense protocols well explain the transmit efficiency of each one. \\
+For 1-persistent CSMA, theoretical Maximum S (throughout per packet time) matches G (attempts per packet time), which is 1. The graphic shows that indeed. \\
+Transmit efficiency reduces with G growing closely. \\
+For non-persistent CSMA, the simulation result is similar with that of the former, hence 1-persistent and non-persistent CSMAs are of the same transmit efficiency. \\
+During the duration of simulation, some station wants to send frames with the medium busy. It may choose to access the medium without getting its state, i.e. collision or not, another choice is ideal as well, which is to give up the right of sense continuously, waiting for the random times for another chance. \\
+For the p-persistent, with the probability growing form 0 to 1, transmit efficiency keeps increasing. \\
+Choices: \\
+Few users use the same bus, 1-persistent and non-persistent CSMAs work; numbers of users may choose the p-persistent in the case the probability is large enough to support the transmission.
 
 \section*{CSMA/CD}
 \subsection*{Theories}
