@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (TeX Live 2011) (format=xelatex 2012.6.6)  31 JUL 2012 15:16
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (TeX Live 2011) (format=xelatex 2012.6.6)  31 JUL 2012 15:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -323,74 +323,67 @@ Overfull \hbox (10.54301pt too wide) in paragraph at lines 120--127
 [][] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 131--132
+File: 1_2.jpg Graphic file (type eps)
+<1_2.jpg>
+Underfull \hbox (badness 10000) in paragraph at lines 137--138
 
  []
 
-[3]
-Overfull \hbox (10.23376pt too wide) in paragraph at lines 133--134
+[3] [4]
+Overfull \hbox (10.23376pt too wide) in paragraph at lines 139--140
 []\OT1/cmr/m/n/10.95 For ex-am-ple, the max-i-mum ran-dom wait time is set to b
 e \OT1/cmr/m/it/10.95 SIM-U-LATE[]TIME/2
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--134
+Underfull \hbox (badness 10000) in paragraph at lines 139--140
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 143--144
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 145--146
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 147--148
-
- []
-
-[4]
 Underfull \hbox (badness 10000) in paragraph at lines 149--150
 
  []
 
 
-Overfull \hbox (9.73695pt too wide) in paragraph at lines 166--173
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--156
+
+ []
+
+
+Overfull \hbox (9.73695pt too wide) in paragraph at lines 172--179
 [][] 
  []
 
-
-Overfull \hbox (10.54301pt too wide) in paragraph at lines 179--186
+File: 2_1.jpg Graphic file (type eps)
+<2_1.jpg>
+Overfull \hbox (10.54301pt too wide) in paragraph at lines 190--197
 [][] 
  []
 
+File: 2_2.jpg Graphic file (type eps)
+<2_2.jpg>
+Underfull \hbox (badness 10000) in paragraph at lines 206--207
 
-Underfull \hbox (badness 10000) in paragraph at lines 190--191
+ []
+
+[5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 217--218
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 201--202
-
- []
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 203--204
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 205--206
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 207--208
+Underfull \hbox (badness 10000) in paragraph at lines 219--220
 
  []
 
@@ -399,46 +392,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 221--222
 
  []
 
-File: 4_1.eps Graphic file (type eps)
-<4_1.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 228--230
 
- []
-
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 231--232
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 233--234
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 235--236
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 237--238
-
- []
-
-Missing character: There is no “ in font cmr10!
-Missing character: There is no ” in font cmr10!
-
-Underfull \hbox (badness 10000) in paragraph at lines 240--241
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 243--244
+Underfull \hbox (badness 10000) in paragraph at lines 223--224
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 245--246
+Underfull \hbox (badness 10000) in paragraph at lines 237--238
+
+ []
+
+File: 4_1.eps Graphic file (type eps)
+<4_1.eps>
+Underfull \hbox (badness 10000) in paragraph at lines 244--246
 
  []
 
@@ -447,18 +413,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 247--248
 
  []
 
-Missing character: There is no ’ in font cmr10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 255--256
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 257--258
+Underfull \hbox (badness 10000) in paragraph at lines 249--250
 
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 251--252
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 253--254
+
+ []
+
+Missing character: There is no “ in font cmr10!
+Missing character: There is no ” in font cmr10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 256--257
+
+ []
+
+[8]
 Underfull \hbox (badness 10000) in paragraph at lines 259--260
 
  []
@@ -468,29 +445,55 @@ Underfull \hbox (badness 10000) in paragraph at lines 261--262
 
  []
 
-[8]
+
 Underfull \hbox (badness 10000) in paragraph at lines 263--264
 
  []
 
+Missing character: There is no ’ in font cmr10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 265--266
+Underfull \hbox (badness 10000) in paragraph at lines 271--272
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 273--274
+
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 275--276
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 267--268
+Underfull \hbox (badness 10000) in paragraph at lines 277--278
 
  []
 
-[9] (./report.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 279--280
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--282
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 283--284
+
+ []
+
+[10] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 1281 strings out of 494123
- 15114 string characters out of 3151762
+ 1287 strings out of 494123
+ 15156 string characters out of 3151762
  70979 words of memory out of 3000000
- 4575 multiletter control sequences out of 15000+200000
+ 4578 multiletter control sequences out of 15000+200000
  9747 words of font info for 35 fonts, out of 3000000 for 9000
  1018 hyphenation exceptions out of 8191
- 27i,9n,20p,724b,249s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,9n,20p,724b,251s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on report.pdf (10 pages).
+Output written on report.pdf (11 pages).
