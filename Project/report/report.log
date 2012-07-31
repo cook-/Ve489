@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (TeX Live 2011) (format=xelatex 2012.6.6)  31 JUL 2012 22:46
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (TeX Live 2011) (format=xelatex 2012.6.6)  31 JUL 2012 23:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -409,112 +409,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 227--228
  []
 
 [8]
-Overfull \hbox (0.97694pt too wide) in paragraph at lines 286--293
-[][] 
- []
 
+! LaTeX Error: File `3_2.bb' not found.
 
-Overfull \hbox (0.97694pt too wide) in paragraph at lines 296--303
-[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 310--311
-
- []
-
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 312--313
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 314--315
-
- []
-
-[10]
-File: 4_1.eps Graphic file (type eps)
- <4_1.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 334--335
-
- []
-
-Missing character: There is no “ in font cmr10!
-Missing character: There is no ” in font cmr10!
-[11]
-File: 4_2.eps Graphic file (type eps)
- <4_2.eps>
-File: 4_3.eps Graphic file (type eps)
- <4_3.eps> [12]
-File: 4_4.eps Graphic file (type eps)
- <4_4.eps>
-File: 4_5.eps Graphic file (type eps)
- <4_5.eps>
-Missing character: There is no ’ in font cmr10!
-
-Underfull \hbox (badness 10000) in paragraph at lines 460--461
-
- []
-
-[13] [14]
-Underfull \hbox (badness 10000) in paragraph at lines 462--463
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 464--465
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 466--467
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 468--469
-
- []
-
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 470--471
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 475--476
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 477--478
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 479--480
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 481--482
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 483--484
-
- []
-
-[16] (./report.aux) ) 
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.265 \includegraphics{3_2.jpg}
+                               
+? x
+ 
 Here is how much of TeX's memory you used:
- 1297 strings out of 494123
- 15226 string characters out of 3151762
- 73979 words of memory out of 3000000
- 4583 multiletter control sequences out of 15000+200000
+ 1286 strings out of 494123
+ 15263 string characters out of 3151762
+ 70979 words of memory out of 3000000
+ 4577 multiletter control sequences out of 15000+200000
  9747 words of font info for 35 fonts, out of 3000000 for 9000
  1018 hyphenation exceptions out of 8191
- 27i,9n,20p,724b,251s stack positions out of 5000i,500n,10000p,200000b,50000s
-
-Output written on report.pdf (17 pages).
+ 27i,9n,20p,723b,251s stack positions out of 5000i,500n,10000p,200000b,50000s
+Output written on report.pdf (9 pages).
