@@ -429,12 +429,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 324--325
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 326--329
+Underfull \hbox (badness 10000) in paragraph at lines 326--328
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 330--331
+Underfull \hbox (badness 10000) in paragraph at lines 329--331
 
  []
 
@@ -481,12 +481,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 489--490
 
  []
 
-[16]
+
 Underfull \hbox (badness 10000) in paragraph at lines 491--492
 
  []
 
-
+[16]
 Underfull \hbox (badness 10000) in paragraph at lines 493--494
 
  []
@@ -501,7 +501,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 497--498
 
  []
 
-[17]
+
 Underfull \hbox (badness 10000) in paragraph at lines 499--500
 
  []
@@ -511,7 +511,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 504--505
 
  []
 
-
+[17]
 Underfull \hbox (badness 10000) in paragraph at lines 506--507
 
  []
@@ -535,7 +535,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 512--513
 Here is how much of TeX's memory you used:
  1303 strings out of 494123
  15268 string characters out of 3151762
- 72979 words of memory out of 3000000
+ 73979 words of memory out of 3000000
  4586 multiletter control sequences out of 15000+200000
  9747 words of font info for 35 fonts, out of 3000000 for 9000
  1018 hyphenation exceptions out of 8191
