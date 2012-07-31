@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (TeX Live 2011) (format=xelatex 2012.6.6)  31 JUL 2012 13:29
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (TeX Live 2011) (format=xelatex 2012.6.6)  31 JUL 2012 13:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -164,8 +164,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--24
 
  []
 
-File: 1.pdf Graphic file (type eps)
-<1.pdf>
+File: 2.jpg Graphic file (type eps)
+<2.jpg>
 Underfull \hbox (badness 10000) in paragraph at lines 34--35
 
  []
@@ -190,12 +190,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--43
 
  []
 
-
+[1]
 Underfull \hbox (badness 10000) in paragraph at lines 44--45
 
  []
 
-[1]
+
 Underfull \hbox (badness 10000) in paragraph at lines 46--47
 
  []
@@ -240,12 +240,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 73--74
 
  []
 
-
+[2]
 Underfull \hbox (badness 10000) in paragraph at lines 75--76
 
  []
 
-[2]
+
 Underfull \hbox (badness 10000) in paragraph at lines 77--78
 
  []
@@ -295,12 +295,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 99--103
 
  []
 
-
+[3]
 Underfull \hbox (badness 10000) in paragraph at lines 104--105
 
  []
 
-[3]
+
 Overfull \hbox (6.89894pt too wide) in paragraph at lines 116--117
 []\OT1/cmr/m/n/10.95 The num-ber of at-tempts per frame time $\OML/cmm/m/it/10.
 95 G$ \OT1/cmr/m/n/10.95 is cal-cu-lated as $\OML/cmm/m/it/10.95 G \OT1/cmr/m/n
@@ -344,12 +344,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 146--147
 
  []
 
-
+[4]
 Underfull \hbox (badness 10000) in paragraph at lines 148--149
 
  []
 
-[4]
+
 Underfull \hbox (badness 10000) in paragraph at lines 168--169
 
  []
@@ -399,6 +399,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 208--209
 
  []
 
+[6]
 Missing character: There is no “ in font cmr10!
 Missing character: There is no ” in font cmr10!
 
@@ -406,7 +407,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 211--212
 
  []
 
-[6]
+
 Underfull \hbox (badness 10000) in paragraph at lines 214--215
 
  []
@@ -459,12 +460,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 238--239
 
 [8] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 1276 strings out of 494123
- 15082 string characters out of 3151762
+ 1278 strings out of 494123
+ 15090 string characters out of 3151762
  69979 words of memory out of 3000000
  4573 multiletter control sequences out of 15000+200000
  9747 words of font info for 35 fonts, out of 3000000 for 9000
  1018 hyphenation exceptions out of 8191
- 27i,9n,20p,724b,249s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,9n,20p,724b,252s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on report.pdf (9 pages).
