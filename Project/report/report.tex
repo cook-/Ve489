@@ -99,11 +99,11 @@ Several global parameters are set as below: \\
 Then the propability \emph{p} are set differently to archive various \emph{G}, and for each \emph{G}, the simulation is run 1000 times to get an average \emph{S}. The data are recorded in the following table. \\
 
 \begin{table}[htbp]
-\begin{tabular}{lccccccccc}
+\begin{tabular}{lcccccccccc}
 \toprule
-p & 0.01 & 0.02  & 0.03 & 0.04 & 0.05 & 0.10 & 0.15 & 0.20 & 0.30 \\
+p & 0 & 0.01 & 0.02  & 0.03 & 0.04 & 0.05 & 0.10 & 0.15 & 0.20 & 0.30 \\
 \midrule
-successNum &  &  &  &  &  &  &  &  & \\
+successNum & 0 & 45 & 52 & 52 & 53 & 56 & 61 & 67 & 66 & 74 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -111,11 +111,11 @@ successNum &  &  &  &  &  &  &  &  & \\
 The number of attempts per frame time \(G\) is calculated as \(G = p*USER_NUM\) and throughput \(S\)is calculated as \(S = successNum/250\). The data are recorded in the following table. \\
 
 \begin{table}[htbp]
-\begin{tabular}{lccccccccc}
+\begin{tabular}{lcccccccccc}
 \toprule
-G & 0.1 & 0.2  & 0.3 & 0.4 & 0.5 & 1.0 & 1.5 & 2.0 & 3.0 \\
+G & 0 & 0.1 & 0.2  & 0.3 & 0.4 & 0.5 & 1.0 & 1.5 & 2.0 & 3.0 \\
 \midrule
-S &  &  &  &  &  &  &  &  & \\
+S & 0 & 0.209 & 0.211 & 0.215 & 0.224 & 0.247 & 0.269 & 0.268 & 0.300 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -156,7 +156,28 @@ for which the maximum occurs at \(G = 1\) with \(S = 1/e \approx 0.368\) and the
 
 Table for \(p\) and \(successNum\) is shown below.
 
+\begin{table}[htbp]
+\begin{tabular}{lcccccccccc}
+\toprule
+p & 0 & 0.01 & 0.02  & 0.03 & 0.04 & 0.05 & 0.10 & 0.15 & 0.20 & 0.30 \\
+\midrule
+successNum & 0 & 65 & 85 & 94 & 97 & 92 & 80 & 73 & 69 & 65 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
 Table for \(G\) and \(S\) is shown below.
+
+\begin{table}[htbp]
+\begin{tabular}{lcccccccccc}
+\toprule
+G & 0 & 0.1 & 0.2  & 0.3 & 0.4 & 0.5 & 1.0 & 1.5 & 2.0 & 3.0 \\
+\midrule
+S & 0 & 0.262 & 0.341 & 0.377 & 0.391 & 0.369 & 0.323 & 0.292 & 0.280 & 0.263 \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \subsection*{Analysis}
 
@@ -191,7 +212,7 @@ where \(a = \frac{t_{prop}}{X} = \frac{Rd}{vL}\) \\
 
 \subsection*{Simulation}
 
-The Flow Chart of the Proggram: \\
+The Flow Chart of the Program is shown on Figure ? \\
 
 \begin{figure}
 \centering
