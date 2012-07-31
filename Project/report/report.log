@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (TeX Live 2011) (format=xelatex 2012.6.6)  31 JUL 2012 16:15
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (TeX Live 2011) (format=xelatex 2012.6.6)  31 JUL 2012 16:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -160,11 +160,6 @@ LaTeX Font Info:    ... okay on input line 11.
  [1
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 23--24
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
  []
@@ -219,12 +214,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--50
 
  []
 
-[1]
+
 Underfull \hbox (badness 10000) in paragraph at lines 51--52
 
  []
 
-
+[1]
 Underfull \hbox (badness 10000) in paragraph at lines 53--54
 
  []
@@ -306,16 +301,11 @@ Overfull \hbox (9.73695pt too wide) in paragraph at lines 102--109
 
 File: 1_1.jpg Graphic file (type eps)
 <1_1.jpg>
-Overfull \hbox (6.89894pt too wide) in paragraph at lines 117--118
+Overfull \hbox (12.8187pt too wide) in paragraph at lines 117--118
 []\OT1/cmr/m/n/10.95 The num-ber of at-tempts per frame time $\OML/cmm/m/it/10.
 95 G$ \OT1/cmr/m/n/10.95 is cal-cu-lated as $\OML/cmm/m/it/10.95 G \OT1/cmr/m/n
 /10.95 = \OML/cmm/m/it/10.95 p \OMS/cmsy/m/n/10.95 ^^C \OML/cmm/m/it/10.95 USER
-[]UM$
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 117--118
-
+[]NUM$
  []
 
 
