@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (TeX Live 2011) (format=xelatex 2012.6.6)  31 JUL 2012 23:26
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (TeX Live 2011) (format=xelatex 2012.6.6)  31 JUL 2012 23:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -410,14 +410,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 227--228
 
 [8]
 File: 3_2.jpg Graphic file (type eps)
- <3_2.jpg>
+ <3_2.jpg> [9]
 File: 3_3.jpg Graphic file (type eps)
  <3_3.jpg>
 Overfull \hbox (0.97694pt too wide) in paragraph at lines 298--305
 [][] 
  []
 
-[9]
+
 Overfull \hbox (0.97694pt too wide) in paragraph at lines 308--315
 [][] 
  []
@@ -438,15 +438,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 332--333
 
  []
 
+[11]
 File: 4_1.eps Graphic file (type eps)
-<4_1.eps>
+ <4_1.eps>
 Underfull \hbox (badness 10000) in paragraph at lines 352--353
 
  []
 
 Missing character: There is no “ in font cmr10!
 Missing character: There is no ” in font cmr10!
-[11] [12]
+[12]
 File: 4_2.eps Graphic file (type eps)
  <4_2.eps>
 File: 4_3.eps Graphic file (type eps)
@@ -454,14 +455,14 @@ File: 4_3.eps Graphic file (type eps)
 File: 4_4.eps Graphic file (type eps)
  <4_4.eps>
 File: 4_5.eps Graphic file (type eps)
- <4_5.eps>
+ <4_5.eps> [14] [15]
 Missing character: There is no ’ in font cmr10!
 
 Underfull \hbox (badness 10000) in paragraph at lines 478--479
 
  []
 
-[14] [15]
+
 Underfull \hbox (badness 10000) in paragraph at lines 480--481
 
  []
@@ -476,7 +477,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 484--485
 
  []
 
-
+[16]
 Underfull \hbox (badness 10000) in paragraph at lines 486--487
 
  []
@@ -486,7 +487,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 488--489
 
  []
 
-[16]
+
 Underfull \hbox (badness 10000) in paragraph at lines 493--494
 
  []
@@ -511,14 +512,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 501--502
 
  []
 
-[17] (./report.aux) ) 
+[17] [18] (./report.aux) ) 
 Here is how much of TeX's memory you used:
  1303 strings out of 494123
  15268 string characters out of 3151762
- 73979 words of memory out of 3000000
+ 71979 words of memory out of 3000000
  4586 multiletter control sequences out of 15000+200000
  9747 words of font info for 35 fonts, out of 3000000 for 9000
  1018 hyphenation exceptions out of 8191
  27i,9n,20p,724b,251s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on report.pdf (18 pages).
+Output written on report.pdf (19 pages).
