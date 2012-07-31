@@ -19,15 +19,11 @@
 \maketitle
 
 \section*{Introduction}
-
-In the MAC sublayer, Random Access Control is a very important part. There are merely four kinds of Random Access Control protocols: pure ALOHA, slotted ALOHA, CSMA and CSMA/CD. This project will simulate these four protocols to see their transmission efficiency and compare their performance. By doing this, it can be determined which protocol is suitable for a certain situation and helps us to understand how each protocol works.
+In the MAC sublayer, Random Access Control is a very important part. There are four kinds of Random Access Control protocols: pure ALOHA, slotted ALOHA, CSMA and CSMA/CD. This project will simulate these four protocols to see their transmission efficiency and compare their performance. By doing this, it can be determined which protocol is suitable for a certain situation and helps us to understand how each protocol works.
 
 \section*{Pure ALOHA}
-
 \subsection*{Theories}
-
 ALOHA was devised by Norman Abramson in the 1970s to solve the channel allocation problem. The basic idea of pure ALOHA is that users(or stations) can transimit frames whenever they have, which is totally random. Of course, when different users are transmiting their frames at the same time, those frames will collide and all of them will be damaged. A sender can find out whether its transmission succeed by checking the acknowledgements from the receiver. If the frame was damadged, it waits for a random time and send again. \\
-
 Given the following parameters: \\
 
 \qquad	\(X\): frame transmission time \\
@@ -54,7 +50,7 @@ Then the throughput is given by \\
 
 \qquad \(S = Ge^{-2G}\) \\
 
-for which the maximum occurs at \(G = 0.5\) with \(S = 1/2e \approx 0.184\) and the \(S - G\) graph is shown on Figure 1.
+for which the maximum occurs at \(G = 0.5\) with \(S = 1/2e \approx 0.184\) and the \(S - G\) graph is shown on "Figure 1".
 
 \subsection*{Assumptions}
 
@@ -64,39 +60,31 @@ for which the maximum occurs at \(G = 0.5\) with \(S = 1/2e \approx 0.184\) and 
 4. The probability of having multiple(\(>\) 1) arrivals during a short time interval \(\Delta t\) approaches 0;
 
 \subsection*{Simulation}
-
-In the simulation program, an two-dimensional array containing 0s and 1s is used to represent states of different users at each short time interval \(\Delta t\). For example, statest[\emph{userNum}][\emph{slotNum}] is an \emph{userNum}\(\times\)\emph{slotNum} array, its Nth(0 \(<\) N \(<\) \emph{userNum}) row represents that the Nth user's states from 0th to (\emph{slotNum}-1)th short time interval. "0" is used when the user is not transmitting data at a certain short time interval and "1" is used otherwise. \\
-
+In the simulation program, an two-dimensional array containing 0s and 1s is used to represent states of different users at each short time interval \(\Delta t\). For example, statest[\emph{userNum}][\emph{simulateTime}] is an \emph{userNum}\(\times\)\emph{simulateTime} array, its Nth(0 \(<\) N \(<\) \emph{userNum}) row represents that the Nth user's states from 0th to (\emph{simulateTime}-1)th short time interval. "0" is used when the user is not transmitting data at a certain short time interval and "1" is used otherwise. \\
 The array can be expressed graphically like this: \\
-
 states[\emph{N}][\emph{M}]: \\
 
-\qquad user1: 111111000111111\(\cdots\)0000000001111110000000 \\
+\qquad user1: 111100111101111\(\cdots\)0111100000011110000000 \\
 
-\qquad user2: 001111110000000\(\cdots\)0001111110000000000111 \\
+\qquad user2: 0011110000000\(\cdots\)00011110000000001111 \\
 
 \qquad\quad \(\vdots\) \hspace{35mm} \(\vdots\) \\
 
-\qquad userN: \hspace{-0.5mm}\(\underbrace{000000011111100\cdots1111110000001111110000}_\text{M short time intervals}\) \\
+\qquad userN: \hspace{-0.5mm}\(\underbrace{000000000111100\cdots1111000111100011110000}_\text{M short time intervals}\) \\
 
 Since the frame length(frameLen) is assumed to be constant, the number of consetutive 1s remains the same(except the frames at the end of each row). The above example always has 4 consetutive 1s which represents a 6-slot length frame. \\
-
 At the beginnig of each simulation, the array need to be initialized based on a given probability \(p\) which is the probability that a user generates a frame during a certain short time interval \(\Delta t\). Once the first state is initialized to be 1, its consetutive (frameLen - 1) states should all be set to 1. This initialization process is conducted by the function \emph{generate\_frame()}.\\
-
 Then at each short time interval, the states of each user are checked and using function \emph{check\_collision}, three status(\emph{COLLISION}, \emph{NO\_COLLISION} and \emph{IDLE}) are marked. \\
-
 If a collision is detected for a user, it pushs all its 1s and 0s backwards for a random time using function \emph{wait\_for\_random\_time()}. To be noticed, the random time should be between 0 and the maximum simulate time and it is set to \emph{SIMULATE\_TIME}/2 in the codes. \\
-
 Finally, the driven function \emph{pure\_aloha\_simulate()} is called in \(main()\) to simulate and output the throughput \emph{S}.
 
 \subsection*{Results}
-
 Several global parameters are set as below: \\
 \emph{USER\_NUM = 10} \\
 \emph{SIMULATE\_TIME = 1000} \\
 \emph{FRAME\_LEN = 4} \\
 
-Then the propability \emph{p} are set differently to archive various \emph{G}, and for each \emph{G}, the simulation is run 1000 times to get an average \emph{S}. The data are recorded in the following table and the figure is shown on Figure 1. \\
+Then the propability \emph{p} are set differently to archive various \emph{G}, and for each \emph{G}, the simulation is run 1000 times to get an average \emph{S}. The data are recorded in the following table and the figure is shown on "Figure 1". \\
 
 \begin{table}[htbp]
 \begin{tabular}{lcccccccccc}
@@ -114,7 +102,7 @@ successNum & 0 & 45 & 52 & 52 & 53 & 56 & 61 & 67 & 66 & 74 \\
 \caption{successNum-p}
 \end{figure}
 
-The number of attempts per frame time \(G\) is calculated as \(G = p*USER\_NUM\) and throughput \(S\) is calculated as \(S = successNum/250\). The data are recorded in the following table and the figure is shown on Figure 2.
+The number of attempts per frame time \(G\) is calculated as \(G = p*USER\_NUM\) and throughput \(S\) is calculated as \(S = successNum/250\). The data are recorded in the following table and the figure is shown on "Figure 2".
 
 \begin{table}[htbp]
 \begin{tabular}{lcccccccccc}
@@ -165,9 +153,7 @@ for which the maximum occurs at \(G = 1\) with \(S = 1/e \approx 0.368\) and the
 
 
 \subsection*{Results}
-
-Table for \(p\) and \(successNum\) is shown below.
-
+Table for \(p\) and \(successNum\) is shown below and \(n-p\) graph is shown on "Figure ?".
 \begin{table}[htbp]
 \begin{tabular}{lcccccccccc}
 \toprule
@@ -184,8 +170,7 @@ Num & 0 & 65 & 85 & 94 & 97 & 92 & 80 & 73 & 69 & 65 \\
 \caption{}
 \end{figure}
 
-Table for \(G\) and \(S\) is shown below.
-
+Table for \(G\) and \(S\) is shown below and \(S-G\) graph is shown on "Figure ?".
 \begin{table}[htbp]
 \begin{tabular}{lcccccccccc}
 \toprule
@@ -205,11 +190,11 @@ S & 0 & 0.262 & 0.341 & 0.377 & 0.391 & 0.369 & 0.323 & 0.292 & 0.280 & 0.263 \\
 \subsection*{Analysis}
 
 Similarly, the results of slotted ALOHA also doesn't match well with the theory with \(S_{max} = 0.368\) at \(G = 1.0\) \\
-
 However, fortunately, compared with data of pure ALOHA, the value of \(S\) of slotted ALOHA is always larger regardless of the value of \(G\). This phenomenon shows that slotted ALOHA has higher efficiency that pure ALOHA.
 
-\section*{CSMA}
 
+
+\section*{CSMA}
 \subsection*{Theories}
 Carrier Sense Multiple Access (CSMA) is a probabilistic Media Access Control (MAC) protocol in which a node verifies the absence of other traffic before transmitting on a shared transmission medium, such as an electrical bus, or a band of the electromagnetic spectrum. \\
 "Carrier Sense" describes the fact that a transmitter uses feedback from a receiver that detects a carrier wave before trying to send. That is, it tries to detect the presence of an encoded signal from another station before attempting to transmit. If a carrier is sensed, the station waits for the transmission in progress to finish before initiating its own transmission. In other words, CSMA is based on the principle "sense before transmit" or "listen before talk". \\
@@ -221,10 +206,9 @@ When the sender (station) is ready to transmit data, it checks if the transmissi
 Non persistent CSMA is less aggressive compared to P persistent protocol. In this protocol, before sending the data, the station senses the channel and if the channel is idle it starts transmitting the data. But if the channel is busy, the station does not continuously sense it but instead of that it waits for random amount of time and repeats the algorithm. Here the algorithm leads to better channel utilization but also results in longer delay compared to 1 -persistent. \\
 3. P-persistent \\
 This is a sort of trade-off between 1 and non-persistent CSMA access modes. When the sender is ready to send data, it checks continually if the medium is busy. If the medium becomes idle, the sender transmits a frame with a probability p. If the station chooses not to transmit (the probability of this event is 1-p), the sender waits until the next available time slot and transmits again with the same probability p. This process repeats until the frame is sent or some other sender starts transmitting. In the latter case the sender monitors the channel, and when idle, transmits with a probability p, and so on. p-persistent CSMA is used in CSMA/CA systems including WiFi and other packet radio systems. \\
-
 \begin{figure}
 \centering
-\includegraphics[width=0.5\textwidth]{3_1.eps}
+\includegraphics[width=0.7\textwidth]{3_1.eps}
 \caption{Simple Graphical Description}
 \end{figure}
 
@@ -235,11 +219,11 @@ The Simplified Procedure of the Program: \\
 3) The length of a frame stays a static constant the whole simulation process which is 3, i.e. \\
 4) The random waiting time is set no larger than 10 and at least 3, which is the length of a frame. \\
 5) The program checks to see whether the medium is idle or busy and decides which station to transmit frames. \\
-i) If the station has something to transmit and the medium is idle without ant collisions, then the station begins to send frames. \\
-ii) If the station has something to send and the medium is busy but has no collisions, it first checks whether it sent data in the last second. If true, it keeps sending. If false, it waits a random number of seconds. \\
-iii) If the station has something to send and the medium is busy and has collisions, it senses the medium continuously (per second) to send frames. \\
-iv) In all other states, the station does nothing. \\
-v) Another array with comparatively small size will be used to record the number of successively transmitted frames of each station.
+(i) If the station has something to transmit and the medium is idle without ant collisions, then the station begins to send frames. \\
+(ii) If the station has something to send and the medium is busy but has no collisions, it first checks whether it sent data in the last second. If true, it keeps sending. If false, it waits a random number of seconds. \\
+(iii) If the station has something to send and the medium is busy and has collisions, it senses the medium continuously (per second) to send frames. \\
+(iv) In all other states, the station does nothing. \\
+(v) Another array with comparatively small size will be used to record the number of successively transmitted frames of each station.
 
 \subsection*{Results}
 1. For the 1-persistent CSMA case, the frame time is set to be 3 seconds. The whole process duration is 1200 seconds. The experiment data1 is in the following lists and the corresponding graph is shown on "Figure ?".
@@ -457,6 +441,7 @@ Between the two figures, we can see that the one with smaller \(A\) (propagation
 In the second simulation, which compares the program both with and without BEBA. From the figure, it is clear that the one with BEBA performs much better than the one without BEBA. And instead of having bad performance, the one with BEBA has a better efficiency when p increases. Thus as a conclusion of the result of simulation, it is better to choose BEBA as the algorithm of setting random waiting time when the traffic is very heavy. \\
 For the third simulation, it tells that when user numbers are larger, the performance will be better. This result is expected because when calculating the maximum efficiency, an approximation is made at \((1-\frac{1}{n})^{n-1}\) when \(n\) is large enough. However, one problem emerges. In the theory, the probability of a transmission success is \(P_s = np(1-p)^{n-1}\), and the maximum value happens when \(n = \frac{1}{p}\). Thus the peak value of \(S\) should happens at \(p = \frac{1}{n}\), but in the figure, the two peak values of different curves happen at the same point. This error may be caused by the scale of simulation or some little errors in the design of simulation. \\
 Comparing to ALOHA and Slotted ALOHA, CSMA has greatly improved the efficiency of transmission. However, a user who is sending a frame needs time, which is twice of the propagation time, to capture the medium. During this small time interval, other users who happen to have packets to send may regard the medium as idle and begins to transit and thus destroys both packets. And with the increasing of propagation time caused by longer distance or lower transmission rate, this kind of fault will have larger effect and reduces the efficiency rapidly. \\
+
 In order to minimize the influence of problem mentioned above, CSMA/CD (collision detection) is invented. It tells users whether their packets are having collisions with other packets or not. If true, both the users stop transmission to save time and wait for another chance.
 \end{document}
 
