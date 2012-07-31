@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (TeX Live 2011) (format=xelatex 2012.6.6)  31 JUL 2012 13:55
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (TeX Live 2011) (format=xelatex 2012.6.6)  31 JUL 2012 15:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -305,191 +305,21 @@ Overfull \hbox (9.73695pt too wide) in paragraph at lines 102--109
  []
 
 
-Overfull \hbox (6.89894pt too wide) in paragraph at lines 111--112
-[]\OT1/cmr/m/n/10.95 The num-ber of at-tempts per frame time $\OML/cmm/m/it/10.
-95 G$ \OT1/cmr/m/n/10.95 is cal-cu-lated as $\OML/cmm/m/it/10.95 G \OT1/cmr/m/n
-/10.95 = \OML/cmm/m/it/10.95 p \OMS/cmsy/m/n/10.95 ^^C \OML/cmm/m/it/10.95 USER
-[]UM$
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 111--112
-
- []
-
-
-Overfull \hbox (10.54301pt too wide) in paragraph at lines 114--121
-[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 125--126
-
- []
-
-[3]
-Overfull \hbox (10.23376pt too wide) in paragraph at lines 127--128
-[]\OT1/cmr/m/n/10.95 For ex-am-ple, the max-i-mum ran-dom wait time is set to b
-e \OT1/cmr/m/it/10.95 SIM-U-LATE[]TIME/2
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 127--128
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 137--138
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 139--140
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 141--142
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 143--144
-
- []
-
-
-Overfull \hbox (9.73695pt too wide) in paragraph at lines 160--167
-[][] 
- []
-
-[4]
-Overfull \hbox (10.54301pt too wide) in paragraph at lines 173--180
-[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 184--185
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 195--196
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 197--198
-
- []
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 199--200
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 201--202
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 215--216
-
- []
-
-File: 4_1.eps Graphic file (type eps)
-<4_1.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 222--224
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 225--226
-
- []
-
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 227--228
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 229--230
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 231--232
-
- []
-
-Missing character: There is no “ in font cmr10!
-Missing character: There is no ” in font cmr10!
-
-Underfull \hbox (badness 10000) in paragraph at lines 234--235
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 237--238
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 239--240
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 241--242
-
- []
-
-Missing character: There is no ’ in font cmr10!
-
-Underfull \hbox (badness 10000) in paragraph at lines 249--250
-
- []
-
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 251--252
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 253--254
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 255--256
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 257--258
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 259--260
-
- []
-
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 261--262
-
- []
-
-[9] (./report.aux) ) 
+LaTeX Warning: File `n-p(pure).jpeg' not found on input line 113.
+
+! Unable to load picture or PDF file 'n-p(pure).jpeg'.
+<to be read again> 
+                   }
+l.113 ...hics[width=0.6\textwidth]{n-p(pure).jpeg}
+                                                  
+? x
+ 
 Here is how much of TeX's memory you used:
  1276 strings out of 494123
- 15087 string characters out of 3151762
- 70979 words of memory out of 3000000
+ 15085 string characters out of 3151762
+ 68979 words of memory out of 3000000
  4573 multiletter control sequences out of 15000+200000
  9747 words of font info for 35 fonts, out of 3000000 for 9000
  1018 hyphenation exceptions out of 8191
- 27i,9n,20p,724b,249s stack positions out of 5000i,500n,10000p,200000b,50000s
-
-Output written on report.pdf (10 pages).
+ 27i,9n,20p,548b,189s stack positions out of 5000i,500n,10000p,200000b,50000s
+Output written on report.pdf (3 pages).
