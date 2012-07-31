@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2012.6.6)  30 JUL 2012 17:25
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2012.6.6)  31 JUL 2012 12:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -112,13 +112,6 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@lastruleclass=\count103
 \@thisrulewidth=\dimen124
 )
-(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
-
-(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
-\KV@toks@=\toks19
-)
 (/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
@@ -133,9 +126,6 @@ Package graphics Info: Driver file: dvips.def on input line 91.
 (/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/dvips.def
 File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 ))
-\Gin@req@height=\dimen125
-\Gin@req@width=\dimen126
-)
 (./report.aux)
 \openout1 = `report.aux'.
 
@@ -228,6 +218,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--52
 
  []
 
+File: 1.eps Graphic file (type eps)
+<1.eps>
+Overfull \hbox (282.4pt too wide) in paragraph at lines 56--57
+[][] 
+ []
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 69--70
 
@@ -268,7 +264,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--84
 
  []
 
-[2]
+[2] [3]
 Underfull \hbox (badness 10000) in paragraph at lines 85--86
 
  []
@@ -311,7 +307,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 126--127
 
  []
 
-[3]
+[4]
 Overfull \hbox (10.23376pt too wide) in paragraph at lines 128--129
 []\OT1/cmr/m/n/10.95 For ex-am-ple, the max-i-mum ran-dom wait time is set to b
 e \OT1/cmr/m/it/10.95 SIM-U-LATE[]TIME/2
@@ -342,7 +338,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 144--145
 
  []
 
-[4]
+[5]
 Underfull \hbox (badness 10000) in paragraph at lines 164--165
 
  []
@@ -367,7 +363,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 181--182
 
  []
 
-[5]
+[6]
 Underfull \hbox (badness 10000) in paragraph at lines 195--197
 
  []
@@ -408,7 +404,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 210--211
 
  []
 
-[6]
+[7]
 Underfull \hbox (badness 10000) in paragraph at lines 212--213
 
  []
@@ -441,7 +437,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 228--229
 
  []
 
-[7]
+[8]
 Underfull \hbox (badness 10000) in paragraph at lines 230--231
 
  []
@@ -456,14 +452,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 234--235
 
  []
 
-[8] (./report.aux) ) 
+[9] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 1215 strings out of 493611
- 14295 string characters out of 3142449
- 70928 words of memory out of 3000000
- 4560 multiletter control sequences out of 15000+200000
+ 1132 strings out of 493611
+ 13060 string characters out of 3142449
+ 69510 words of memory out of 3000000
+ 4481 multiletter control sequences out of 15000+200000
  9747 words of font info for 35 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 27i,9n,20p,726b,189s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,9n,20p,726b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on report.dvi (9 pages, 21060 bytes).
+Output written on report.dvi (10 pages, 21248 bytes).
