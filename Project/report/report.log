@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (TeX Live 2011) (format=xelatex 2012.6.6)  31 JUL 2012 18:23
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (TeX Live 2011) (format=xelatex 2012.6.6)  31 JUL 2012 18:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -375,19 +375,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 214--224
 [7]
 File: 3_1.eps Graphic file (type eps)
  <3_1.eps> [8]
-! Too many }'s.
-\@endfloatbox ...pagefalse \outer@nobreak \egroup 
-                                                  \color@endbox 
-l.275 \end{table}
-                 
-? x
- 
+Underfull \hbox (badness 10000) in paragraph at lines 314--317
+
+ []
+
+[9]
+File: 4_1.eps Graphic file (type eps)
+ <4_1.eps>
+Missing character: There is no “ in font cmr10!
+Missing character: There is no ” in font cmr10!
+ [10] [11]
+File: 4_2.eps Graphic file (type eps)
+ <4_2.eps>
+Overfull \hbox (23.72864pt too wide) in paragraph at lines 386--393
+[][] 
+ []
+
+File: 4_3.eps Graphic file (type eps)
+<4_3.eps>
+File: 4_4.eps Graphic file (type eps)
+ <4_4.eps>
+File: 4_5.eps Graphic file (type eps)
+ <4_5.eps> [12] [13]
+Missing character: There is no ’ in font cmr10!
+ [14] [15] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 1284 strings out of 494123
- 15128 string characters out of 3151762
- 70979 words of memory out of 3000000
- 4577 multiletter control sequences out of 15000+200000
+ 1297 strings out of 494123
+ 15226 string characters out of 3151762
+ 74979 words of memory out of 3000000
+ 4583 multiletter control sequences out of 15000+200000
  9747 words of font info for 35 fonts, out of 3000000 for 9000
  1018 hyphenation exceptions out of 8191
- 27i,9n,20p,723b,251s stack positions out of 5000i,500n,10000p,200000b,50000s
-Output written on report.pdf (9 pages).
+ 27i,9n,20p,724b,255s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on report.pdf (16 pages).
