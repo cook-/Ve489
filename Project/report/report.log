@@ -305,21 +305,25 @@ Overfull \hbox (9.73695pt too wide) in paragraph at lines 102--109
  []
 
 
-LaTeX Warning: File `n-p(pure).jpeg' not found on input line 113.
+LaTeX Warning: File `n-p(pure).jpg' not found on input line 113.
 
-! Unable to load picture or PDF file 'n-p(pure).jpeg'.
-<to be read again> 
-                   }
-l.113 ...hics[width=0.6\textwidth]{n-p(pure).jpeg}
+
+! LaTeX Error: File `n-p(pure).bb' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.113 ...phics[width=0.6\textwidth]{n-p(pure).jpg}
                                                   
 ? x
  
 Here is how much of TeX's memory you used:
- 1276 strings out of 494123
- 15085 string characters out of 3151762
+ 1275 strings out of 494123
+ 15199 string characters out of 3151762
  68979 words of memory out of 3000000
- 4573 multiletter control sequences out of 15000+200000
+ 4572 multiletter control sequences out of 15000+200000
  9747 words of font info for 35 fonts, out of 3000000 for 9000
  1018 hyphenation exceptions out of 8191
- 27i,9n,20p,548b,189s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,9n,20p,548b,247s stack positions out of 5000i,500n,10000p,200000b,50000s
 Output written on report.pdf (3 pages).
