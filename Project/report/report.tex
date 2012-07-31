@@ -129,7 +129,7 @@ S & 0 & 0.183 & 0.209 & 0.211 & 0.215 & 0.224 & 0.247 & 0.269 & 0.268 & 0.300 \\
 \begin{figure}
 \centering
 \includegraphics[width=0.6\textwidth]{1_2.jpg}
-\caption{successNum-p}
+\caption{S-G}
 \end{figure}
 
 \subsection*{Analysis}
@@ -199,7 +199,7 @@ S & 0 & 0.262 & 0.341 & 0.377 & 0.391 & 0.369 & 0.323 & 0.292 & 0.280 & 0.263 \\
 \begin{figure}
 \centering
 \includegraphics[width=0.6\textwidth]{2_2.jpg}
-\caption{successNum-p}
+\caption{S-G}
 \end{figure}
 \subsection*{Analysis}
 
@@ -239,6 +239,7 @@ The Flow Chart of the Program is shown on Figure ? \\
 \begin{figure}
 \centering
 \includegraphics[width=0.6\textwidth]{4_1.eps}
+\caption{flow chart}
 \end{figure}
 
 The Simplified Procedure of the Program: \\
@@ -252,9 +253,7 @@ The Simplified Procedure of the Program: \\
 
 (i) If the station has something to send and the medium is idle, then the station begins to send and the data it is sending will be received by the medium in the next larger loop. \\
 
-
 (ii) If the station has something to send and the medium is busy but has no collisions, it first checks whether it sent data in the last two loops. If true, it keeps sending. If false, it waits a random number of slots based on the Binary Exponential Backoff Algorithm. The act “Waiting” is realized by postponing the value in the array by a given slots. Values, which are moved out of bound, are just discarded and the newly - produced empty slots are filled by 0s. \\
-
 
 (iii) If the station has something to send and the medium is busy and has collisions, it does the same backoff strategy as in the previous part. \\
 
@@ -265,6 +264,120 @@ The Simplified Procedure of the Program: \\
 (vi) Another array with comparatively small size will be used to record the number of successively transmitted frames of each station.
 
 \subsection*{Results}
+
+1. For the original case, the frame time is set to be 4 slots. The whole process duration is 1000 slots, and the number of users is 10. The experiment data1 is in the following lists. (Since the theoretical values are measured without using BEBA, so in this case, all stations wait a random time from 0 to 1024 slots) \\
+
+\begin{table}[htbp]
+\begin{tabular}{lccccccccccc}
+\toprule
+p & 0.05 & 0.10 & 0.15  & 0.20 & 0.25 & 0.30 & 0.35 & 0.40 & 0.45 & 0.50 \\
+\midrule
+successNum & 36 & 37 & 35 & 34 & 33 & 30 & 29 & 27 & 25 & 25 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\begin{tabular}{lccccccccccc}
+\toprule
+p & 0.55 & 0.60 & 0.65  & 0.70 & 0.75 & 0.80 & 0.85 & 0.90 & 0.95 & 1.00 \\
+\midrule
+successNum & 22 & 22 & 20 & 20 & 18 & 17 & 16 & 15 & 14 & 13 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth]{4_2.eps}
+\end{figure}
+
+2. To show the influence of BEBA, the program simulates the same situation as in the first case both with BEBA and without it. The data of the one with BEBA is shown in the following list.
+
+\begin{table}[htbp]
+\begin{tabular}{lccccccccccc}
+\toprule
+p & 0.05 & 0.10 & 0.15  & 0.20 & 0.25 & 0.30 & 0.35 & 0.40 & 0.45 & 0.50 \\
+\midrule
+successNum & 55 & 56 & 57 & 59 & 63 & 63 & 67 & 69 & 73 & 76 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\begin{tabular}{lccccccccccc}
+\toprule
+p & 0.55 & 0.60 & 0.65  & 0.70 & 0.75 & 0.80 & 0.85 & 0.90 & 0.95 & 1.00 \\
+\midrule
+successNum & 82 & 86 & 93 & 98 & 104 & 111 & 114 & 118 & 119 & 119 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The figure of the performance of this situation is shown in Figure ?, comparing to the performance of the one without Binary Exponential Backoff Algorithm.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth]{4_3.eps}
+\end{figure}
+
+3. In order to find out the relationship between performance and number of users, the first case is tested again by changing the number of users to be 5. The experiment data is in the following lists.
+
+\begin{table}[htbp]
+\begin{tabular}{lccccccccccc}
+\toprule
+p & 0.05 & 0.10 & 0.15  & 0.20 & 0.25 & 0.30 & 0.35 & 0.40 & 0.45 & 0.50 \\
+\midrule
+successNum & 25 & 28 & 27 & 26 & 21 & 21 & 18 & 18 & 16 & 14 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\begin{tabular}{lccccccccccc}
+\toprule
+p & 0.55 & 0.60 & 0.65  & 0.70 & 0.75 & 0.80 & 0.85 & 0.90 & 0.95 & 1.00 \\
+\midrule
+successNum & 14 & 11 & 11 & 10 & 10 & 9 & 9 & 8 & 8 & 8 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The figure of the performance of this situation is shown in "Figure ?", comparing to the performance of the one with ten users.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth]{4_4.eps}
+\end{figure}
+
+4. To see the efficiency change due to the ratio of propagation time and frame time, a new simulation is done with the set used in the first one except that the frame time is set to be 10. The whole process is 1000. The experiment data is in the following lists.
+
+\begin{table}[htbp]
+\begin{tabular}{lccccccccccc}
+\toprule
+p & 0.05 & 0.10 & 0.15  & 0.20 & 0.25 & 0.30 & 0.35 & 0.40 & 0.45 & 0.50 \\
+\midrule
+successNum & 21 & 23 & 24 & 24 & 24 & 22 & 21 & 21 & 19 & 20 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\begin{tabular}{lccccccccccc}
+\toprule
+p & 0.55 & 0.60 & 0.65  & 0.70 & 0.75 & 0.80 & 0.85 & 0.90 & 0.95 & 1.00 \\
+\midrule
+successNum & 18 & 18 & 17 & 16 & 15 & 15 & 14 & 14 & 13 & 13 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The figure of the performance of this situation is shown in "Figure 4", including the theoretic value at this situation.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth]{4_5.eps}
+\end{figure}
 
 \subsection*{Analysis}
 
