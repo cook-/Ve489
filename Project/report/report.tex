@@ -1,7 +1,8 @@
-\documentclass[11pt,oneside,a4paper]{report}
+\documentclass[11pt,a4paper]{report}
 \usepackage{amsmath}
 \usepackage{booktabs}
 \usepackage{graphics}
+\usepackage{epsfig}
 \everymath{\displaystyle}
 \setlength\parindent{0pt}
 \begin{document}
@@ -52,10 +53,8 @@ Then the throughput is given by \\
 
 for which the maximum occurs at \(G = 0.5\) with \(S = 1/2e \approx 0.184\) and the \(S - G\) graph is shown on Figure 1.
 
-\begin{figure}
-\includegraphics{1.eps}
-\caption{ALOHA}
-\end{figure}
+%\includegraphics{1.eps}
+\epsfig{figure=1.eps}
 
 \subsection*{Assumptions}
 
