@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (TeX Live 2011) (format=xelatex 2012.6.6)  31 JUL 2012 23:50
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (TeX Live 2011) (format=xelatex 2012.6.6)  31 JUL 2012 23:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -423,32 +423,47 @@ Overfull \hbox (0.97694pt too wide) in paragraph at lines 308--315
  []
 
 File: 3_4.jpg Graphic file (type eps)
-<3_4.jpg> [10]
-Underfull \hbox (badness 10000) in paragraph at lines 335--336
+<3_4.jpg>
+Underfull \hbox (badness 10000) in paragraph at lines 324--325
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 337--338
+Underfull \hbox (badness 10000) in paragraph at lines 326--330
+
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 331--332
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 338--339
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 340--341
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 339--340
+Underfull \hbox (badness 10000) in paragraph at lines 342--343
 
  []
 
 File: 4_1.eps Graphic file (type eps)
 <4_1.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 359--360
+Underfull \hbox (badness 10000) in paragraph at lines 362--363
 
  []
 
 Missing character: There is no “ in font cmr10!
 Missing character: There is no ” in font cmr10!
-[12]
+[12] [13]
 File: 4_2.eps Graphic file (type eps)
- <4_2.eps> [13]
+ <4_2.eps>
 File: 4_3.eps Graphic file (type eps)
  <4_3.eps>
 File: 4_4.eps Graphic file (type eps)
@@ -457,61 +472,61 @@ File: 4_5.eps Graphic file (type eps)
  <4_5.eps> [14] [15]
 Missing character: There is no ’ in font cmr10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 485--486
+Underfull \hbox (badness 10000) in paragraph at lines 488--489
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 487--488
+Underfull \hbox (badness 10000) in paragraph at lines 490--491
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 489--490
+Underfull \hbox (badness 10000) in paragraph at lines 492--493
 
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 491--492
+Underfull \hbox (badness 10000) in paragraph at lines 494--495
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 493--494
+Underfull \hbox (badness 10000) in paragraph at lines 496--497
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 495--496
+Underfull \hbox (badness 10000) in paragraph at lines 498--499
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 500--501
+Underfull \hbox (badness 10000) in paragraph at lines 503--504
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 502--503
+Underfull \hbox (badness 10000) in paragraph at lines 505--506
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 504--505
+Underfull \hbox (badness 10000) in paragraph at lines 507--508
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 506--507
+Underfull \hbox (badness 10000) in paragraph at lines 509--510
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 508--509
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 511--512
 
  []
 
-[17] [18] (./report.aux) ) 
+[18] (./report.aux) ) 
 Here is how much of TeX's memory you used:
  1303 strings out of 494123
  15268 string characters out of 3151762
