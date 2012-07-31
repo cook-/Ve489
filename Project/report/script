@@ -1,0 +1,25 @@
+#gnuplot
+set polar
+set grid polar
+set size square
+set xrange [-1:1]
+set yrange [-1:1]
+set terminal gif
+
+set output "load_b_cal"
+plot "load_b_cal.s1p" using 3:2
+
+set output "load_a_cal"
+plot "load_a_cal.s1p" using 3:2
+
+set output "open_b_cal"
+plot "open_b_cal.s1p" using 3:2
+
+set output "open_a_cal"
+plot "open_a_cal.s1p" using 3:2
+
+set output "short_b_cal"
+plot "short_b_cal.s1p" using 3:2
+
+set output "short_a_cal"
+plot "short_a_cal.s1p" using 3:2
