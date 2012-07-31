@@ -106,7 +106,7 @@ Num & 0 & 45 & 52 & 52 & 53 & 56 & 61 & 67 & 66 & 74 \\
 \begin{figure}
 \centering
 \includegraphics[width=0.5\textwidth]{1_1.jpg}
-\caption{n-p Graph}
+\caption{n-p Graph for Pure ALOHA}
 \end{figure}
 
 The number of attempts per frame time \(G\) is calculated as \(G = p*USER\_NUM\) and throughput \(S\) is calculated as \(S = successNum/250\). The data are recorded in the following table and the figure is shown on "Figure 2".
@@ -123,7 +123,7 @@ S & 0 & 0.183 & 0.209 & 0.211 & 0.215 & 0.224 & 0.247 & 0.269 & 0.268 & 0.300 \\
 \begin{figure}
 \centering
 \includegraphics[width=0.6\textwidth]{1_2.jpg}
-\caption{S-G Graph}
+\caption{S-G Graph for Pure ALOHA}
 \end{figure}
 
 \subsection*{Analysis}
@@ -158,7 +158,7 @@ For example, the frames for userK can be only like the following format(the leng
 \qquad userK: 1111 0000 1111 1111 1111 0000 \(\cdots\) 1111 0000 1111 1111 \\
 
 \subsection*{Results}
-Table for \(p\) and \(successNum\) is shown below and \(n-p\) graph is shown on "Figure ?".
+Table for \(p\) and \(successNum\) is shown below and \(n-p\) graph is shown on "Figure 3".
 \begin{table}[htbp]
 \begin{tabular}{lcccccccccc}
 \toprule
@@ -172,10 +172,10 @@ Num & 0 & 65 & 85 & 94 & 97 & 92 & 80 & 73 & 69 & 65 \\
 \begin{figure}
 \centering
 \includegraphics[width=0.5\textwidth]{2_1.jpg}
-\caption{}
+\caption{n-p Graph for Slotted ALOHA}
 \end{figure}
 
-Table for \(G\) and \(S\) is shown below and \(S-G\) graph is shown on "Figure ?".
+Table for \(G\) and \(S\) is shown below and \(S-G\) graph is shown on "Figure 4".
 \begin{table}[htbp]
 \begin{tabular}{lcccccccccc}
 \toprule
@@ -189,7 +189,7 @@ S & 0 & 0.262 & 0.341 & 0.377 & 0.391 & 0.369 & 0.323 & 0.292 & 0.280 & 0.263 \\
 \begin{figure}
 \centering
 \includegraphics[width=0.5\textwidth]{2_2.jpg}
-\caption{}
+\caption{S-G Graph for Slotted ALOHA}
 \end{figure}
 
 \subsection*{Analysis}
@@ -220,7 +220,7 @@ This is a sort of trade-off between 1 and non-persistent CSMA access modes. When
 \begin{figure}
 \centering
 \includegraphics[width=0.8\textwidth]{3_1.eps}
-\caption{Simple Graphical Description}
+\caption{Simple Graphical Description for CSMA}
 \end{figure}
 
 \subsection*{Simulation}
@@ -238,7 +238,7 @@ The Simplified Procedure of the Program: \\
 (v) Another array with comparatively small size will be used to record the number of successively transmitted frames of each station.
 
 \subsection*{Results}
-1. For the 1-persistent CSMA case, the frame time is set to be 3 seconds. The whole process duration is 1200 seconds. The experiment data1 is in the following lists and the corresponding graph is shown on "Figure ?".
+1. For the 1-persistent CSMA case, the frame time is set to be 3 seconds. The whole process duration is 1200 seconds. The experiment data1 is in the following lists.
 
 \begin{table}[htbp]
 \begin{tabular}{lcccccccccc}
@@ -260,7 +260,7 @@ Frames & 22 & 23 & 18 & 15 & 11 & 8 & 11 & 8 & 7 & 8 \\
 \end{tabular}
 \end{table}
 
-2. For the non-persistent CSMA case, the frame time is set to be 3 seconds. The whole process duration is 1200 seconds. The experiment data1 is in the following lists and the corresponding graph is shown on "Figure ?". 
+2. For the non-persistent CSMA case, the frame time is set to be 3 seconds. The whole process duration is 1200 seconds. The experiment data1 is in the following lists. 
 \begin{table}[htbp]
 \begin{tabular}{lcccccccccc}
 \toprule
@@ -281,7 +281,7 @@ Frames & 22 & 13 & 13 & 6 & 12 & 8 & 8 & 2 & 6 & 5 \\
 \end{tabular}
 \end{table}
 
-3. For the p-persistent CSMA case, the frame time is set to be 3 seconds. The whole process duration is 1200 seconds, and the number of users is 10. The experiment data1 is in the following lists and the corresponding grapf is shown on "Figure ?".
+3. For the p-persistent CSMA case, the frame time is set to be 3 seconds. The whole process duration is 1200 seconds, and the number of users is 10. The experiment data1 is in the following lists.
 \begin{table}[htbp]
 \begin{tabular}{lccccccccccc}
 \toprule
@@ -297,7 +297,7 @@ Frames & 37 & 52 & 76 & 80 & 99 & 98 & 113 & 129 & 142 & 144 \\
 \toprule
 p & 0.55 & 0.60 & 0.65  & 0.70 & 0.75 & 0.80 & 0.85 & 0.90 & 0.95 & 1.00 \\
 \midrule
-Num & 158 & 155 & 152 & 162 & 178 & 195 & 199 & 200 & 205 & 202 \\
+Frames & 158 & 155 & 152 & 162 & 178 & 195 & 199 & 200 & 205 & 202 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -324,11 +324,11 @@ where \(a = \frac{t_{prop}}{X} = \frac{Rd}{vL}\) \\
 4. The states of all users during the whole process are saved in a large array and the size of it is the number of users times the duration.
 
 \subsection*{Simulation}
-The Flow Chart of the Program is shown on "Figure ?". \\
+The Flow Chart of the Program is shown on "Figure 6". \\
 \begin{figure}
 \centering
 \includegraphics[width=0.7\textwidth]{4_1.eps}
-\caption{flow chart}
+\caption{Flow Chart for CSMA/CD Simulation}
 \end{figure}
 
 The Simplified Procedure of the Program: \\
@@ -449,7 +449,7 @@ Num & 18 & 18 & 17 & 16 & 15 & 15 & 14 & 14 & 13 & 13 \\
 \end{tabular}
 \end{table}
 
-The figure of the performance of this situation is shown in "Figure 4", including the theoretic value at this situation.
+The figure of the performance of this situation is shown in "Figure ?", including the theoretic value at this situation.
 \begin{figure}
 \centering
 \includegraphics[width=0.6\textwidth]{4_5.eps}
