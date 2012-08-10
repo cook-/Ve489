@@ -462,4 +462,131 @@ Underfull \hbox (badness 10000) in paragraph at lines 214--216
  []
 
 [7]
-Underfull \hbox (badness 10000) in parag
+Underfull \hbox (badness 10000) in paragraph at lines 217--219
+
+ []
+
+Package epstopdf Info: Source file: <3_1.eps>
+(epstopdf)                    date: 2012-07-31 17:49:50
+(epstopdf)                    size: 15303868 bytes
+(epstopdf)             Output file: <3_1-eps-converted-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=3_1-eps-converted-to.pdf 3
+_1.eps>
+(epstopdf)             \includegraphics on input line 222.
+runsystem(repstopdf --outfile=3_1-eps-converted-to.pdf 3_1.eps)...executed safe
+ly (allowed).
+
+Package epstopdf Info: Result file: <3_1-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-08-10 12:44:34
+(epstopdf)                    size: 188038 bytes.
+<3_1-eps-converted-to.pdf, id=40, 2170.1075pt x 1167.36125pt>
+File: 3_1-eps-converted-to.pdf Graphic file (type pdf)
+
+<use 3_1-eps-converted-to.pdf>
+Package pdftex.def Info: 3_1-eps-converted-to.pdf used on input line 222.
+(pdftex.def)             Requested size: 288.0011pt x 154.9151pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--228
+
+ []
+
+[8 <./3_1-eps-converted-to.pdf>] [9]
+Overfull \hbox (0.97694pt too wide) in paragraph at lines 298--305
+[][] 
+ []
+
+
+Overfull \hbox (0.97694pt too wide) in paragraph at lines 308--315
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 324--325
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 326--328
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 329--331
+
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 332--333
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 339--340
+
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 341--342
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 343--344
+
+ []
+
+Package epstopdf Info: Source file: <4_1.eps>
+(epstopdf)                    date: 2012-07-31 13:35:18
+(epstopdf)                    size: 2559877 bytes
+(epstopdf)             Output file: <4_1-eps-converted-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=4_1-eps-converted-to.pdf 4
+_1.eps>
+(epstopdf)             \includegraphics on input line 359.
+runsystem(repstopdf --outfile=4_1-eps-converted-to.pdf 4_1.eps)...executed safe
+ly (allowed).
+
+Package epstopdf Info: Result file: <4_1-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-08-10 12:44:37
+(epstopdf)                    size: 69947 bytes.
+<4_1-eps-converted-to.pdf, id=56, 733.74126pt x 577.15625pt>
+File: 4_1-eps-converted-to.pdf Graphic file (type pdf)
+
+<use 4_1-eps-converted-to.pdf>
+Package pdftex.def Info: 4_1-eps-converted-to.pdf used on input line 359.
+(pdftex.def)             Requested size: 251.9989pt x 198.22083pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 363--364
+
+ []
+
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+[12] [13 <./4_1-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <4_2.eps>
+(epstopdf)                    date: 2012-07-31 13:36:48
+(epstopdf)                    size: 2077791 bytes
+(epstopdf)             Output file: <4_2-eps-converted-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=4_2-eps-converted-to.pdf 4
+_2.eps>
+(epstopdf)             \includegraphics on input line 400.
+runsystem(repstopdf --outfile=4_2-eps-converted-to.pdf 4_2.eps)...executed safe
+ly (allowed).
+
+Package epstopdf Info: Result file: <4_2-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-08-10 12:44:39
+(epstopdf)                    size: 39768 bytes.
+
+<4_2-eps-converted-to.pdf, id=67, 755.82375pt x 454.69875pt>
+File: 4_2-eps-converted-to.pdf Graphic file (type pdf)
+
+<use 4_2-eps-converted-to.pdf>
+Package pdftex.def Info: 4_2-eps-converted-to.pdf used on input line 400.
+(pdftex.def)             Requested size: 216.0022pt x 129.94432pt.
+Package epstopdf Info: Source file: <4_3.eps>
+(epstopdf)                    date: 2012-07-31 13:38:34
+(epstopdf)                    size: 2077791 bytes
+(epstopdf) 
