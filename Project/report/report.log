@@ -589,4 +589,149 @@ Package pdftex.def Info: 4_2-eps-converted-to.pdf used on input line 400.
 Package epstopdf Info: Source file: <4_3.eps>
 (epstopdf)                    date: 2012-07-31 13:38:34
 (epstopdf)                    size: 2077791 bytes
-(epstopdf) 
+(epstopdf)             Output file: <4_3-eps-converted-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=4_3-eps-converted-to.pdf 4
+_3.eps>
+(epstopdf)             \includegraphics on input line 428.
+runsystem(repstopdf --outfile=4_3-eps-converted-to.pdf 4_3.eps)...executed safe
+ly (allowed).
+
+Package epstopdf Info: Result file: <4_3-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-08-10 12:44:42
+(epstopdf)                    size: 35385 bytes.
+
+<4_3-eps-converted-to.pdf, id=68, 755.82375pt x 454.69875pt>
+File: 4_3-eps-converted-to.pdf Graphic file (type pdf)
+
+<use 4_3-eps-converted-to.pdf>
+Package pdftex.def Info: 4_3-eps-converted-to.pdf used on input line 428.
+(pdftex.def)             Requested size: 216.0022pt x 129.94432pt.
+Package epstopdf Info: Source file: <4_4.eps>
+(epstopdf)                    date: 2012-07-31 13:38:14
+(epstopdf)                    size: 2077791 bytes
+(epstopdf)             Output file: <4_4-eps-converted-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=4_4-eps-converted-to.pdf 4
+_4.eps>
+(epstopdf)             \includegraphics on input line 456.
+runsystem(repstopdf --outfile=4_4-eps-converted-to.pdf 4_4.eps)...executed safe
+ly (allowed).
+
+Package epstopdf Info: Result file: <4_4-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-08-10 12:44:45
+(epstopdf)                    size: 38154 bytes.
+
+<4_4-eps-converted-to.pdf, id=69, 755.82375pt x 454.69875pt>
+File: 4_4-eps-converted-to.pdf Graphic file (type pdf)
+
+<use 4_4-eps-converted-to.pdf>
+Package pdftex.def Info: 4_4-eps-converted-to.pdf used on input line 456.
+(pdftex.def)             Requested size: 216.0022pt x 129.94432pt.
+ [14 <./4_2-eps-converted-to.pdf>] [15 <./4_3-eps-converted-to.pdf> <./4_4-eps-
+converted-to.pdf>]
+Package epstopdf Info: Source file: <4_5.eps>
+(epstopdf)                    date: 2012-07-31 15:05:24
+(epstopdf)                    size: 2077791 bytes
+(epstopdf)             Output file: <4_5-eps-converted-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=4_5-eps-converted-to.pdf 4
+_5.eps>
+(epstopdf)             \includegraphics on input line 484.
+runsystem(repstopdf --outfile=4_5-eps-converted-to.pdf 4_5.eps)...executed safe
+ly (allowed).
+
+Package epstopdf Info: Result file: <4_5-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-08-10 12:44:48
+(epstopdf)                    size: 37153 bytes.
+
+<4_5-eps-converted-to.pdf, id=85, 755.82375pt x 454.69875pt>
+File: 4_5-eps-converted-to.pdf Graphic file (type pdf)
+
+<use 4_5-eps-converted-to.pdf>
+Package pdftex.def Info: 4_5-eps-converted-to.pdf used on input line 484.
+(pdftex.def)             Requested size: 216.0022pt x 129.94432pt.
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 489--490
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 491--492
+
+ []
+
+[16 <./4_5-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 493--494
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 495--496
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 497--498
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 499--500
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 504--505
+
+ []
+
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 506--507
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 508--509
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 510--511
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 512--513
+
+ []
+
+[18] (./report.aux) ) 
+Here is how much of TeX's memory you used:
+ 2235 strings out of 493610
+ 30399 string characters out of 3142426
+ 95685 words of memory out of 3000000
+ 5514 multiletter control sequences out of 15000+200000
+ 9915 words of font info for 36 fonts, out of 3000000 for 9000
+ 831 hyphenation exceptions out of 8191
+ 37i,9n,23p,726b,254s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive/2011/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmbx12.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmex10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmmi10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmmi8.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr12.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr17.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r8.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
+0.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.
+pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.p
+fb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pf
+b>
+Output written on report.pdf (19 pages, 567297 bytes).
+PDF statistics:
+ 138 PDF objects out of 1000 (max. 8388607)
+ 92 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+
