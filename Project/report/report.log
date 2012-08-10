@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (TeX Live 2011) (format=xelatex 2012.6.6)  10 AUG 2012 12:37
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.6.6)  10 AUG 2012 12:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -21,15 +21,15 @@ Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/local/texlive/2011/texmf-dist/tex/latex/base/size11.clo
 File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
-\c@part=\count80
-\c@chapter=\count81
-\c@section=\count82
-\c@subsection=\count83
-\c@subsubsection=\count84
-\c@paragraph=\count85
-\c@subparagraph=\count86
-\c@figure=\count87
-\c@table=\count88
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
@@ -54,13 +54,13 @@ Package: amsbsy 1999/11/29 v1.2d
 (/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count89
+\inf@bad=\count88
 LaTeX Info: Redefining \frac on input line 211.
-\uproot@=\count90
-\leftroot@=\count91
+\uproot@=\count89
+\leftroot@=\count90
 LaTeX Info: Redefining \overline on input line 307.
-\classnum@=\count92
-\DOTSCASE@=\count93
+\classnum@=\count91
+\DOTSCASE@=\count92
 LaTeX Info: Redefining \ldots on input line 379.
 LaTeX Info: Redefining \dots on input line 382.
 LaTeX Info: Redefining \cdots on input line 467.
@@ -69,15 +69,15 @@ LaTeX Info: Redefining \cdots on input line 467.
 \big@size=\dimen105
 LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
-\macc@depth=\count94
-\c@MaxMatrixCols=\count95
+\macc@depth=\count93
+\c@MaxMatrixCols=\count94
 \dotsspace@=\muskip10
-\c@parentequation=\count96
-\dspbrk@lvl=\count97
+\c@parentequation=\count95
+\dspbrk@lvl=\count96
 \tag@help=\toks15
-\row@=\count98
-\column@=\count99
-\maxfields@=\count100
+\row@=\count97
+\column@=\count98
+\maxfields@=\count99
 \andhelp@=\toks16
 \eqnshift@=\dimen106
 \alignsep@=\dimen107
@@ -104,12 +104,12 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \cmidrulesep=\dimen119
 \cmidrulekern=\dimen120
 \defaultaddspace=\dimen121
-\@cmidla=\count101
-\@cmidlb=\count102
+\@cmidla=\count100
+\@cmidlb=\count101
 \@aboverulesep=\dimen122
 \@belowrulesep=\dimen123
-\@thisruleclass=\count103
-\@lastruleclass=\count104
+\@thisruleclass=\count102
+\@lastruleclass=\count103
 \@thisrulewidth=\dimen124
 )
 (/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/graphics.sty
@@ -121,11 +121,18 @@ Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 (/usr/local/texlive/2011/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: xetex.def on input line 91.
+Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/local/texlive/2011/texmf-dist/tex/xelatex/xetex-def/xetex.def
-File: xetex.def 2009/11/22 v0.94 LaTeX color/graphics driver for XeTeX (RRM/JK)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count104
 ))
 (/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
@@ -157,9 +164,70 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
- [1
 
-]
+(/usr/local/texlive/2011/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count105
+\scratchdimen=\dimen129
+\scratchbox=\box28
+\nofMPsegments=\count106
+\nofMParguments=\count107
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count108
+\MPscratchDim=\dimen130
+\MPnumerator=\count109
+\makeMPintoPDFobject=\count110
+\everyMPtoPDFconversion=\toks21
+) (/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.jpg,.png,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+[1
+
+{/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
  []
@@ -289,8 +357,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 90--94
 
  []
 
-File: 1_1.jpg Graphic file (type eps)
-<1_1.jpg>
+
 Overfull \hbox (10.54301pt too wide) in paragraph at lines 114--121
 [][] 
  []
@@ -303,8 +370,7 @@ Overfull \hbox (12.8187pt too wide) in paragraph at lines 112--122
 []NUM$
  []
 
-File: 1_2.jpg Graphic file (type eps)
-<1_2.jpg>
+
 Underfull \hbox (badness 10000) in paragraph at lines 130--131
 
  []
@@ -360,14 +426,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 158--159
 
  []
 
-File: 2_1.jpg Graphic file (type eps)
-<2_1.jpg>
+
 Overfull \hbox (10.54301pt too wide) in paragraph at lines 180--187
 [][] 
  []
 
-File: 2_2.jpg Graphic file (type eps)
-<2_2.jpg>
+
 Underfull \hbox (badness 10000) in paragraph at lines 196--197
 
  []
@@ -398,147 +462,4 @@ Underfull \hbox (badness 10000) in paragraph at lines 214--216
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 217--219
-
- []
-
-File: 3_1.eps Graphic file (type eps)
-<3_1.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 227--228
-
- []
-
-[8]
-File: 3_2.jpg Graphic file (type eps)
- <3_2.jpg> [9]
-File: 3_3.jpg Graphic file (type eps)
- <3_3.jpg>
-Overfull \hbox (0.97694pt too wide) in paragraph at lines 298--305
-[][] 
- []
-
-
-Overfull \hbox (0.97694pt too wide) in paragraph at lines 308--315
-[][] 
- []
-
-File: 3_4.jpg Graphic file (type eps)
-<3_4.jpg>
-Underfull \hbox (badness 10000) in paragraph at lines 324--325
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 326--328
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 329--331
-
- []
-
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 332--333
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 339--340
-
- []
-
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 341--342
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 343--344
-
- []
-
-File: 4_1.eps Graphic file (type eps)
-<4_1.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 363--364
-
- []
-
-Missing character: There is no “ in font cmr10!
-Missing character: There is no ” in font cmr10!
-[12] [13]
-File: 4_2.eps Graphic file (type eps)
- <4_2.eps>
-File: 4_3.eps Graphic file (type eps)
- <4_3.eps>
-File: 4_4.eps Graphic file (type eps)
- <4_4.eps> [14] [15]
-File: 4_5.eps Graphic file (type eps)
- <4_5.eps>
-Missing character: There is no ’ in font cmr10!
-
-Underfull \hbox (badness 10000) in paragraph at lines 489--490
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 491--492
-
- []
-
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 493--494
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 495--496
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 497--498
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 499--500
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 504--505
-
- []
-
-[17]
-Underfull \hbox (badness 10000) in paragraph at lines 506--507
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 508--509
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 510--511
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 512--513
-
- []
-
-[18] (./report.aux) ) 
-Here is how much of TeX's memory you used:
- 1303 strings out of 494123
- 15268 string characters out of 3151762
- 73979 words of memory out of 3000000
- 4586 multiletter control sequences out of 15000+200000
- 9747 words of font info for 35 fonts, out of 3000000 for 9000
- 1018 hyphenation exceptions out of 8191
- 27i,9n,20p,724b,251s stack positions out of 5000i,500n,10000p,200000b,50000s
-
-Output written on report.pdf (19 pages).
+Underfull \hbox (badness 10000) in parag
